@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  _____   ____  _____                                          %
+% |_   _| /  __||  __ \    Institute of Computitional Physics   %
+%   | |  |  /   | |__) |   Zuercher Hochschule Winterthur       %
+%   | |  | (    |  ___/    (University of Applied Sciences)     %
+%  _| |_ |  \__ | |        8401 Winterthur, Switzerland         %
+% |_____| \____||_|                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Project     : LaTeX doc Vorlage für Windows ProTeXt mit TexMakerX
+% Title       : 
+% File        : einleitung.tex Rev. 00
+% Date        : 23.4.12
+% Author      : Remo Ritzmann
+% Feedback bitte an Email: remo.ritzmann@pfunzle.ch
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Projektübersicht}\label{chap.projektuebersicht}
+Die Übersicht dient dem Zweck einen generellen Überblick über das Dokument zu verschaffen. Sie beinhaltet die Ausganglage, das Ziel dieser Arbeit, die Aufgabenstellung, die erwarteten Resultate und die Nicht-Ziele. Zusätzlich wird der Aufbau dieses Dokumentes erklärt.
+
+\section{Ausgangslage}\label{ausganglage}
+Der Turnverein Grafstal wünscht sich auf sein 125-jähriges Jubiläum ein Mobile App. Der Verein hat bereits eine interaktive Webseite, welche in PHP geschrieben ist. Die Nutzung der Webseite wird immer grösser und bis jetzt werden ca. 800 Mitglieder damit verwaltet. In der letzten Zeit hat es sich eingebürgert, dass die Mitglieder sich per Whatsapp organisieren, wer ins Training fährt und wie viel Platz er noch im Auto hat. Dies und das Abrufen der wichtigsten Informationen sollen über das App möglich sein.
+
+\section{Ziele der Arbeit}\label{ziele}
+Das Ziel ist eine Mobile App zu entwickeln, welche die wichtigsten Grundfunktionen (neueste Berichte anzeigen, Trainings-, Anlass-, Matchinformationen und die dazugehörigen An- und Abmeldefunktionen für die jeweiligen Events) abdeckt. Die wichtigste Funktion neben den Informationen ist die Fahrgemeinschaftsverwaltung. Durch diese Verwaltung soll der Whatsapp Chat entlastet und eine saubere Abwicklung gewährleistet werden. Der Verein erhofft sich vom App weiter eine höhere Anmeldungsquote, da das Anmelden durch wenige Klicks ermöglichst werden sollte. Zusätzlich kann bei der App die Push-Funktion genutzt werden, um Mitglieder auf Wichtiges aufmerksam zu machen. Für die Zukunft hat eine App weitere Vorteile, da auf GPS-Daten zugegriffen  und offline Caching eingebaut  werden kann, diese beiden Eigenschaften sind jedoch nicht Teil dieser Arbeit.
+
+\section{Aufgabenstellung}\label{aufgabenstellung}
+Folgende Punkte werden in der Semesterarbeit behandelt:
+\begin{itemize}
+\item Analysieren des Ist-Zustands
+\item Anforderungen an die Fahrgemeinschaftsverwaltung
+\item Entwicklung einer Mobile App mit Login
+\item Entwicklung einer Fahrgemeinschaftsverwaltung mit geeignetem Locking-Verfahren
+\item Abnahme der Mobile App durch den Vorstand
+\end{itemize}
+
+\section{Erwartete Resultate}\label{erwartete_resultate}
+Folgende Punkte werden als Resultate der Semesterarbeit erwartet:
+\begin{itemize}
+\item Dokumentation des Ist-Zustandes
+\item Anforderungskatalog
+\item Beschreibung der Architektur und Locking-Verfahren bei der Fahrgemeinschaftsverwaltung
+\item Implementation der gewünschten Funktionen in einem Mobile App
+\item Live Schaltung des erweiterten Backends und Bereitstellung der App für den Download
+\end{itemize}
+
+\section{Nicht-Ziele}\label{nicht_ziele}
+Folgende Punkte wurden mit dem Auftraggeber als Nicht-Ziele definiert und sind somit nicht Teil dieses Projekts:
+\begin{itemize}
+\item Dieses Projekt erweitert die Funktionalität der Webseite nicht
+\item Es müssen keine Tests für die alten Funktionen geschrieben werden, ausser sie werden wegen diesem Projekt umgeschrieben
+\item Die Vermarktung des Apps ist Sache des Auftraggebers
+\item Lokales Speichern der Daten im App
+\end{itemize}
+
+\section{Dokumentstruktur}\label{nicht_ziele}
+Nachdem die Ausgangslage geklärt ist, kommen wir nun zum Aufbau dieses Dokuments. Dieses Dokument spiegelt die geleistete Arbeit wieder und ist in einzelne Kapitel unterteilt.
+\begin{itemize}
+\item Projektplanung: Schritte für die Erstellung des Projektplanes und Risikoanalyse
+\item Anforderungsdokument: System- und Kontextabgrenzung, Stakeholderliste, getroffene Annahmen und dann der Anforderungskatalog mit Use Cases, Mockups und Anforderungen
+\item Architektur: Übersicht über das ganze System, Architektur Beschreibung von Backend und App mit einer Nutzwertanalyse von den verschiedenen Lösungsvarianten
+\item Umsetzung: Beschreibung der Entwicklungsumgebung, Umsetzung von App und Backend
+\item Tests: Erläuterung der Test-Methoden und Abnahme Protokoll
+\end{itemize}
+
+Im Kapitel \ref{chap.verzeichnisse} sind alle Verzeichnisse zu finden, darunter auch ein Glossar, in welchem unbekannte Begriff erklärt werden. Falls es zu einem gewissen Begriff eine gängige Abkürzung gibt, wird diese beim ersten auftauchen des Wortes in Klammern geschrieben und danach verwendet, im Glossar finden sich dann beide Einträge.

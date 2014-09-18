@@ -1,0 +1,12 @@
+**.aux
+**.out
+**.bak
+doc.bbl
+doc.blg
+doc.idx
+doc.lof
+doc.log
+doc.lot
+doc.synctex.gz
+doc.toc
+doc.lol
