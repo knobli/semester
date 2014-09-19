@@ -10,7 +10,7 @@
 
 \chapter{Anforderungsdokument}\label{chap.anforderungsdokument}
 
-Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich detailierte Anforderungen zu erfassen, einerseits verhindert das Mögliche Missverständnis, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
+Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich detailierte Anforderungen zu erfassen, einerseits verhindert das mögliche Missverständnis, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
 
 \section{Übersicht}\label{anf_uebersicht}
 
@@ -24,7 +24,7 @@ Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten
 \label{fig:systemkontext}
 \end{figure}
 
-Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen, nämlich die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Desweiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, den Mitgliedern und nicht zu vergessen dem Hosting beeinflusst.
+Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen, nämlich die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Desweiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und nicht zu vergessen den Mitgliedern beeinflusst.
 
 \subsection{Systemumgebung}\label{systemumgebung}
 Die Systemumgebung definiert die Ausgangslage für das Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein PHP Backend und interaktive Webseiten lief. Die Daten wurden in eine MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
@@ -53,9 +53,9 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 								&				&	-Positiv \mbox{-Neutral} \mbox{-Negativ} 	&	-Hoch \mbox{-Mittel} \mbox{-Niedrig} \\ \hline
 	Vorstand						&	Der Vorstand ist der Kunde in diesem Projekt, er hat den Auftrag erteilt. Er erwartet vom App mehr Popularität vorallem bei den jüngeren Mitgliedern. Zusätzlich erhoft er sich etwas Werbung für den Verein.			
 												& 	Positiv		&	Hoch		\\ \hline
-	Trainingsverantwortliche				&	Die Trainingsverantwortlichen sehen einen grossen Vorteil darin, dass die Anmeldung für die Trainings noch etwas vereinfacht werden soll. Sie finden es praktisch, dass sie die Trainingsinformationen schnell abrufen können.			
+	Trainingsverantwortliche				&	Die Trainingsverantwortlichen sehen einen grossen Vorteil darin, dass die Anmeldung für die Trainings vereinfacht werden soll. Sie finden es praktisch, dass sie die Trainingsinformationen schnell abrufen können.			
 												& 	Positiv		&	Hoch		\\ \hline
-	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder warten gespannt auf das App. Es geht ihnen vorallem auch darum, einfach ein App von ihrem Verein zu haben.			
+	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder warten gespannt auf das App. Es geht ihnen vorallem darum, ein App von ihrem Verein zu besitzen.			
 												& 	Positiv		&	Hoch		\\ \hline
 	aktive Mitglieder (Ü30)				&	Die ältere Generation der aktiv Mitglieder haben keine Erwartungen an das App, sie würden auch gut ohne auskommen. 		
 												& 	Neutral	&	Mittel		\\ \hline
@@ -69,7 +69,7 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 
 \newpage
 \section{Anforderungen}\label{sec.anfoderungen}
-Bei dem Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertrettern des Turnvereins festgelegt. Die Beschreibung beinhaltet einen bereits klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden dann in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man nun aber mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden anhand einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
+Bei dem Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertrettern des Turnvereins festgelegt. Die Beschreibung beinhaltet einen bereits klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man nun aber mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden anhand einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
 
 \subsection{Use Cases}\label{use_cases}
 Das Use Case Diagramm (siehe Abbildung \ref{fig:use_case}) zeigt zwei Akteure, Mitglieder und Nicht-Mitglieder und sechs Use Cases, welche in diesem Projekt umgesetzt wurden.
