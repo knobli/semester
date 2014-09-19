@@ -12,7 +12,7 @@
 In diesem Kapitel wird auf die ganze Strukur und die Architektur des Backends und des Apps eingegangen. Die Architektur legt die Grundlage für die Umsetzung und sollte mit Bedacht festgelegt werden.
 
 \section{Übersicht}\label{architektur_uebersicht}
-Die Systemumgebung (siehe Abbildung \ref{fig:system_scope}) besteht aus einem Webserver, auf welchem das Backend, geschrieben in PHP, die Webseite und neu auch die API-Schnitstelle für das App läuft. Die Web-Schnitstelle für Funktioninäre wird in diesem Bild seperat aufgeführt, da sie viel mehr Funktionen bietet, als für normale Mitglieder und Nicht-Mitglieder, sie ist jedoch über die gleiche Webseite ansprechbar. Die RESTful API, mit welcher das App kommuniziert, beherschrt momentan nur die in den Anforderungen benötigten Funktionen.
+Die Systemumgebung (siehe Abbildung \ref{fig:system_scope}) besteht aus einem Webserver, auf welchem das Backend, die Webseite und neu auch die API-Schnitstelle für das App läuft. Die Web-Schnitstelle für Funktioninäre wird in diesem Bild seperat aufgeführt, da sie viel mehr Funktionen bietet, als für normale Mitglieder und Nicht-Mitglieder, sie ist jedoch über die gleiche Webseite ansprechbar. Das RESTful API, mit welcher das App kommuniziert, beherrscht nur die in den Anforderungen benötigten Funktionen.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{images/visio/SystemScope.png}
@@ -26,7 +26,7 @@ Im PHP Backend wird seit diesem Projekt Doctrine (siehe \cite{doctrine} und \cit
 \subsection{Locking}
 Das Problem bei einer Fahrgemeinschaftsverwaltung ist, dass man eine beschränkte Anzahl an Plätzen hat. Wenn man jetzt davon ausgeht, dass es noch drei freie Plätze hat und vier Mitglieder gleichzeitig auf den Anmelde-Knopf klicken, wäre die Fahrgemeinschaft plötzlich überbucht. Das Szenario ist etwas unwahrscheinlich, jedoch werden die Fahrgemeinschaften immer sehr Zeitnah an der Veranstaltung erstellt und somit ist die Zeitspanne, in der sich Mitglieder anmelden, nicht sehr gross. Eine Überbuchte Fahrgemeinschaft führt zu Ärger, welcher durch ein gezieltes Locking einfach vermieden werden kann.\\
 
-Es gibt zwei verschiedene Varianten von Locking, das optimistische Locking und das pessimistische Locking. Das optimistische Locking funktioniert so, dass eine Zeitstempfel oder eine Versionsnummer (Fussnote: besser, da der Zeitstempfel bei sehr schnellen und vielen Transaktionen und je nach Auflösungsgenauigkeit fehler verursachen könnte)  abgespeichert wird, wenn man das Objekt lädt. Wenn man nun etwas verändern möchte, wird diese Versionsnummer mitgegeben und geprüft, ob sich die Version seit diesem Zeitpunkt bereits verändert hat. Das pessimistische Locking wird mittels einem Lock, sei dass einem zeilenbasierten oder tabellenbasierten Lock, und einer Transaktion umgeben.\\
+Es gibt zwei verschiedene Varianten von Locking, das optimistische Locking und das pessimistische Locking. Das optimistische Locking funktioniert so, dass eine Zeitstempfel oder eine Versionsnummer\footnote{besser Variante, da der Zeitstempfel bei sehr schnellen und vielen Transaktionen und je nach Auflösungsgenauigkeit fehler verursachen könnte} abgespeichert wird, wenn man das Objekt lädt. Wenn man nun etwas verändern möchte, wird diese Versionsnummer mitgegeben und geprüft, ob sich die Version seit diesem Zeitpunkt bereits verändert hat. Das pessimistische Locking wird mittels einem Lock, sei dass einem zeilenbasierten oder tabellenbasierten Lock, und einer Transaktion umgeben.\\
 
 Die Implementation in diesem Projekt sieht für den User wie ein optimstisches Locking aus, alle vier Mitglieder, aus dem Beispiel oben, sehen den Anmelde-Knopf und einer erhält am Schluss die Fehlermeldung, dass es keinen Platz mehr hat. Im Backend ist es jedoch mit einem pessimistischen Locking auf Zeilenebene gelöst. Die Transaktion wird eröffnet, die Zeile wird gelockt, der Request wird überprüft, der Eintrag wird gespeichert und danach wird die Zeile mit dem Beenden der Transaktion wieder freigegeben. Um diesen Vorgang etwas besser zu veranschaulichen wurde ein Sequenzdiagramm (siehe Abbildung \ref{fig:locking_verfahren}) erstellt, dies wurde anhand der Vorlage in \cite{soft_arch_book}.
 
@@ -37,8 +37,9 @@ Die Implementation in diesem Projekt sieht für den User wie ein optimstisches L
 \label{fig:locking_verfahren}
 \end{figure}
 
+\FloatBarrier
 \subsection{API}
-Das App enthält so gut wie keine Daten, sondern holt diese immer von dem Backend. Dazu wurde ein RESTful API erstellt, welches JavaScript Object Notation-Objekte (JSON-Objekte) zurück liefert. Das API funktioniert nach dem De-facto-Standard (siehe \cite{wiki_restful}). Bei einem Listen-Aufruf ohne Einträge liefert es eine leere Liste zurück, wenn ein spezifisches Objekt abgerufen wird, liefert es "null" zurück. Bei Aktionen wird ein JSON-Objekt mit den Attributen 'success' und 'error\_message' zurück gegeben.\\
+Das App enthält so gut wie keine Daten, sondern holt diese immer von dem Backend. Dazu wurde ein RESTful API erstellt, welches JavaScript Object Notation-Objekte (JSON-Objekte) zurück liefert. Das API funktioniert nach dem De-facto-Standard (siehe \cite{wiki_restful}). Bei einem Listen-Aufruf ohne Einträge liefert es eine leere Liste zurück, wenn ein spezifisches Objekt abgerufen wird, liefert es 'null' zurück. Bei Aktionen wird ein JSON-Objekt mit den Attributen 'success' und 'error\_message' zurück gegeben.\\
 
 Das API hat eine Versionsnummer in der URL, damit kann sichergestellt werden, dass ältere Versionen von der App immer noch lauffähig sind, wenn etwas an der Schnittstelle geändert wird. Dieser Punkt ist sehr wichtig, da man den Usern nicht vorschreiben kann, wann und ob sie ihr App updaten.
 
