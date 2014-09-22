@@ -1,5 +1,6 @@
 - doc.pdf nicht versionieren (.gitignore und rausnehmen)
 - \\ hinter jedem Absatz würde ich wegmachen. Bricht die typografischen Vorteile von LaTeX. Leere Zeile reicht.
+- Zeilenumbruch der Paragraphen bietet eine bessere Granularität bei den Diffs (nicht der ganze Absatz in einer Zeile).: in vi z.B. mit V (visual mode) + gq
 
 Abkürzungsverzeichnis:
 
