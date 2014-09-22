@@ -1,0 +1,20 @@
+- doc.pdf nicht versionieren (.gitignore und rausnehmen)
+
+Abkürzungsverzeichnis:
+
+- Stakeholder ist nicht wirklich erklärt (im Sinne von: Personen, die in irgendeiner Weise vom Projekt betroffen sind, jedoch nicht notwendigerweise direkt Einfluss auf den Projektverlauf haben...). Auswirkung auf den Requirements Engineer ist eine wichtige, jedoch trotzdem Neben-Erklärung.
+- DOM beschreiben
+
+Low prio
+========
+
+- Booktabs (Beispiel im Abkürzungsverzeichnis)
+- Abkürzungsverzeichnis: Hyperlinks bei "siehe..."
+- Hyperlinks clickable
+- Abkürzungsverzeichnis: Linke spalte blocksatz
+- Generell: ev. englische Fachbegriffe auszeichnen (emph oder noch besser eigenen Befehl dafür)
+
+
+Fehlende Referenzen
+
+- Abkürzugnsverzeichnis: PHP
