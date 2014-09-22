@@ -8,7 +8,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Umsetzung des Prototypes}\label{chap.umsetzung}
+\chapter{Umsetzung des Prototypen}\label{chap.umsetzung}
 In diesem Kapitel wird kurz auf die Entwicklungsumgebung, welche für dieses Projekt verwendet wurde, eingegangen und danach wird erklärt, wie die Umsetzung des Mobile App Prototypes und des Backends durchgeführt wurde.
 
 \section{Entwicklungsumgebung}\label{entwicklungsumgebung}
@@ -219,7 +219,7 @@ Die Javascript Funktionen wurden möglichst generisch gewählt, damit man sie an
 \subsection{Login}
 Da das Backend nur über eine HTTP-Verbindung verfügte und die Anmeldedaten nicht im localStorage  gespeichert werden sollten, wurde darauf verzichtet die Anmeldedaten bei jeder Anfrage an das Backend mitzusenden. Bei der Anmeldung wird die Mitglieder-ID gespeichert und dann bei einer Anfrage mitgeteilt. In einem späteren Projekt sollte diese Lösung durch ein Session-ID abgelöst werden.
 
-\subsection{ Provisioning Prozesse}
+\subsection{Provisioning Prozesse}
 Die Entwicklung des Apps ist das eine, die Bereitstellung zum Download das andere. Phonegap hilft beim Provisioning vorallem bei Android, hier erstellt es, richtig konfiguriert, ein signiertes APK-Paket, welches in der Google Play Developer Console hochgeladen werden kann. Zuerst muss man sich jedoch einen Developer Account erstellen, danach kann man die Beschreibung und die Screenshots für das App hochladen. Das ganze dauert etwa 10 Minuten und 1 Stunden nach dem Absenden hat man sein App in Google Play. Es empfiehlt sich die App noch mit eine Absender-ID zu verknüpfen, damit man auch Statistiken über die Downloadzahlen sieht. (siehe dazu auch \cite{android_prov})\\
 Bei Apple sieht das etwas anders aus, Phonegap kann kein Paket erstellen, es erstellt lediglich das Projekt. Diese Projekt muss man dann in XCode öffnen und von dort aus das Paket erstellen. Doch zuerst muss man einen Developer Account haben, diesen besitz man wahrscheindlich bereits, da man sonst nicht auf realen Geräten testen kann, zusätzlich muss man ein Distribution Zertifikate erstellen und in XCode hinzufügen. Danach muss man in iTunes Connect neben den gleiche Informationen wie bei Android, noch einige Angaben zu den Inhalten des Apps machen. Desweiteren muss man Review Informationen bereitstellen, dass heisst einen Test Benutzer und Informationen zum Entwicklung angeben. Erst wenn das App erfasst wurde, kann man in XCode ein Archiv erstellen und dieses direkt zu iTunes Connect hochladen. Nun werden schon die ersten Tests durchgeführt, ob zum Beispiel die Versionsnummern übereinstimmen und ob für jedes unterstütze Gerät Screenshots erfasst wurden. Falls dies nicht der Fall ist, wird das App abgelehnt und man muss die Dinge beheben. An diesem Punkt beginnt das warten, die durchschnittliche Review-Zeit beträgt 8 Tage. (siehe dazu auch \cite{apple_prov_apple} und \cite{apple_prov_ralf})
 
