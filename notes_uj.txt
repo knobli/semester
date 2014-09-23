@@ -23,3 +23,9 @@ Abkürzugnsverzeichnis:
 - PHP
 - REST
 - API
+
+Umsetzung
+- git
+- github
+
+- Seite 61, fussnote 3
