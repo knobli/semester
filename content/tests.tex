@@ -16,30 +16,30 @@ In diesem Projekt hat man die sieben Grunsätze aus \cite{test_soft_book} als Le
 \begin{enumerate}
 \item \textbf{Testen zeigt die Anwesenheit von Fehlern}: Testabdeckung mit Sonar ermittelt und Anforderungen überprüft
 \item \textbf{Vollständiges Testen ist nicht möglich}: Es wurde solange getestet bis die Fehlerfindungsrate einen bestimmte Punkt unterschritten hatte
-\item \textbf{Mit dem Testen frühzeitig beginnen}: Die Tests für die neuen Funktionen wurden zur gleiche Zeit, wie der Code, geschrieben
-\item \textbf{Häufung von Fehlern}: Wenn Fehler auftratten, dann wurde diese Komponente nach der Behebung nochmals intensiv getestet
-\item \textbf{Zunehmende Testresistenz (Pesticide paradoc)}: Als Änderungen am Code gemacht wurden, wurden die Tests erweitert bzw. angepasst
-\item \textbf{Testen ist abhängig vom Umfeld}: Dieses System ist nicht so sicherheitskritische, wie eine Bank, jedoch werden die Dienste rege bentutzt, somit sollte die Testintensität in einem normalen Rahmen liegen.
+\item \textbf{Mit dem Testen frühzeitig beginnen}: Die Tests für die neuen Funktionen wurden zur gleichen Zeit wie der Code geschrieben
+\item \textbf{Häufung von Fehlern}: Wenn Fehler auftraten, dann wurde diese Komponente nach der Behebung nochmals intensiv getestet
+\item \textbf{Zunehmende Testresistenz (Pesticide paradox)}: Als Änderungen am Code gemacht wurden, wurden die Tests erweitert bzw. angepasst
+\item \textbf{Testen ist abhängig vom Umfeld}: Dieses System ist nicht so sicherheitskritisch, wie etwa Systeme im Umfeld einer Bank, die Dienste werden jedoch rege benutzt, somit sollte die Testintensität in einem normalen Rahmen liegen.
 \item \textbf{Trugschluss: Keine Fehler bedeutet eine brauchbares System}: Die Stakeholder wurden schon bei der Mock-up Erstellung mit einbezogen und bekamen auch während der Entwicklung immer wieder einen Blick in den aktuellen Stand.
 \end{enumerate}
 
 \section{Testing}
-Komponententests und Integrationstests wurden im Backend mit PHPUnit durchgeführt. Bei den Integrationstests wurde eine In-Memory Datenbank verwendet, welche bei jedem Testlauf neugeladen wird, somit ist man komplett unabhängig von äusseren Einflüssen. Die Testabdeckung wurde mit Sonar überprüft, hier wurde vorallem ein Augenmerk auf die neuen Funktionen und in diesem Projekt verwendete Funktionen gelegt. Neben den verschiedenen Entitäten wurden die Repositories und die Services getestet. (siehe \cite{test_soft_book})
+Komponententests und Integrationstests wurden im Backend mit PHPUnit durchgeführt. Bei den Integrationstests wurde eine In-Memory Datenbank verwendet, welche bei jedem Testlauf neu geladen wird, somit ist man komplett unabhängig von äusseren Einflüssen. Die Testabdeckung wurde mit Sonar überprüft, hier wurde vor allem ein Augenmerk auf die neuen Funktionen und in diesem Projekt verwendete Funktionen gelegt. Neben den verschiedenen Entitäten wurden die Repositories und die Services getestet. (siehe \cite{test_soft_book})
 
-\subsection{ Testphasen}
-Es wurde festgelegt, dass das Projekt nicht mit der Implementation fertig ist, sondern mit der definitiven Auslieferung. Damit der Kunde genug Erfahrungen sammeln kann, wurden Testphasen definiert und erst nach Beendigung dieser Testphasen, konnte das Produkt abgenommen werden. Die Testphasen wurden getrennt, damit Fehler klar abgegrenzt werden konnten und für die gemeldeten Fehler auch mehr Zeit zur Verfügung stand.
+\subsection{Testphasen}
+Es wurde festgelegt, dass das Projekt nicht mit der Implementation fertig ist, sondern mit der definitiven Auslieferung. Damit der Kunde genug Erfahrungen sammeln kann, wurden Testphasen definiert. Erst nach Beendigung dieser Testphasen konnte das Produkt abgenommen werden. Die Testphasen wurden getrennt, damit Fehler klar abgegrenzt werden konnten und für die Behandlung der gemeldeten Fehler auch mehr Zeit zur Verfügung stand.
 
 \subsubsection{Backend}
-Die Testphase des Backends begann nachdem lokalen Testing des Refactorings und der produktiv Schaltung des Backends. Die Mitglieder wurden informiert, dass sie theoretisch keine grossen Änderungen feststellen sollten und sie sollten sich doch bitte bei negativen Abweichungen zur vorherigen Version sofort melden. Es wurden nur wenige Speziallfälle gemeldet, welche schnell behoben werden konnten.
+Die Testphase des Backends begann nach dem lokalen Testing des Refactorings und der Produktiv-Schaltung des Backends. Die Mitglieder wurden informiert, dass sie theoretisch keine grossen Änderungen feststellen sollten und sie sollten sich doch bitte bei negativen Abweichungen zur vorherigen Version sofort melden. Es wurden nur wenige Speziallfälle gemeldet, welche schnell behoben werden konnten.
 
 \subsubsection{App}
-Da das Freigeben der iOS App mehrere Tage benötigt, wurde die erste Testphase auf Android gemacht, damit man schneller reagieren konnte. Das App wurde hochgeladen und nur einigen Personen davon erzählt, nach kurzer Zeit gab es bereits über 10 Downloads. Das Feedback war gut und nur einige kleine Fehler wurden gefunden. Alle Fehler und ein paar kleine Verbesserungsvorschläge wurden sofort umgesetzt, getest und dann eine neue Version hochgeladen. Grössere Anforderungen wurden erfasst und auf die kommenden Versionen verschoben. Als keine negativen Rückmeldungen mehr kamen und auch beim Nachfragen nichts mehr zum Vorschein kam, wurde die Testphase mit dem Einliefern des iOS Apps beendet.
+Da das Freigeben der iOS App mehrere Tage benötigt, wurde die erste Testphase auf Android gemacht. So konnte schneller Feedback eingeholt werden. Das App wurde hochgeladen -- wobei nur wenige Personen informiert wurden. Nach kurzer Zeit gab es bereits über 10 Downloads. Das Feedback war gut; ledliglich einige kleine Fehler wurden gefunden. Alle Fehler wurden behoben und ein paar kleine Verbesserungsvorschläge umgesetzt, getestet und dann in einer neuen Version hochgeladen. Grössere Anforderungen wurden erfasst, deren Umsetzung jedoch auf kommenden Versionen verschoben. Als keine negativen Rückmeldungen mehr kamen und auch beim Nachfragen nichts mehr zum Vorschein kam, wurde die Testphase mit dem Einliefern des iOS Apps beendet.
 
 \section{System- und Abnahmetest}
-Nach erfolgreichem Testing und abschluss der Testphasen, wurde für den Abnahmetest ein Testprotokoll erstellt, welches vorgängig im Systemtest schon durchgeganen wurde. Das Testprotokoll wurde danach dem Kunden übergeben und von diesem selber nochmals abgearbeitet.
+Nach erfolgreichem Testing und Abschluss der Testphasen wurde für den Abnahmetest ein Testprotokoll erstellt, welches vorgängig im Systemtest schon durchgeganen wurde. Das Testprotokoll wurde danach dem Kunden übergeben und von diesem selber nochmals abgearbeitet.
 
 \subsection{Testprotokoll}
-Das Testprotokoll basiert auf den Use Cases (siehe \ref{use_cases}) und den Anforderungen (siehe \ref{anforderungen}). Akzeptanz Kriterien mit einen UND- oder ODER-Verknüfung wurden in aufgesplitet, um sicher zu gehen, dass beide Bedingungen erfüllt sind.
+Das Testprotokoll basiert auf den Use Cases (siehe \ref{use_cases}) und den Anforderungen (siehe \ref{anforderungen}). Akzeptanz Kriterien mit UND- oder ODER-Verknüfung wurden aufgesplitet, um sicher zu gehen, dass beide Bedingungen erfüllt sind.
 
 \begin{longtable}{ l | p{7cm} | l | l }
 
@@ -68,7 +68,7 @@ Das Testprotokoll basiert auf den Use Cases (siehe \ref{use_cases}) und den Anfo
 				&	\nameref{table:req_4} 	&	erfüllt\\ \hline
 	8	&	Das angemeldete Mitglied kann einer Fahrgemeinschaft nicht erneut beitreten
 				&	\nameref{table:req_4} 	&	erfüllt\\ \hline
-	9	&	Das angemeldete Mitglied erhält eine Fehlermeldung falls die Fahrgemeinschaft keine Kapazität mehr aufweisst
+	9	&	Das angemeldete Mitglied erhält eine Fehlermeldung falls die Fahrgemeinschaft keine Kapazität mehr aufweist
 				&	\nameref{table:req_4} 	&	plz test\\ \hline
 	10	&	Das angemeldete Mitglied kann sich für einen Anlass anmelden
 				&	\nameref{table:req_5} 	&	erfüllt\\ \hline
