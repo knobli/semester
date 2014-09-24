@@ -86,7 +86,7 @@ Neben den Tests an Geräten, Emulatoren wurden auch noch automatisierte Tests un
 In diesem Unterkapitel werden neben einem detailierten Aufbau der App, die unterschiedlichen Provisioning Prozesse und das Refactoring des Backends beschrieben. Des Weiteren wird eine Übersicht der Push-Nachricht Implementation vermittelt.
 
 \subsection{Aufbau}
-Das Menü (siehe Abbildung \ref{fig:navigation}) der App wurde sehr schlicht gehalten und sehr leicht erweiterbar gemacht. Da das Menü in verschiedenen Seiten gebraucht wird, werden die Elemente zentral verwaltet. Die Einträge News, Vereine und Veranstaltungen sind für alle Benutzer sichtbar, wenn auch mit benutzerspezifischem Inhalt und Design. Der Link zu den Resultaten ist nur für angemeldete Benutzer verfügbar.
+Das Menü (siehe Abbildung \ref{fig:navigation}) der App wurde sehr schlicht gehalten und sehr leicht erweiterbar gemacht. Die Einträge News, Vereine und Veranstaltungen sind für alle Benutzer sichtbar, wenn auch mit benutzerspezifischem Inhalt und Design. Der Link zu den Resultaten ist nur für angemeldete Benutzer verfügbar.
 
 \begin{figure}[h]
 \centering
@@ -205,7 +205,7 @@ In den Einstellungen kann sich der Benutzer nicht nur einloggen (siehe Abbildung
 \newpage
 \FloatBarrier
 \subsection{Javascript Funktionen}
-Die Javascript Funktionen wurden möglichst generisch gewählt, damit man sie an verschiedenen Orten wiederverwenden kann. Mit diesem Anzatz ist man bei den verschiedenen Veranstaltungsseiten mit wenig Code ausgekommen. Es war auch einfach, die nächste bevorstehende Veranstaltung auf der Startseite gleich anzuzeigen, wie in den anderen Seiten. Die Funktionen wurden in unterschiedliche Files geschrieben, welche nach ihrem Zweck benannt wurden.
+Die Javascript Funktionen wurden möglichst generisch gewählt, damit man sie an verschiedenen Orten wiederverwenden kann. Mit diesem Ansatz ist man bei den verschiedenen Veranstaltungsseiten mit wenig Code ausgekommen. Es war auch einfach, die nächste bevorstehende Veranstaltung auf der Startseite gleich anzuzeigen, wie in den anderen Seiten. Die Funktionen wurden in unterschiedliche Files geschrieben, welche nach ihrem Zweck benannt wurden.
 \begin{itemize}
 \item carpool.js: an- und abmelden bei Fahrgemeinschaften, anzeigen von Fahrgemeinschaften
 \item help.js:  Datum formatieren,  Listen-Elemente erstellen, Navigationselemente
