@@ -10,7 +10,7 @@
 
 \chapter{Anforderungsdokument}\label{chap.anforderungsdokument}
 
-Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich detailierte Anforderungen zu erfassen, einerseits verhindert das mögliche Missverständnis, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
+Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich detaillierte Anforderungen zu erfassen, einerseits verhindert das mögliche Missverständnis, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
 
 \section{Übersicht}\label{anf_uebersicht}
 
@@ -24,7 +24,7 @@ Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten
 \label{fig:systemkontext}
 \end{figure}
 
-Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen, nämlich die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Desweiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und nicht zu vergessen den Mitgliedern beeinflusst.
+Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen, nämlich die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und nicht zu vergessen den Mitgliedern beeinflusst.
 
 \subsection{Systemumgebung}\label{systemumgebung}
 Die Systemumgebung definiert die Ausgangslage für das Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein PHP Backend und interaktive Webseiten lief. Die Daten wurden in eine MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
@@ -51,11 +51,11 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 	Name							&	Erwartung		&	Einstellung 	&	Einfluss	\\ \hline
 	\rowcolor{gray}
 								&				&	-Positiv \mbox{-Neutral} \mbox{-Negativ} 	&	-Hoch \mbox{-Mittel} \mbox{-Niedrig} \\ \hline
-	Vorstand						&	Der Vorstand ist der Kunde in diesem Projekt, er hat den Auftrag erteilt. Er erwartet vom App mehr Popularität vorallem bei den jüngeren Mitgliedern. Zusätzlich erhoft er sich etwas Werbung für den Verein.			
+	Vorstand						&	Der Vorstand ist der Kunde in diesem Projekt, er hat den Auftrag erteilt. Er erwartet vom App mehr Popularität vor allem bei den jüngeren Mitgliedern. Zusätzlich erhofft er sich etwas Werbung für den Verein.			
 												& 	Positiv		&	Hoch		\\ \hline
 	Trainingsverantwortliche				&	Die Trainingsverantwortlichen sehen einen grossen Vorteil darin, dass die Anmeldung für die Trainings vereinfacht werden soll. Sie finden es praktisch, dass sie die Trainingsinformationen schnell abrufen können.			
 												& 	Positiv		&	Hoch		\\ \hline
-	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder warten gespannt auf das App. Es geht ihnen vorallem darum, ein App von ihrem Verein zu besitzen.			
+	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder warten gespannt auf das App. Es geht ihnen vor allem darum, ein App von ihrem Verein zu besitzen.			
 												& 	Positiv		&	Hoch		\\ \hline
 	aktive Mitglieder (Ü30)				&	Die ältere Generation der aktiv Mitglieder haben keine Erwartungen an das App, sie würden auch gut ohne auskommen. 		
 												& 	Neutral	&	Mittel		\\ \hline
@@ -69,7 +69,7 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 
 \newpage
 \section{Anforderungen}\label{sec.anfoderungen}
-Bei dem Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertrettern des Turnvereins festgelegt. Die Beschreibung beinhaltet einen bereits klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man nun aber mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden anhand einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
+Bei dem Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet einen bereits klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man nun aber mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden anhand einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
 
 \subsection{Use Cases}\label{use_cases}
 Das Use Case Diagramm (siehe Abbildung \ref{fig:use_case}) zeigt zwei Akteure, Mitglieder und Nicht-Mitglieder und sechs Use Cases, welche in diesem Projekt umgesetzt wurden.
@@ -93,7 +93,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Verantwortlicher	&	Verantwortlicher Stakeholder\\ \hline
 	Beschreibung	&	Komprimierte Beschreibung\\ \hline
 	Auslösendes Ereignis&	Angabe des Ereignisses, das den Use Case auslöst\\ \hline
-	Akteure		&	Auflistung der Akteuere, die mit dem Use Case in Beziehung stehen\\ \hline
+	Akteure		&	Auflistung der Akteure, die mit dem Use Case in Beziehung stehen\\ \hline
 	Vorbedingung	&	Eine Liste notwendiger Voraussetzungen, die erfüllt sein müssen, bevor die Ausführung des Use Case beginnen kann\\ \hline
 	Nachbedingung	&	Eine Liste von Zuständen, in denen sich das System unmittelbar nach der Ausführung des Hauptszenarios befindet.\\ \hline
 	Ergebnis		&	Beschreibung der Ausgaben, die während der Ausführung des Use Case erzeugt werden\\ \hline
@@ -117,7 +117,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftverwaltung sein. Jedes Mitglieder soll eine Fahrgemeinschafte erstellen können.\\ \hline
+	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Jedes Mitglieder soll eine Fahrgemeinschaft erstellen können.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte eine Fahrgemeinschaft erstellen\\ \hline
 	Akteure		&	TV-Mitglied\\ \hline
 	Vorbedingung	&	Das Mitglied ist angemeldet und es existiert eine Veranstaltung\\ \hline
@@ -161,7 +161,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftverwaltung sein. Die Mitglieder sollen sich eine Liste aller Fahrgemeinschaften anzeigen lassen können, um dann zu entscheiden, welcher sie sich anschliessen möchten.\\ \hline
+	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Die Mitglieder sollen sich eine Liste aller Fahrgemeinschaften anzeigen lassen können, um dann zu entscheiden, welcher sie sich anschliessen möchten.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte Fahrgemeinschaften anschauen\\ \hline
 	Akteure		&	TV-Mitglied\\ \hline
 	Vorbedingung	&	Das Mitglied ist angemeldet und Fahrgemeinschaften sind vorhanden\\ \hline
@@ -204,11 +204,11 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftverwaltung sein. Beim Beitreten einer Fahrgemeinschaft geht es darum, dass das Mitglied Interesse an der Fahrgemeinschaft hat und dieser gern beitreten möchte.\\ \hline
+	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Beim Beitreten einer Fahrgemeinschaft geht es darum, dass das Mitglied Interesse an der Fahrgemeinschaft hat und dieser gern beitreten möchte.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte einer Fahrgemeinschaft beitreten\\ \hline
 	Akteure		&	TV-Mitglied\\ \hline
 	Vorbedingung	&	Das Mitglied ist angemeldet und Fahrgemeinschaften sind vorhanden\\ \hline
-	Nachbedingung	&	Das Mitglied ist einer Fahrgemeinschaft beigetretten\\ \hline
+	Nachbedingung	&	Das Mitglied ist einer Fahrgemeinschaft beigetreten\\ \hline
 	Ergebnis		&	Neuer Eintrag in der Gemeinschaft und Kapazitätenminderung\\ \hline
 	Hauptszenario	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
@@ -220,7 +220,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das Mitglied klickt auf 'Fahrgemeinschaften'
 					\item Das System zeigt eine Liste aller Fahrgemeinschaften an
 					\item Das Mitglied wählt eine aus und klickt auf 'Beitreten'
-					\item Das System zeigt 'Erfolgreich beigetretten' an
+					\item Das System zeigt 'Erfolgreich beigetreten' an
 					\end{enumerate}
 					\\ \hline
 	Alternativszenarien	&	\begin{enumerate}
@@ -290,7 +290,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Ivan Sebastiano\\ \hline
-	Beschreibung	&	Neben Funktionen für die Mitglieder soll die App auch Informationen über bevorstehnde Anlässe für Mitglieder und Nicht-Mitglieder zur Verfügung stellen.\\ \hline
+	Beschreibung	&	Neben Funktionen für die Mitglieder soll die App auch Informationen über bevorstehende Anlässe für Mitglieder und Nicht-Mitglieder zur Verfügung stellen.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte Informationen über einen bevorstehenden Anlass\\ \hline
 	Akteure		&	TV-Mitglied, Nicht Mitglieder\\ \hline
 	Vorbedingung	&	Anlässe sind vorhanden\\ \hline
@@ -304,11 +304,11 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt eine Liste der Anlässe an
 					\item Das Mitglied sucht den Anlass und klickt auf ihn
 					\item Das System schickt die Anfrage an das Backend
-					\item Das System zeigt detailierte Informationen über den Anlass an
+					\item Das System zeigt detaillierte Informationen über den Anlass an
 					\end{enumerate}
 					\\ \hline
 	Alternativszenarien	&	\begin{enumerate}
-					\item[8a] Das System zeigt detailierte Informationen über den Anlass und spezielle Informationen für Mitglieder an
+					\item[8a] Das System zeigt detaillierte Informationen über den Anlass und spezielle Informationen für Mitglieder an
 					\end{enumerate}
 					\\ \hline
 	Ausnahmeszenarien&	\begin{enumerate}
@@ -360,10 +360,10 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 
 \FloatBarrier
 \subsection{Mockups}\label{mockups}
-Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden Mockups von den verschiedenen Seiten ersellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle Typen sehr ansprechend. Die Mockups wurden in einer kleinen Gruppe ersellt und die Use Cases dienten als Vorlange. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den Mockups wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Die Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
+Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden Mockups von den verschiedenen Seiten erstellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle Typen sehr ansprechend. Die Mockups wurden in einer kleinen Gruppe erstellt und die Use Cases dienten als Vorlage. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den Mockups wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Die Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
 
 \subsubsection{Navigation - Einstellungen}\label{mockup_navigation_settings}
-Die Navigation und die Einstellungen sind die Grundstrukur der App und deshalb wurden sie zuerst erstellt.
+Die Navigation und die Einstellungen sind die Grundstruktur der App und deshalb wurden sie zuerst erstellt.
 \begin{figure}[ht]
 \centering
 \subfigure[Navigation]{
@@ -502,7 +502,7 @@ Alle Anforderungen wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	Eindeutiger Identikator\\ \hline
+	ID 			&	Eindeutiger Identifikator\\ \hline
 	Priorität 		&	Must, Should, Nice to have\\ \hline
 	Anforderungstyp	&	Funktional Anforderung, Qualitätsanforderung, Randbedingung\\ \hline
 	Name 			&	Eindeutiger, charakterisierender Name\\ \hline
@@ -512,7 +512,7 @@ Alle Anforderungen wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table
 	Akzeptanz Kriterium	&	Messbare Abnahmekriterien\\ \hline
 	Abhängigkeiten 	&	Referenz zu anderen Anforderungen\\ \hline
 	Antragssteller 	&	Stakeholder Gruppe, die um diese Anforderung bittet\\ \hline
-	Risiken	 	&	Weisst auf allfällige Risiken betreffend der Anforderunge hin
+	Risiken	 	&	Weisst auf allfällige Risiken betreffend der Anforderungen hin
   \end{tabular}
    \caption{Vorlage für Anforderungen}\label{table:req_template}
 \end{table}
@@ -541,7 +541,7 @@ Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der An
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Login Möglichkeit bei der Mobile App\\ \hline
 	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Falls ein Mitglied vom Turnverein auf der Homepage registiert ist, muss das System dem besagten Mitglied die Möglichkeit bieten sich über ein Formular am Backend anzumelden.\\ \hline
+	Beschreibung 	&	Falls ein Mitglied vom Turnverein auf der Homepage registriert ist, muss das System dem besagten Mitglied die Möglichkeit bieten sich über ein Formular am Backend anzumelden.\\ \hline
 	Begründung 		&	Einige Informationen dürfen nur für Mitglieder zugänglich
 					gemacht werden. Zusätzlich vereinfacht es das Anmelden, Erstellen
 					und Abrufen von benutzerspezifischen Daten\\ \hline
@@ -552,7 +552,7 @@ Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der An
 					\\ \hline
 	Abhängigkeiten 	&	-\\ \hline
 	Antragssteller 	&	Dominic Keller\\ \hline
-	Risiken	 	&	Falls diese Anforderunge nicht erfolgreich implementiert werden kann, gibt es Schwierigkeiten bei sehr vielen anderen Anforderungen
+	Risiken	 	&	Falls diese Anforderung nicht erfolgreich implementiert werden kann, gibt es Schwierigkeiten bei sehr vielen anderen Anforderungen
   \end{tabular}
    \caption{Anforderung RF-F1}\label{table:req_1}
 \end{table}
@@ -615,12 +615,12 @@ Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der An
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Fahrgemeinschaft beitreten\\ \hline
 	Use Case 		&	\nameref{table:use_case_3}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, eine Fahrgemeinschaft im System besteht, das besagte Mitglied noch nicht beigetretten ist und die Fahrgemeinschaft noch Kapazität aufweisst, muss das System dem besagten Mitglied die Möglichkeit bieten sich über einen Knopf bei einer Fahrgemeinschaft einzutragen.\\ \hline
+	Beschreibung 	&	Falls das Mitglied angemeldet ist, eine Fahrgemeinschaft im System besteht, das besagte Mitglied noch nicht beigetreten ist und die Fahrgemeinschaft noch Kapazität aufweist, muss das System dem besagten Mitglied die Möglichkeit bieten sich über einen Knopf bei einer Fahrgemeinschaft einzutragen.\\ \hline
 	Begründung 		&	Damit die Fahrgemeinschaften auch funktionieren, muss es den Mitgliedern möglich sein, sich selbständig bei den Fahrgemeinschaften einzutragen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann einer Fahrgemeinschaft beitreten
 					\item Das angemeldete Mitglied kann einer Fahrgemeinschaft nicht erneut beitreten
-					\item Das angemeldete Mitglied erhält eine Fehlermeldung falls die Fahrgemeinschaft keine Kapazität mehr aufweisst
+					\item Das angemeldete Mitglied erhält eine Fehlermeldung falls die Fahrgemeinschaft keine Kapazität mehr aufweist
 					\end{enumerate}
 					\\ \hline
 	Abhängigkeiten 	&	\nameref{table:req_1}, \nameref{table:req_2}, \nameref{table:req_3}\\ \hline
@@ -665,7 +665,7 @@ Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der An
 	Name 			&	Informationen über Vereinsanlässe\\ \hline
 	Use Case 		&	\nameref{table:use_case_5}\\ \hline
 	Beschreibung 	&	Falls ein Anlass im System ist, muss das System dem Benutzer der App die Möglichkeit Informationen über Vereinsanlässe zu erhalten.\\ \hline
-	Begründung 		&	Über die App kann man die Informationen schnell und einfach abrufen, somit sollte den Anlässen mehr Beachtung geschenkt werden.\\ \hline
+	Begründung 		&	Über das App kann man die Informationen schnell und einfach abrufen, somit sollte den Anlässen mehr Beachtung geschenkt werden.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Der Benutzer erhält informationen über den ausgewählten Anlass
 					\item Der Benutzer sieht einen Hinweis, falls keine Anlässe vorhanden sind
