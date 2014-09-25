@@ -18,7 +18,7 @@ In diesem Projekt hat man die sieben Grundsätze aus \cite{test_soft_book} als L
 \item \textbf{Vollständiges Testen ist nicht möglich}: Es wurde solange getestet bis die Fehlerfindungsrate einen bestimmte Punkt unterschritten hatte
 \item \textbf{Mit dem Testen frühzeitig beginnen}: Die Tests für die neuen Funktionen wurden zur gleichen Zeit wie der Code, geschrieben
 \item \textbf{Häufung von Fehlern}: Wenn Fehler auftraten, dann wurde diese Komponente nach der Behebung nochmals intensiv getestet
-\item \textbf{Zunehmende Testresistenz (Pesticide paradoc)}: Als Änderungen am Code gemacht wurden, wurden die Tests erweitert bzw. angepasst
+\item \textbf{Zunehmende Testresistenz (Pesticide paradox)}: Als Änderungen am Code gemacht wurden, wurden die Tests erweitert bzw. angepasst
 \item \textbf{Testen ist abhängig vom Umfeld}: Dieses System ist nicht so sicherheitskritisch, wie etwa Systeme im Bank Umfeld, die Dienste werden jedoch rege benutzt, somit sollte die Testintensität in einem normalen Rahmen liegen.
 \item \textbf{Trugschluss: Keine Fehler bedeutet eine brauchbares System}: Die Stakeholder wurden schon bei der Mock-up Erstellung mit einbezogen und bekamen auch während der Entwicklung immer wieder einen Blick in den aktuellen Stand.
 \end{enumerate}
@@ -33,7 +33,7 @@ Es wurde festgelegt, dass das Projekt nicht mit der Implementation fertig ist, s
 Die Testphase des Backends begann nach dem lokalen Testing des Refactorings und der Produktiv Schaltung des Backends. Die Mitglieder wurden informiert, dass sie theoretisch keine grossen Änderungen feststellen sollten und sie sollten sich doch bitte bei negativen Abweichungen zur vorherigen Version sofort melden. Es wurden nur wenige Spezialfälle gemeldet, welche schnell behoben werden konnten.
 
 \subsubsection{App}
-Da das Freigeben der iOS App mehrere Tage benötigt, wurde die erste Testphase auf Android gemacht, damit man schneller reagieren konnte. Das App wurde hochgeladen und nur einigen Personen davon erzählt, nach kurzer Zeit gab es bereits über 10 Downloads. Das Feedback war gut und nur einige kleine Fehler wurden gefunden. Alle Fehler und ein paar kleine Verbesserungsvorschläge wurden sofort umgesetzt, getestet und dann eine neue Version hochgeladen. Grössere Anforderungen wurden erfasst und auf die kommenden Versionen verschoben. Als keine negativen Rückmeldungen mehr kamen und auch beim Nachfragen nichts mehr zum Vorschein kam, wurde die Testphase mit dem Einliefern des iOS Apps beendet.
+Da das Freigeben der iOS App mehrere Tage benötigt, wurde die erste Testphase auf Android gemacht. So konnte schneller Feedback eingeholgt werden. Das App wurde hochgeladen und nur wenige Personen wurden informiert. Nach wenigen Stunden gab es bereits über 10 Downloads. Das Feedback war gut, lediglich einige kleine Fehler wurden gefunden. Alle Fehler wurden behoben und ein paar kleine Verbesserungsvorschläge umgesetzt, getestet und dann in einer neuen Version hochgeladen. Grössere Anforderungen wurden erfasst, deren Umsetzung jedoch auf kommenden Versionen verschoben. Als keine negativen Rückmeldungen mehr kamen und auch beim Nachfragen nichts mehr zum Vorschein kam, wurde die Testphase mit dem Einliefern des iOS Apps beendet.
 
 \section{System- und Abnahmetest}
 Nach erfolgreichem Testing und Abschluss der Testphasen wurde für den Abnahmetest ein Testprotokoll erstellt, welches vorgängig im Systemtest schon durchgegangen wurde. Das Testprotokoll wurde danach dem Kunden übergeben und von diesem selber nochmals abgearbeitet.
@@ -41,72 +41,80 @@ Nach erfolgreichem Testing und Abschluss der Testphasen wurde für den Abnahmete
 \subsection{Testprotokoll}
 Das Testprotokoll basiert auf den Use Cases (siehe \ref{use_cases}) und den Anforderungen (siehe \ref{anforderungen}). Akzeptanz Kriterien mit UND- oder ODER-Verknüpfung wurden aufgesplittet, um sicher zu gehen, dass beide Bedingungen erfüllt sind.
 
-\begin{longtable}{ l | p{7cm} | l | l }
+%%\begin{longtable}{ l | p{7cm} | l | l }
+\begin{longtable}{>{\raggedright}m{1cm}m{7cm}m{3cm}m{2cm}}
 
-	\hline
-	\rowcolor{gray}
-	ID	&	Test			&	Herkunft			&	erfüllt / nicht erfüllt\\ \hline
+\caption[Testprotokoll]{\label{table:tests}Abkürzungsverzeichnis}\\ 
+\toprule
+\textbf{ID}&\textbf{Test}&\textbf{Herkunft}&\textbf{erfüllt / nicht erfüllt}\\ \midrule\addlinespace
+\endfirsthead
+\caption*{\textbf{Tabelle~\ref{table:tests} (Fortsetzung):} Testprotokoll}\\ \toprule
+\textbf{ID}&\textbf{Test}&\textbf{Herkunft}&\textbf{erfüllt / nicht erfüllt}\\ \midrule\addlinespace
+\endhead
+
+\bottomrule\multicolumn{2}{>{\small\raggedleft\arraybackslash}r}{\slshape Fortsetzung auf der nächsten Seite}\\
+\endfoot
+\bottomrule
+\endlastfoot	
+
+	\addlinespace
 	1a	&	Bei bekanntem Username und Password muss es dem Mitglied möglich sein, sich beim Backend anzumelden			
-				&	\nameref{table:req_1} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_1} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	1b	&	und dann erweiterte Möglichkeiten und Informationen zu erhalten.
-				&	\nameref{table:req_1} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_1} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	2a	&	Falls ein unbekannter Username eingegeben wurden kommt eine entsprechende Fehlermeldung.			
-				&	\nameref{table:req_1} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_1} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	2b	&	Falls ein falsche Passwort eingegeben wurden kommt eine entsprechende Fehlermeldung.			
-				&	\nameref{table:req_1} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_1} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	3	&	Das angemeldete Mitglied kann eine Fahrgemeinschaft eröffnen.		
-				&	\nameref{table:req_2} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_2} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	4a	&	Bei ungültigen Informationen kommt eine entsprechende Fehlermeldung
-				&	\nameref{table:req_2} 	&	nicht erfüllt\\ \hline
+				&	\nameref{table:req_2} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	4b	&	Bei nicht ausreichenden Informationen kommt eine entsprechende Fehlermeldung
-				&	\nameref{table:req_2} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_2} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	5	&	Das angemeldete Mitglied kann die Fahrgemeinschaften anzeigen lassen
-				&	\nameref{table:req_3} 	&	nicht erfüllt\\ \hline
+				&	\nameref{table:req_3} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	6	&	Das angemeldete Mitglied sieht einen Hinweis, falls es keine Fahrgemeinschaften gibt
-				&	\nameref{table:req_3} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_3} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	7	&	Das angemeldete Mitglied kann einer Fahrgemeinschaft beitreten
-				&	\nameref{table:req_4} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_4} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	8	&	Das angemeldete Mitglied kann einer Fahrgemeinschaft nicht erneut beitreten
-				&	\nameref{table:req_4} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_4} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	9	&	Das angemeldete Mitglied erhält eine Fehlermeldung falls die Fahrgemeinschaft keine Kapazität mehr aufweist
-				&	\nameref{table:req_4} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_4} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	10	&	Das angemeldete Mitglied kann sich für einen Anlass anmelden
-				&	\nameref{table:req_5} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_5} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	11	&	Das angemeldete Mitglied kann sich für einen Anlass nicht erneut anmelden
-				&	\nameref{table:req_5} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_5} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	12	&	Der Benutzer erhält informationen über den ausgewählten Anlass
-				&	\nameref{table:req_6} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_6} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	13	&	Der Benutzer sieht einen Hinweis, falls keine Anlässe vorhanden sind
-				&	\nameref{table:req_6} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_6} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	14	&	Das angemeldete Mitglied sieht die erweiterten Informationen zum Anlass
-				&	\nameref{table:req_7} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_7} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	15	&	Nicht angemeldete Mitglieder sehen die erweiterten Informationen zum Anlass nicht
-				&	\nameref{table:req_7} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_7} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	16a	&	Der Benutzer erhält Informationen über die verschiedenen Vereine
-				&	\nameref{table:req_8} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_8} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	16b	&	Der Benutzer erhält Informationen über die verschiedenen Riegen
-				&	\nameref{table:req_8} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_8} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	17	&	Der Benutzer kann die aktuellen Berichte lesen
-				&	\nameref{table:req_9} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_9} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	18	&	Das angemeldete Mitglied erhält die Push-Nachrichten
-				&	\nameref{table:req_10} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_10} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	19a	&	Ein Nutzer mit einem Android Mobiltelefon kann die App öffnen
-				&	\nameref{table:req_nf_1} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_nf_1} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	19b	&	Ein Nutzer mit einem Android Mobiltelefon kann die App verwenden
-				&	\nameref{table:req_nf_1} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_nf_1} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	20a	&	Ein Nutzer mit einem iPhone kann die App öffnen
-				&	\nameref{table:req_nf_2} 	&	erfüllt\\ \hline
+				&	\nameref{table:req_nf_2} 	&	erfüllt\\ \addlinespace\hline \addlinespace
 	20b	&	Ein Nutzer mit einem iPhone kann die App verwenden
-				&	\nameref{table:req_nf_2} 	&	erfüllt
+				&	\nameref{table:req_nf_2} 	&	erfüllt\\ \addlinespace\hline \addlinespace
+	21	&	Das System zeigt 'keine Internetverbindung vorhanden' an
+				&	Use Case UC-1, UC-2, UC-4, UC-5
+										&	erfüllt
 
 \end{longtable}
 
-\newpage
 \section{Abnahme Protokoll}
-Nach dem erfolgreichen Abnahmetest wurde vom Kunde das Abnahme Protokoll unterzeichnet.
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.55]{images/word/Abnahmeprotokoll.pdf}
-\caption{Abnahmeprotokoll}
-\label{fig:abnahmeprotokoll}
-\end{figure}
+Nach dem erfolgreichen Abnahmetest wurde vom Kunden das Abnahme Protokoll unterzeichnet (siehe Anhang \ref{anhang_abnahmeprotokoll}).

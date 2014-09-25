@@ -26,7 +26,7 @@ Eine IDE, um welche man sicher nicht herum kommt, ist XCode, sie wird benötigt 
 
 
 \subsection{Versionierung}
-Versionieriung ist in der Softwareentwicklung ein sehr wichtiges Thema, früher war das ein manueller Task, heute gibt es verschiedenste Tools, welche einen dabei unterstützen. In diesem Projekt wurde git (ref) verwendet, was eines der verbreitetsten Versionierungstools ist. Das Remote Repository wurde auf Github (ref) erstellt. Es wurde geschaut, dass der Code jeden Abend auf das Repository geladen wurde, damit man auch gleich ein Backup hat.
+Versionieriung ist in der Softwareentwicklung ein sehr wichtiges Thema, früher war das ein manueller Task, heute gibt es verschiedenste Tools, welche einen dabei unterstützen. In diesem Projekt wurde git (siehe \cite{git}) verwendet, was eines der verbreitetsten Versionierungstools ist. Das Remote Repository wurde auf Github (siehe \cite{github_app}) erstellt. Es wurde geschaut, dass der Code jeden Abend auf das Repository geladen wurde, damit man auch gleich ein Backup hat.
 
 \begin{figure}[h]
 \centering
@@ -37,7 +37,7 @@ Versionieriung ist in der Softwareentwicklung ein sehr wichtiges Thema, früher 
 
 \newpage
 \subsection{SDK - Software Development Kit}
-Für die Entwicklung der App auf den beiden Plattformen Android und iOS wurden die dazugehörigen SDKs gebraucht, um die Applikation in einem Emulator laufen zu lassen. Vor allem bei Android, mit seinen diversen Gerätevariationen, macht das Sinn, weil man beim Emulator jedes beliebige Device emulieren kann.
+Für die Entwicklung der App auf den beiden Plattformen Android und iOS wurden die dazugehörigen SDKs gebraucht, um die Applikation in einem Emulator laufen zu lassen. Vor allem bei Android, mit seinen diversen Gerätevariationen, macht das Sinn, weil man mit dem Emulator jedes beliebige Device emulieren kann.
 
 \begin{figure}[h]
 \centering
@@ -48,14 +48,14 @@ Für die Entwicklung der App auf den beiden Plattformen Android und iOS wurden d
 
 \FloatBarrier
 \subsection{Webbrowser}
-Das App wurde nicht nur auf Emulatoren getestet, sondern auch in Browsern. Dazu wurde auf Windows mit dem Google Chrome und auf Mac OSX mit Safari gearbeitet.
+Das App wurde nicht nur auf Emulatoren getestet, sondern auch in Browsern. Dazu wurde auf Windows mit Google Chrome und auf Mac OSX mit Safari gearbeitet.
 
 \subsection{Technische Geräte}
 Push-Nachrichten können weder auf Emulatoren noch in Webbrowsern getestet werden, dafür benötigt man ein physisches Gerät. Das App wurde auf einem iPhone 4S, iPhone 5S, iPad und Samsung Ace getestet. Für die Entwicklung wurde ein Windows PC verwendet. Damit XCode benutzt werden konnte, wurde zusätzlich noch auf einem iMac gearbeitet.
 
 \newpage
 \subsection{Testen - Analysieren}
-Neben den Tests an Geräten, Emulatoren wurden auch noch automatisierte Tests und Analysen durchgeführt. Für die automatisierten Tests im Backend wurde PHPunit (siehe \cite{phpunit}) verwendet und für die statische Code Analyse wurde Sonar (siehe \cite{sonar}) mit dem PHP und Web Plugin (siehe Abbildung \ref{fig:sonar_backend} und \ref{fig:sonar_app}) aufgesetzt und verwendet. Damit das API direkt getestet werden konnte, wurde das Chrome App Advanced REST client (siehe Abbildung \ref{fig:advanced_rest_client}) verwendet.
+Zusätzlich zu den manuellen Tests an Geräten und  Emulatoren wurden auch automatisierte Tests und Analysen durchgeführt. Für die automatisierten Tests im Backend wurde PHPunit (siehe \cite{phpunit}) verwendet und für die statische Code Analyse wurde Sonar (siehe \cite{sonar}) mit dem PHP und Web Plugin (siehe Abbildung \ref{fig:sonar_backend} und \ref{fig:sonar_app}) aufgesetzt und verwendet. Damit das API direkt getestet werden konnte, wurde das Chrome App Advanced REST client (siehe Abbildung \ref{fig:advanced_rest_client}) verwendet.
 
 \begin{figure}[h]
 \centering
@@ -97,7 +97,7 @@ Das Menü (siehe Abbildung \ref{fig:navigation}) der App wurde sehr schlicht geh
 
 \FloatBarrier
 \subsubsection{News}
-Die News Seite (siehe Abbildung \ref{fig:app_news}) ist zu gleich auch die Startseite, wenn das App aufgemacht wird. Auf ihr werden die neuesten drei Berichte angezeigt. Das System ist wie auf der Homepage, die Elemente enthalten nur einen Einleitungstext und erst wenn man auf das Element klickt kann man den ganzen Bericht lesen. Dies hat den einfachen Grund, dass die Berichte zum Teil sehr lange sind und dann die anderen Berichte verloren gehen. Bei angemeldeten Mitgliedern wird zusätzlich noch die nächste Veranstaltung angezeigt, damit man sich sofort an- bzw. abmelden kann und wichtige Informationen nachschlagen kann.
+Die News Seite (siehe Abbildung \ref{fig:app_news}) ist zugleich auch die Startseite, wenn das App aufgemacht wird. Auf ihr werden die neusten drei Berichte angezeigt. Der Aufbau ist wie auf der Homepage, die Elemente enthalten lediglich einen Einleitungstext. Erst wenn man auf das Element klickt kann man den ganzen Bericht lesen. Dies hat den einfachen Grund, dass die Berichte zum Teil sehr lange sind und dann die anderen Berichte verloren gehen. Bei angemeldeten Mitgliedern wird zusätzlich noch die nächste Veranstaltung angezeigt, damit man sich sofort an- bzw. abmelden kann und wichtige Informationen nachschlagen kann.
 
 \begin{figure}[h]
 \centering
@@ -148,7 +148,7 @@ Wenn auf eine Veranstaltung geklickt wird, geht eine Detailansicht (siehe Abbild
 \newpage
 \FloatBarrier
 \subsubsection{Fahrgemeinschaften}
-Bei jeder Veranstaltung können Fahrgemeinschaften erstellt werden, welche dann in der Übersicht (siehe Abbildung \ref{fig:app_carpools}) angezeigt werden. Man sieht den Namen, den Fahrer und dessen Wohnort. Zusätzlich sieht man, wie viele Plätze es noch frei sind oder ob man bereits angemeldet ist. In der Detailansicht (siehe Abbildung \ref{fig:app_carpool_detail}) kann man sich anmelden und erhält eine Liste der Mitfahrenden.
+Bei jeder Veranstaltung können Fahrgemeinschaften erstellt werden, welche dann in der Übersicht (siehe Abbildung \ref{fig:app_carpools}) angezeigt werden. Man sieht den Namen, den Fahrer und dessen Wohnort. Zusätzlich sieht man, wie viele Plätze noch frei sind oder ob man bereits angemeldet ist. In der Detailansicht (siehe Abbildung \ref{fig:app_carpool_detail}) kann man sich anmelden und erhält eine Liste der Mitfahrenden.
 \begin{figure}[ht]
 \centering
 \subfigure[Fahrgemeinschaften]{
@@ -205,7 +205,7 @@ In den Einstellungen kann sich der Benutzer nicht nur einloggen (siehe Abbildung
 \newpage
 \FloatBarrier
 \subsection{Javascript Funktionen}
-Die Javascript Funktionen wurden möglichst generisch gewählt, damit man sie an verschiedenen Orten wiederverwenden kann. Mit diesem Ansatz ist man bei den verschiedenen Veranstaltungsseiten mit wenig Code ausgekommen. Es war auch einfach, die nächste bevorstehende Veranstaltung auf der Startseite gleich anzuzeigen, wie in den anderen Seiten. Die Funktionen wurden in unterschiedliche Files geschrieben, welche nach ihrem Zweck benannt wurden.
+Die Javascript Funktionen wurden möglichst generisch gewählt, damit man sie an verschiedenen Orten wiederverwenden kann. Mit diesem Ansatz ist man bei den verschiedenen Veranstaltungsseiten mit wenig Code ausgekommen. Es war auch einfach, die nächste bevorstehende Veranstaltung auf der Startseite gleich anzuzeigen, wie auf den anderen Seiten. Die Funktionen wurden in unterschiedliche Files geschrieben, welche nach ihrem Zweck benannt wurden.
 \begin{itemize}
 \item carpool.js: an- und abmelden bei Fahrgemeinschaften, anzeigen von Fahrgemeinschaften
 \item help.js:  Datum formatieren,  Listen-Elemente erstellen, Navigationselemente
@@ -220,8 +220,8 @@ Die Javascript Funktionen wurden möglichst generisch gewählt, damit man sie an
 Da das Backend nur über eine HTTP-Verbindung verfügte und die Anmeldedaten nicht im localStorage  gespeichert werden sollten, wurde darauf verzichtet, die Anmeldedaten bei jeder Anfrage an das Backend mitzusenden. Bei der Anmeldung wird die Mitglieder-ID gespeichert und bei einer Anfrage mitgeteilt. In einem späteren Projekt sollte diese Lösung durch ein Session-ID abgelöst werden.
 
 \subsection{Provisioning Prozesse}
-Die Entwicklung des Apps ist das eine, die Bereitstellung zum Download das andere. Phonegap hilft beim Provisioning vor allem bei Android, hier erstellt es, richtig konfiguriert, ein signiertes APK-Paket, welches in der Google Play Developer Console hochgeladen werden kann. Zuerst muss man sich jedoch einen Developer Account erstellen, danach kann man die Beschreibung und die Screenshots für das App hochladen. Das ganze dauert etwa 10 Minuten und 1 Stunden nach dem Absenden hat man sein App in Google Play. Es empfiehlt sich die App noch mit eine Absender-ID zu verknüpfen, damit man auch Statistiken über die Downloadzahlen sieht. (siehe dazu auch \cite{android_prov})\\
-Bei Apple sieht das etwas anders aus, Phonegap kann kein Paket erstellen, es erstellt lediglich das Projekt. Diese Projekt muss man dann in XCode öffnen und von dort aus das Paket erstellen. Doch zuerst muss man einen Developer Account haben, diesen besitzt man wahrscheinlich bereits, da man sonst nicht auf realen Geräten testen kann, zusätzlich muss man ein Distribution Zertifikate erstellen und in XCode hinzufügen. Danach muss man in iTunes Connect neben den gleiche Informationen wie bei Android, noch einige Angaben zu den Inhalten des Apps machen. Des Weiteren muss man Review Informationen bereitstellen, dass heisst einen Test Benutzer und Informationen zum Entwicklung angeben. Erst wenn das App erfasst wurde, kann man in XCode ein Archiv erstellen und dieses direkt zu iTunes Connect hochladen. Nun werden schon die ersten Tests durchgeführt, ob zum Beispiel die Versionsnummern übereinstimmen und ob für jedes unterstütze Gerät Screenshots erfasst wurden. Falls dies nicht der Fall ist, wird das App abgelehnt und man muss die Dinge beheben. An diesem Punkt beginnt das warten, die durchschnittliche Review-Zeit beträgt 8 Tage. (siehe dazu auch \cite{apple_prov_apple} und \cite{apple_prov_ralf})
+Die Entwicklung des Apps ist das eine, die Bereitstellung zum Download das andere. Phonegap hilft beim Provisioning vor allem bei Android. Es erstellt, richtig konfiguriert, ein signiertes APK-Paket, welches in der Google Play Developer Console hochgeladen werden kann. Zuerst muss man jedoch einen Developer Account eröffnen. Anschliessend kann man die Beschreibung und die Screenshots für das App hochladen. Das ganze dauert nur wenige Minuten, eine Stunde nach dem Absenden findet man sein App in Google Play. Es empfiehlt sich, das App noch mit eine Absender-ID zu verknüpfen, damit man Statistiken über die Downloadzahlen ansehen kann. (siehe dazu auch \cite{android_prov})\\
+Bei Apple sieht das etwas anders aus: Phonegap kann kein Paket erstellen, es erstellt lediglich das Projekt. Das Projekt muss man dann in XCode öffnen und von dort aus das eigentliche Paket erstellen. Auch hier benötigt man einen Developer Account, den man wahrscheinlich bereits besitzt, da man ihn zum Testen auf realen Geräten benötigt. Zusätzlich muss man ein Distribution Zertifikate erstellen und in XCode hinzufügen. Danach muss man in iTunes Connect noch einige Angaben zu den Inhalten des Apps machen. Des Weiteren muss man Review Informationen bereitstellen, dass heisst einen Test Benutzer und Informationen zur Entwicklung angeben. Erst wenn das App erfasst wurde, kann man in XCode ein Archiv erstellen und dieses direkt zu iTunes Connect hochladen. Nun werden schon die ersten Tests durchgeführt, ob zum Beispiel die Versionsnummern übereinstimmen und ob für jedes unterstütze Gerät Screenshots erfasst wurden. Falls dies nicht der Fall ist, wird das App abgelehnt und man muss die Dinge beheben. An diesem Punkt beginnt das Warten - die durchschnittliche Review-Zeit beträgt 8 Tage. (siehe dazu auch \cite{apple_prov_apple} und \cite{apple_prov_ralf})
 
 \FloatBarrier
 \section{Backend}\label{impl_backend}
@@ -232,38 +232,38 @@ In diesem Unterkapitel wird kurz der vorgefundene Ist-Zustand beschrieben und da
 \subsubsection{Ist-Zustand}
 Am Anfang dieses Projekts war in jeder Klasse HTML- mit PHP-Code vermischt und SQL-Abfragen waren überall verstreut. Dies machte es schwierig den Code zu warten. Zusätzlich wurde jede save-, update-, load- und delete-Anweisung von Objekten, wenn es denn solche gab, selber implementiert, was sehr mühsam und unflexibel war. Zudem erweiterten ähnliche Objekte zwar eine Super-Klasse, teilten sich aber keine Tabelle und hatten somit auch verschiedene ID-Sequenzen.\\
 
-Schnell wurde klar, dass man nicht mit diesem Stand ein API aufbauen sollte, welches dann von dem App angesprochen wird. Um den Code besser zu strukturieren, übersichtlicher und vor allem auch testbar zu machen, wurde ein Refacotring (siehe \cite{feathers2004working}) durchgeführt. Ausgehend von der Strategie für das Refactoring wurde Doctrine in das Projekt eingebunden. Doctrine ist, wie schon im Kapitel \ref{arch_backend} erklärt, ein ORM, welches richtig eingesetzt viel Arbeit abnehmen kann. Damit man Doctrine jedoch sinnvoll verwenden konnte, benötigte es zuerst einige Zeit für die Analyse und die Umstellungen.
+Schnell wurde klar, dass man mit diesem Stand kein API aufbauen sollte, welches dann von dem App angesprochen wird. Um den Code besser zu strukturieren, übersichtlicher und vor allem auch testbar zu machen, wurde ein Refactoring (siehe \cite{feathers2004working}) durchgeführt. Ausgehend von der Strategie für das Refactoring wurde Doctrine in das Projekt eingebunden. Doctrine ist, wie schon im Kapitel \ref{arch_backend} erklärt, ein ORM, welches richtig eingesetzt viel Arbeit abnehmen kann. Damit man Doctrine jedoch sinnvoll verwenden konnte, benötigte es zuerst einige Zeit für die Analyse und die Umstellungen.
 
 \subsubsection{Refactoring}
-Zuerst wurde geschaut, was zusammengefasst werden konnte. Alle Entities, bei welchen man sich anmelden kann, wurden ganz getreu dem 'Don’t repeat yourself' Prinzip als SigninObject zusammengefasst, da sie sehr viele gleiche Attribute und Funkionen haben. Im gleiche Zug wurde die Datenbank normalisiert, da zum Teil gleiche Ortnamen in verschiedenen Tabellen vorhanden waren. Da die einzelnen Typen jedoch auch spezifische Attribute haben, wurde eine Joined-Inheritance (siehe \cite{inheritance_java} und \cite{inheritance_doctrine}) angewendet, welche von vielen ORMs unterstützt wird. Die Joined-Inheritance basiert auf einer Grundtabelle, welche alle gemeinsamen Attribute beinhaltet und einer spezifischen Tabelle, welche die anderen Attribute beinhaltet. Die Tabellen werden über eine DiscriminatorColumn miteinander verknüpft. In diesem Konstrukt wurde auch ein Strategy-Pattern (siehe \cite{gof_book}) verwendet, um verschiedene Informationen im Kalender\footnote{Der Kalender (nicht in diesem Projekt entwickelt) kann über ein ics-File auf Geräten eingebunden werden.} anzuzeigen.\\
+Zuerst wurde geschaut, was zusammengefasst werden konnte. Alle Entities, bei welchen man sich anmelden kann, wurden ganz getreu dem 'Don’t repeat yourself' Prinzip als SigninObject zusammengefasst, da sie sehr viele gleiche Attribute und Funkionen haben. Im gleichen Zug wurde die Datenbank normalisiert, da zum Teil gleiche Ortnamen in verschiedenen Tabellen vorhanden waren. Da die einzelnen Typen jedoch auch spezifische Attribute haben, wurde eine Joined-Inheritance (siehe \cite{inheritance_java} und \cite{inheritance_doctrine}) angewendet, welche von vielen ORMs unterstützt wird. Die Joined-Inheritance basiert auf einer Grundtabelle, welche alle gemeinsamen Attribute beinhaltet und einer spezifischen Tabelle, welche die anderen Attribute beinhaltet. Die Tabellen werden über eine DiscriminatorColumn miteinander verknüpft. In diesem Konstrukt wurde auch ein Strategy-Pattern (siehe \cite{gof_book}) verwendet, um verschiedene Informationen im Kalender\footnote{Der Kalender (nicht in diesem Projekt entwickelt) kann über ein ics-File auf Geräten eingebunden werden.} anzuzeigen.\\
 
 Dieser Umbau hat den grossen Vorteil, dass für jeden Veranstaltungstyp, sei das ein Training, Match, Sitzung, Anlass oder Helfereinsatz, die gleiche Anmeldefunkion verwendet werden kann. Der Umbau machte sich auch bei der Entwicklung der Fahrgemeinschaftsverwaltung bezahlt, da diese nur ein mal implementiert werden musste.\\
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{images/visio/datenbankdiagramm_alt.png}
+\includegraphics[scale=0.7]{images/visio/datenbankdiagramm_alt.png}
 \caption{Datenbankdiagramm alt}
 \label{fig:db_schema_alt}
 \end{figure}
 
-Das Datenbankdiagramm (siehe Abbildung \ref{fig:db_schema_alt}) zeigt einen kleinen Ausschnitt aus dem Datenbank Schema von früher. Jeder Veranstaltungstyp hatte seine eigene Ortstabelle und seine eigene Verknüpfungstabelle für die Anmeldungen. Wenn man sich nun vorstellt, dass dieses Konstrukt für die fünf verschiedenen Typen vorhanden war, kann man sich denken, wie viel Tabellen schon bereits nur für die Anmeldungen vorhanden waren. Nach dem Refactoring sah das Datenbankdiagramm (siehe Abbildung \ref{fig:db_schema_neu}) etwas einfacher aus, die Orte waren nun in einer Tabelle, die Anmeldungen auch und alle gemeinsamen Attribute wurden in der TerminObjekte-Tabelle gespeichert.
+Das Datenbankdiagramm (siehe Abbildung \ref{fig:db_schema_alt}) zeigt einen kleinen Ausschnitt aus dem Datenbank Schema von früher. Jeder Veranstaltungstyp hatte seine eigene Ortstabelle und seine eigene Verknüpfungstabelle für die Anmeldungen. Wenn man sich nun vorstellt, dass dieses Konstrukt für die fünf verschiedenen Typen vorhanden war, kann man sich denken, wie viel Tabellen schon bereits nur für die Anmeldungen vorhanden waren. Nach dem Refactoring sah das Datenbankdiagramm (siehe Abbildung \ref{fig:db_schema_neu}) etwas einfacher aus. Die Orte waren nun in einer Tabelle, die Anmeldungen auch und alle gemeinsamen Attribute wurden in der TerminObjekte-Tabelle gespeichert.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{images/visio/datenbankdiagramm_neu.png}
+\includegraphics[scale=0.7]{images/visio/datenbankdiagramm_neu.png}
 \caption{Datenbankdiagramm neu}
 \label{fig:db_schema_neu}
 \end{figure}
 
 \FloatBarrier
-Durch das Refactoring werden auch weniger SQL-Statments direkt in den Webseiten abgesetzt, es wird vermehrt\footnote{Nur an Orten, wo die Objekte innerhalb dieses Projektes angefasst wurden} mit Objekte gearbeitet. Ein Repository liefert die gewünschten Objekte zur Webseite, die Abfrage Logik ist somit zentralisiert. Das Repository arbeitet mit einer Object Query Language (OQL), bei welcher man nicht über die Spalten der Tabelle Werte abfragt, sondern über Attribute des Objekts. Eine Änderung des Spaltennamens hat somit keine grössere Auswirkung als eine kleine Änderung in der Entity.\\
+Durch das Refactoring werden auch weniger SQL-Statements direkt in den Webseiten abgesetzt, es wird vermehrt\footnote{Nur an Orten, wo die Objekte innerhalb dieses Projektes angefasst wurden} mit Objekten gearbeitet. Ein Repository liefert die gewünschten Objekte zur Webseite, die Abfrage Logik ist somit zentralisiert. Das Repository arbeitet mit einer Object Query Language (OQL), bei welcher man nicht über die Spalten der Tabelle Werte abfragt, sondern über Attribute des Objekts. Eine Änderung des Spaltennamens hat somit keine grössere Auswirkung als eine kleine Änderung in der Entity.\\
 
-Die Struktur sieht nach der Implementierung von Docrine, wie folgt aus:
+Die Struktur sieht nach der Implementierung von Doctrine wie folgt aus:
 \begin{itemize}
 \item Entity: Attribute, Getter und Setter
-\item Enity-Manager: speichert, löscht und lödt Entities oder gibt das Repository der Entity zurück
+\item Enity-Manager: speichert, löscht und lädt Entities oder gibt das Repository der Entity zurück
 \item Repository: spezifische Abfrage-Logik
-\item Services\footnote{Services werden nicht von Doctrine zur Verfügung gestellt, wurden aber wegen ... implementiert (ref)}: Business-Logik
+\item Services\footnote{Services werden nicht von Doctrine vorgegeben, wurden aber als eine weitere Schicht sogenannte Verarbeitungsschicht implementiert}: Business-Logik
 \end{itemize}
 
 \newpage
@@ -279,20 +279,20 @@ Das Refactoring war zwar sehr zeitaufwendig, hat jedoch bei einigen Implementati
 
 
 \subsection{Push-Nachrichten}
-Das Versenden von Push-Nachrichten funktioniert bei iOS und Android ähnlich, jedoch sind die Vorbedingungen sehr unterschiedlich. Bei Android wird ein API-Key gebraucht, diesen kann man in der Google Developers Console erstellen kann. Dazu muss man ein Projekt erstellen und das 'Google Cloud Messaging for Android' aktivieren. Nun kann man einen neuen API-Key erstellen, welcher dann im Backend benötigt wird. Die Projektnummer ist zugleich die Sender ID und wird bei der Registrierung des produktiven Apps über Phonegap benötigt. (siehe dazu \cite{android_push_android} und \cite{devgirl_push_android})\\
+Das Versenden von Push-Nachrichten funktioniert bei iOS und Android ähnlich, jedoch sind die Vorbedingungen sehr unterschiedlich. Bei Android wird ein API-Key verwendet, welchen man in der Google Developers Console erstellen kann. Dazu muss man ein Projekt erstellen und das 'Google Cloud Messaging for Android' aktivieren. Nun kann man einen neuen API-Key erstellen, welcher dann im Backend benötigt wird. Die Projektnummer ist zugleich die Sender ID und wird bei der Registrierung des produktiven Apps über Phonegap benötigt. (siehe dazu \cite{android_push_android} und \cite{devgirl_push_android})\\
 
 
-Bei iOS ist das etwas anders, als erstes braucht man ein Zertifikat, da nur ein Server mit diesem Zertifikat Push-Nachrichten an den APNS senden darf. Es gibt ein Zertifikat für den Entwicklungsserver und eines für den produktiven Server, über den Entwicklungsserver können nur verknüpfte\footnote{um das App auf einem Gerät zu testen, muss man es zuerst mit dem Developer Account verknüpfen} Geräte im Entwicklungsmodus erreicht werden. Zusätzlich muss für das Testen der Push-Nachrichten noch ein iOS App Development Provisioning Profile erstellt werden, welches dann auch mit dem Developer Account und den Test Geräten verknüpft wird. Bei der Erstellung der Zertifikate ist es wichtig, dass die App ID mit dem Projekt übereinstimmt, ansonsten kommen die Push-Nachrichten nicht an. Die Registrierung des produktiven Apps über Phonegap ist ganz einfach und nicht Projekt spezifisch. (siehe dazu \cite{ios_push})\\
+Bei iOS ist das etwas anders, als erstes braucht man ein Zertifikat, da nur ein Server mit diesem Zertifikat Push-Nachrichten an den APNS senden darf. Es gibt ein Zertifikat für den Entwicklungsserver und ein weiteres für den produktiven Server. Über den Entwicklungsserver können nur verknüpfte\footnote{um das App auf einem Gerät zu testen, muss man es zuerst mit dem Developer Account verknüpfen} Geräte im Entwicklungsmodus erreicht werden. Zusätzlich muss für das Testen der Push-Nachrichten noch ein iOS App Development Provisioning Profile erstellt werden, welches dann auch mit dem Developer Account und den Test Geräten verknüpft wird. Bei der Erstellung der Zertifikate ist es wichtig, dass die App ID mit dem Projekt übereinstimmt, ansonsten kommen die Push-Nachrichten nicht an. Die Registrierung des produktiven Apps über Phonegap ist ganz einfach und nicht Projekt spezifisch. (siehe dazu \cite{ios_push})\\
 
 Nach der Registrierung bei dem jeweiligen Servicen schickt das App den Geräteschlüssel mit der Mitglieder ID ans Backend, welches den Schlüssel mit der Verknüpfung zum Mitglied speichert. Nun hat man den Schlüssel, welchen man für das gezielt Versenden von Push-Nachrichten benötigt.
 \begin{figure}[ht]
 \centering
 \subfigure[Registration]{
-  \includegraphics[scale=0.4]{images/visio/push_notification_flow_reg.png}
+  \includegraphics[scale=0.7]{images/visio/push_notification_flow_reg.png}
   \label{fig:push_notification_flow_reg}
 }
 \subfigure[Mitteilung versenden]{
-  \includegraphics[scale=0.4]{images/visio/push_notification_flow_send.png}
+  \includegraphics[scale=0.7]{images/visio/push_notification_flow_send.png}
   \label{fig:push_notification_flow_send}
 }
 \label{fig:app_settings}

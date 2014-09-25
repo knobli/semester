@@ -10,7 +10,7 @@
 
 \chapter{Anforderungsdokument}\label{chap.anforderungsdokument}
 
-Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich detaillierte Anforderungen zu erfassen, einerseits verhindert das mögliche Missverständnis, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
+Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich, detaillierte Anforderungen zu erfassen. Einerseits verhindert das mögliche Missverständnisse, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
 
 \section{Übersicht}\label{anf_uebersicht}
 
@@ -24,7 +24,7 @@ Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten
 \label{fig:systemkontext}
 \end{figure}
 
-Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen, nämlich die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und nicht zu vergessen den Mitgliedern beeinflusst.
+Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
 
 \subsection{Systemumgebung}\label{systemumgebung}
 Die Systemumgebung definiert die Ausgangslage für das Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein PHP Backend und interaktive Webseiten lief. Die Daten wurden in eine MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
@@ -37,7 +37,7 @@ Die Systemumgebung definiert die Ausgangslage für das Projekt. Am Anfang des Pr
 
 \FloatBarrier
 \subsection{Annahmen}\label{annahmen}
-Es wurden keine Annahmen getroffen, durch die enge Zusammenarbeit mit dem Turnverein, konnten alle offenen Punkte in kürzester Zeit geklärt werden.
+Es wurden keine Annahmen getroffen. Durch die enge Zusammenarbeit mit dem Turnverein, konnten alle offenen Punkte in kürzester Zeit geklärt werden.
 
 \newpage
 \subsection{Stakeholder}\label{stakeholder}
@@ -64,12 +64,12 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 	Nicht-Mitglieder					&	Die Nicht-Mitglieder erhoffen sich schnelle und gute Informationen über Anlässe und die Vereine selbst.
 												& 	Neutral	&	Niedrig	\\ \hline
   \end{tabular}
-   \caption{Stakeholder}\label{table:stakeholder}
+   \caption{Liste der evaluierten Stakeholder}\label{table:stakeholder}
 \end{table}
 
 \newpage
 \section{Anforderungen}\label{sec.anfoderungen}
-Bei dem Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet einen bereits klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man nun aber mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden anhand einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
+Beim Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet bereits einen klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden auf der Grundlage einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
 
 \subsection{Use Cases}\label{use_cases}
 Das Use Case Diagramm (siehe Abbildung \ref{fig:use_case}) zeigt zwei Akteure, Mitglieder und Nicht-Mitglieder und sechs Use Cases, welche in diesem Projekt umgesetzt wurden.
@@ -349,10 +349,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\end{enumerate}
 					\\ \hline
 	Alternativszenarien	&	-\\ \hline
-	Ausnahmeszenarien&	\begin{enumerate}
-					\item[5a] Das System zeigt 'keine Internetverbindung vorhanden' an
-					\end{enumerate}
-					\\ \hline
+	Ausnahmeszenarien&	-\\ \hline
 	Mockups	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_vereine}
   \end{tabular}
    \caption{Use Case UC-6: Informationen zu Vereinen anzeigen}\label{table:use_case_6}
@@ -363,7 +360,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden Mockups von den verschiedenen Seiten erstellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle Typen sehr ansprechend. Die Mockups wurden in einer kleinen Gruppe erstellt und die Use Cases dienten als Vorlage. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den Mockups wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Die Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
 
 \subsubsection{Navigation - Einstellungen}\label{mockup_navigation_settings}
-Die Navigation und die Einstellungen sind die Grundstruktur der App und deshalb wurden sie zuerst erstellt.
+Die Navigation und die Einstellungen sind die Grundstruktur der App und wurden deshalb zuerst erstellt.
 \begin{figure}[ht]
 \centering
 \subfigure[Navigation]{
@@ -518,14 +515,14 @@ Alle Anforderungen wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table
 \end{table}
 
 
-Die Beschreibung der Anforderungen wurden zusätzlich mit einer Satzschablone (siehe Abbildung \ref{fig:satzschablone}) aus \cite{req_eng_book} erstellt. Dies hat den Vorteil, dass die Anforderungen normiert und exakt da herkommen.
+Die Beschreibung der Anforderungen wurden zusätzlich mit einer Satzschablone (siehe Abbildung \ref{fig:satzschablone}) aus \cite{req_eng_book} erstellt. Dies hat den Vorteil, dass die Anforderungen normiert und exakt daher kommen.
 \begin{figure}[h]
 \includegraphics{images/anforderungen/satzschablone.png}
 \caption{Satzschablone}
 \label{fig:satzschablone}
 \end{figure}
 \FloatBarrier
-Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der Anforderungen auszudrücken.
+Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um die Wichtigkeit der Anforderungen auszudrücken.
 
 \newpage
 \FloatBarrier
@@ -568,7 +565,7 @@ Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der An
 	Name 			&	Fahrgemeinschaft erstellen\\ \hline
 	Use Case 		&	\nameref{table:use_case_1}\\ \hline
 	Beschreibung 	&	Falls das Mitglied angemeldet ist, muss das System dem besagten Mitglied die Möglichkeit bieten über ein Formular eine neue Fahrgemeinschaft zu eröffnen.\\ \hline
-	Begründung 		&	Seit einiger Zeit wird vermehrt der Vereins-Chat mit endlosen Diskussionen für Fahrgemeinschaftsorganisationen gebraucht, was einige Mitglieder stört und auch nicht der Sinn und Zweck dieses Chats ist. Jedes Mitglied sollte über das App die Möglichkeit haben seine Fahrdienste zur Verfügung zu stellen.\\ \hline
+	Begründung 		&	Seit einiger Zeit wird vermehrt der Vereins-Chat mit endlosen Diskussionen für Fahrgemeinschaftsorganisationen verwendet, was einige Mitglieder stört und auch nicht der Sinn und Zweck dieses Chats ist. Jedes Mitglied sollte über das App die Möglichkeit haben seine Fahrdienste zur Verfügung zu stellen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann eine Fahrgemeinschaft eröffnen
 					\item Bei ungültigen oder nicht ausreichenden Informationen kommt eine entsprechende Fehlermeldung
@@ -713,7 +710,7 @@ Die Abstufungen muss, sollte und wird werden verwendet um die Wichtigkeit der An
 	Name 			&	Informationen über Vereine und Riegen\\ \hline
 	Use Case 		&	\nameref{table:use_case_6}\\ \hline
 	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten Informationen über die verschiedenen Vereine und Riegen zu erhalten.\\ \hline
-	Begründung 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. Jeder kann somit aktuelle Trainingszeiten und Inhalte der Trainings anschauen und erhält Kontaktinformationen.\\ \hline
+	Begründung 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. Jeder kann aktuelle Trainingszeiten und Inhalte der Trainings anschauen und erhält Kontaktinformationen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Der Benutzer erhält Informationen über die verschiedenen Vereine und Riegen
 					\end{enumerate}

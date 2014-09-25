@@ -55,7 +55,7 @@
 \usepackage[super,square]{natbib} %für BibTeX Literaturverzeichnis
 \usepackage{amsmath}
 \usepackage[section]{placeins}
-
+\usepackage{booktabs}
 
 
 
@@ -106,6 +106,9 @@
 \definecolor{lred}{RGB}{127,0,85}
 \definecolor{lblue}{RGB}{42,0,255}
 
+% footnote layout optimization
+\deffootnote[1.25em]{1.25em}{1.25em}{\textsuperscript{\normalfont\thefootnotemark\,}}
+
 %***********************************************************************
 % listing
 %***********************************************************************
@@ -134,6 +137,9 @@
 		xleftmargin=0.5cm,
 		xrightmargin=0.5cm
 }
+
+% Trennmuster
+\hyphenation{Back-end}
 
 \lstloadlanguages{C++}
 
