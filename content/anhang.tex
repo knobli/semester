@@ -14,7 +14,20 @@
 \appendix
 \chapter{Anhang}\label{chap.anhang}
 
+\section{Verzeichnisse}\label{verzeichnisse}
 
+ \bibliography{bibtex/literatur}
+ \addcontentsline{toc}{subsection}{Literaturverzeichnis}
 
+ \listoffigures
+ \addcontentsline{toc}{subsection}{Abbildungsverzeichnis}
+
+ \listoftables
+ \addcontentsline{toc}{subsection}{Tabellenverzeichnis}
+
+\clearpage
+ \input{content/glossar}
+
+\clearpage
 \section{Abnahmeprotokoll}\label{anhang_abnahmeprotokoll}
 \includepdf{images/word/Abnahmeprotokoll.pdf}

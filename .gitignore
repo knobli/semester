@@ -1,6 +1,7 @@
 **.aux
 **.out
 **.bak
+**.log
 doc.bbl
 doc.blg
 doc.idx
@@ -11,3 +12,5 @@ doc.synctex.gz
 doc.toc
 doc.lol
 doc.pdf
+doc.ilg
+doc.ind
