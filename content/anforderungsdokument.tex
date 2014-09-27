@@ -10,7 +10,7 @@
 
 \chapter{Anforderungsdokument}\label{chap.anforderungsdokument}
 
-Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich, detaillierte Anforderungen zu erfassen. Einerseits verhindert das mögliche Missverständnisse, andererseits ist es eine Absicherung, wenn der Kunde am Schluss etwas anderes behauptet.
+Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich, detaillierte Anforderungen zu erfassen. Einerseits verhindert das mögliche Missverständnisse, andererseits ist es eine Absicherung, wenn der Kunde am Ende des Projekts etwas anderes behauptet.
 
 \section{Übersicht}\label{anf_uebersicht}
 
@@ -24,10 +24,10 @@ Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten
 \label{fig:systemkontext}
 \end{figure}
 
-Das System hat zwei relevanten Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
+Das System hat zwei relevante Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
 
 \subsection{Systemumgebung}\label{systemumgebung}
-Die Systemumgebung definiert die Ausgangslage für das Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein PHP Backend und interaktive Webseiten lief. Die Daten wurden in eine MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
+Die Systemumgebung definiert die Ausgangslage für ein Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein PHP Backend und eine interaktive Webseite liefen. Die Daten wurden in einer MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{images/visio/systemumgebung.png}
@@ -41,7 +41,7 @@ Es wurden keine Annahmen getroffen. Durch die enge Zusammenarbeit mit dem Turnve
 
 \newpage
 \subsection{Stakeholder}\label{stakeholder}
-Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analyse notwendig. In der der Tabelle \ref{table:stakeholder} wurden die Stakeholder für dieses Projekt zusammengetragen und ihre Erwartungen, ihre Einstellung und ihren Einfluss gegenüber diesem Projekt festgehalten.
+Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analyse notwendig. In der der Tabelle \ref{table:stakeholder} wurden die Stakeholder für dieses Projekt zusammengetragen und ihre Erwartungen, ihre Einstellung und ihr Einfluss gegenüber diesem Projekt festgehalten.
 
 \begin{table}[ht]
 \centering
@@ -51,15 +51,15 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 	Name							&	Erwartung		&	Einstellung 	&	Einfluss	\\ \hline
 	\rowcolor{gray}
 								&				&	-Positiv \mbox{-Neutral} \mbox{-Negativ} 	&	-Hoch \mbox{-Mittel} \mbox{-Niedrig} \\ \hline
-	Vorstand						&	Der Vorstand ist der Kunde in diesem Projekt, er hat den Auftrag erteilt. Er erwartet vom App mehr Popularität vor allem bei den jüngeren Mitgliedern. Zusätzlich erhofft er sich etwas Werbung für den Verein.			
+	Vorstand						&	Der Vorstand ist der Kunde in diesem Projekt, er hat den Auftrag erteilt. Er erwartet von der App mehr Popularität, vor allem bei den jüngeren Mitgliedern. Zusätzlich erhofft er sich etwas Werbung für den Verein.			
 												& 	Positiv		&	Hoch		\\ \hline
 	Trainingsverantwortliche				&	Die Trainingsverantwortlichen sehen einen grossen Vorteil darin, dass die Anmeldung für die Trainings vereinfacht werden soll. Sie finden es praktisch, dass sie die Trainingsinformationen schnell abrufen können.			
 												& 	Positiv		&	Hoch		\\ \hline
-	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder warten gespannt auf das App. Es geht ihnen vor allem darum, ein App von ihrem Verein zu besitzen.			
+	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder wartet gespannt auf die App. Es geht ihnen vor allem darum, eine App von ihrem Verein zu besitzen.			
 												& 	Positiv		&	Hoch		\\ \hline
-	aktive Mitglieder (Ü30)				&	Die ältere Generation der aktiv Mitglieder haben keine Erwartungen an das App, sie würden auch gut ohne auskommen. 		
+	aktive Mitglieder (Ü30)				&	Die ältere Generation der aktiv Mitglieder hat keine Erwartungen an die App, sie würden auch gut ohne auskommen. 		
 												& 	Neutral	&	Mittel		\\ \hline
-	Passiv- und Ehrenmitglieder			&	Passiv- und Ehrenmitglieder gehören auch eher zu dem älteren Semester und können mit Apps nicht viel anfangen. Sie sind dem App gegenüber jedoch nicht negativ eingestellt, zum Glück, da sie oft das Zünglein an der Waage sind.
+	Passiv- und Ehrenmitglieder			&	Passiv- und Ehrenmitglieder gehören auch eher zu dem älteren Semester und können mit Apps nicht viel anfangen. Sie sind der App gegenüber jedoch nicht negativ eingestellt. Zum Glück, da sie oft das Zünglein an der Waage sind.
 												& 	Neutral	&	Mittel		\\ \hline
 	Nicht-Mitglieder					&	Die Nicht-Mitglieder erhoffen sich schnelle und gute Informationen über Anlässe und die Vereine selbst.
 												& 	Neutral	&	Niedrig	\\ \hline
@@ -117,7 +117,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Jedes Mitglieder soll eine Fahrgemeinschaft erstellen können.\\ \hline
+	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Jedes Mitglied soll eine Fahrgemeinschaft erstellen können.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte eine Fahrgemeinschaft erstellen\\ \hline
 	Akteure		&	TV-Mitglied\\ \hline
 	Vorbedingung	&	Das Mitglied ist angemeldet und es existiert eine Veranstaltung\\ \hline
@@ -133,13 +133,13 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das Mitglied klickt auf 'Fahrgemeinschaften'
 					\item Das Mitglied klickt auf 'Neue Fahrgemeinschaft'
 					\item Das System zeigt ein Formular mit Daten zur Fahrgemeinschaft an
-					\item Das Mitglied fühlt die Felder aus und sendet das Formular ab
+					\item Das Mitglied füllt die Felder aus und sendet das Formular ab
 					\item Das System schickt die Daten an das Backend
 					\item Das System zeigt 'Fahrgemeinschaft erfolgreich erstellt' an
 					\end{enumerate}
 					\\ \hline
 	Alternativszenarien	&	\begin{enumerate}
-					\item[7a] Das System weisst das Mitglied auf fehlende Felder hin
+					\item[7a] Das System weist das Mitglied auf fehlende Felder hin
 					\end{enumerate}
 					\\ \hline
 	Ausnahmeszenarien&	\begin{enumerate}
@@ -247,7 +247,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Dominic Keller\\ \hline
-	Beschreibung	&	Die bekannte Anmelde-Funktion von der Homepage soll es auch beim App geben.\\ \hline
+	Beschreibung	&	Die bekannte Anmelde-Funktion von der Homepage soll es auch in der App geben.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte sich für einen Anlass anmelden\\ \hline
 	Akteure		&	TV-Mitglied\\ \hline
 	Vorbedingung	&	Das Mitglied ist angemeldet\\ \hline
@@ -291,7 +291,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Ivan Sebastiano\\ \hline
 	Beschreibung	&	Neben Funktionen für die Mitglieder soll die App auch Informationen über bevorstehende Anlässe für Mitglieder und Nicht-Mitglieder zur Verfügung stellen.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte Informationen über einen bevorstehenden Anlass\\ \hline
+	Auslösendes Ereignis&	Mitglied möchte Informationen über einen bevorstehenden Anlass abrufen\\ \hline
 	Akteure		&	TV-Mitglied, Nicht Mitglieder\\ \hline
 	Vorbedingung	&	Anlässe sind vorhanden\\ \hline
 	Nachbedingung	&	Das Mitglied hat die gewünschten Informationen erhalten\\ \hline
@@ -333,12 +333,12 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Kritikalität		&	hoch\\ \hline
 	Quelle			&	Stakeholder\\ \hline
 	Verantwortlicher	&	Ivan Sebastiano\\ \hline
-	Beschreibung	&	Mit Hilfe von der App sollen Informationen über die Vereine und Riegen, wie zum Beispiel Trainingszeiten und Trainingsinhalte, einfach und rasch zu finden sein.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte Informationen über einen Verein erhalten\\ \hline
+	Beschreibung	&	Mit Hilfe der App sollen Informationen über die Vereine und Riegen, wie zum Beispiel Trainingszeiten und Trainingsinhalte, einfach und rasch zu finden sein.\\ \hline
+	Auslösendes Ereignis&	Mitglied oder Nicht Mitglied möchte Informationen über einen Verein erhalten\\ \hline
 	Akteure		&	TV-Mitglied, Nicht Mitglieder\\ \hline
 	Vorbedingung	&	-\\ \hline
-	Nachbedingung	&	Das Mitglied hat die gewünschten Informationen erhalten\\ \hline
-	Ergebnis		&	Informationen über den Verein\\ \hline
+	Nachbedingung	&	Das Mitglied oder Nicht Mitglied hat die gewünschten Informationen erhalten\\ \hline
+	Ergebnis		&	Informationen über den gewünschten Verein\\ \hline
 	Hauptszenario	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
@@ -357,7 +357,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 
 \FloatBarrier
 \subsection{Mockups}\label{mockups}
-Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden Mockups von den verschiedenen Seiten erstellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle Typen sehr ansprechend. Die Mockups wurden in einer kleinen Gruppe erstellt und die Use Cases dienten als Vorlage. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den Mockups wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Die Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
+Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden Mockups von den verschiedenen Seiten erstellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle veranlagte Kunden sehr ansprechend. Die Mockups wurden in einer kleinen Gruppe erstellt und die Use Cases dienten als Vorlage. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den Mockups wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Eine gute Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
 
 \subsubsection{Navigation - Einstellungen}\label{mockup_navigation_settings}
 Die Navigation und die Einstellungen sind die Grundstruktur der App und wurden deshalb zuerst erstellt.
@@ -378,7 +378,7 @@ Die Navigation und die Einstellungen sind die Grundstruktur der App und wurden d
 \newpage
 \FloatBarrier
 \subsubsection{Neuigkeiten}\label{mockup_news}
-Als Startseite sollte eine Seite gewählt werden, welche etwas aktuelles anzeigt, somit fiel die Entscheidung auf die News Seite.
+Als Startseite sollte eine Seite gewählt werden, die etwas aktuelles anzeigt, somit fiel die Entscheidung auf die News Seite.
 \begin{figure}[ht]
 \centering
 \subfigure[Neuigkeiten]{
@@ -457,7 +457,7 @@ Die verschiedenen Übersichten und Detailsichten der Veranstaltungen sollten urs
 
 \FloatBarrier
 \subsubsection{Resultate}\label{mockup_results}
-Das Mockup für die Resultat Darstellung sah eine veranstaltungsspezifische Darstellung vor, wurde dann im späteren Verlauf des Projektes auf eine personenspezifische Übersicht abgeändert. Diese Ansicht war kein Use Case der Stakeholder und wurde als möglicher Begeisterungsfaktor vom Entwickler hinzugefügt.
+Das Mockup für die Darstellung der Resultate sah eine veranstaltungsspezifische Darstellung vor, wurde dann im späteren Verlauf des Projektes auf eine personenspezifische Übersicht abgeändert. Diese Ansicht war kein Use Case der Stakeholder und wurde als möglicher Begeisterungsfaktor vom Entwickler hinzugefügt.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{images/mockups/results.png}
@@ -468,7 +468,7 @@ Das Mockup für die Resultat Darstellung sah eine veranstaltungsspezifische Dars
 \newpage
 \FloatBarrier
 \subsubsection{Fahrgemeinschaften}\label{mockups_carpools}
-Eine der wichtigsten Ansichten, welche nichts vergleichbares auf der Webseite hatte, war jene von der Fahrgemeinschaft. An diesem Punkt wurden schon die ersten Überlegungen getroffen, was für Attribute eine Fahrgemeinschaft benötigt.
+Eine der wichtigsten Ansichten, die nicht auf der Webseite existierte, war jene der Fahrgemeinschaft. An diesem Punkt wurden schon die ersten Überlegungen getroffen, welche Attribute eine Fahrgemeinschaft benötigt.
 \begin{figure}[ht]
 \centering
 \subfigure[Fahrgemeinschafen]{
@@ -515,7 +515,7 @@ Alle Anforderungen wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table
 \end{table}
 
 
-Die Beschreibung der Anforderungen wurden zusätzlich mit einer Satzschablone (siehe Abbildung \ref{fig:satzschablone}) aus \cite{req_eng_book} erstellt. Dies hat den Vorteil, dass die Anforderungen normiert und exakt daher kommen.
+Die Beschreibung der Anforderungen wurden zusätzlich mit einer Satzschablone (siehe Abbildung \ref{fig:satzschablone}) aus \cite{req_eng_book} erstellt. Dies hat den Vorteil, dass die Anforderungen normiert und exakt erfasst werden.
 \begin{figure}[h]
 \includegraphics{images/anforderungen/satzschablone.png}
 \caption{Satzschablone}
@@ -565,7 +565,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Name 			&	Fahrgemeinschaft erstellen\\ \hline
 	Use Case 		&	\nameref{table:use_case_1}\\ \hline
 	Beschreibung 	&	Falls das Mitglied angemeldet ist, muss das System dem besagten Mitglied die Möglichkeit bieten über ein Formular eine neue Fahrgemeinschaft zu eröffnen.\\ \hline
-	Begründung 		&	Seit einiger Zeit wird vermehrt der Vereins-Chat mit endlosen Diskussionen für Fahrgemeinschaftsorganisationen verwendet, was einige Mitglieder stört und auch nicht der Sinn und Zweck dieses Chats ist. Jedes Mitglied sollte über das App die Möglichkeit haben seine Fahrdienste zur Verfügung zu stellen.\\ \hline
+	Begründung 		&	Seit einiger Zeit wird vermehrt der Vereins-Chat mit endlosen Diskussionen für Fahrgemeinschaftsorganisationen verwendet, was einige Mitglieder stört und auch nicht der Sinn und Zweck dieses Chats ist. Jedes Mitglied sollte über die App die Möglichkeit haben seine Fahrdienste zur Verfügung zu stellen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann eine Fahrgemeinschaft eröffnen
 					\item Bei ungültigen oder nicht ausreichenden Informationen kommt eine entsprechende Fehlermeldung
@@ -588,7 +588,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Übersicht über Fahrgemeinschaft\\ \hline
 	Use Case 		&	\nameref{table:use_case_2}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist und eine Fahrgemeinschaft im System besteht, muss das System dem besagten Mitglied die Möglichkeit bieten eine Liste aller aktuellen Fahrgemeinschaften anzeigen zu lassen.\\ \hline
+	Beschreibung 	&	Falls das Mitglied angemeldet ist und eine Fahrgemeinschaft im System besteht, muss das System dem besagten Mitglied die Möglichkeit bieten, eine Liste aller aktuellen Fahrgemeinschaften anzeigen zu lassen.\\ \hline
 	Begründung 		&	Das Mitglied benötigt eine Übersicht der aktuellen Fahrgemeinschaften, damit es sich für eine entscheiden kann.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann die Fahrgemeinschaften anzeigen lassen
@@ -612,7 +612,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Fahrgemeinschaft beitreten\\ \hline
 	Use Case 		&	\nameref{table:use_case_3}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, eine Fahrgemeinschaft im System besteht, das besagte Mitglied noch nicht beigetreten ist und die Fahrgemeinschaft noch Kapazität aufweist, muss das System dem besagten Mitglied die Möglichkeit bieten sich über einen Knopf bei einer Fahrgemeinschaft einzutragen.\\ \hline
+	Beschreibung 	&	Falls das Mitglied angemeldet ist, eine Fahrgemeinschaft im System besteht, das besagte Mitglied noch nicht beigetreten ist und die Fahrgemeinschaft noch Kapazität aufweist, muss das System dem besagten Mitglied die Möglichkeit bieten, sich über einen Knopf bei einer Fahrgemeinschaft einzutragen.\\ \hline
 	Begründung 		&	Damit die Fahrgemeinschaften auch funktionieren, muss es den Mitgliedern möglich sein, sich selbständig bei den Fahrgemeinschaften einzutragen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann einer Fahrgemeinschaft beitreten
@@ -637,7 +637,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Anmelden an Vereinsanlässe\\ \hline
 	Use Case 		&	\nameref{table:use_case_4}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, ein Anlass im System besteht und das besagte Mitglied noch nicht angemeldet ist, sollte das System dem besagten Mitglied die Möglichkeit bieten sich über einen Knopf für den Anlass anzumelden.\\ \hline
+	Beschreibung 	&	Falls das Mitglied angemeldet ist, ein Anlass im System besteht und das besagte Mitglied noch nicht angemeldet ist, sollte das System dem besagten Mitglied die Möglichkeit bieten, sich über einen Knopf für den Anlass anzumelden.\\ \hline
 	Begründung 		&	Die Anmeldequote der Mitglieder ist nicht so hoch wie erwünscht, durch das Anbieten der Anmelde-Möglichkeit über das App soll das Anmelden vereinfacht und die Anmeldequote erhöht werden.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann sich für einen Anlass anmelden
@@ -661,8 +661,8 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Informationen über Vereinsanlässe\\ \hline
 	Use Case 		&	\nameref{table:use_case_5}\\ \hline
-	Beschreibung 	&	Falls ein Anlass im System ist, muss das System dem Benutzer der App die Möglichkeit Informationen über Vereinsanlässe zu erhalten.\\ \hline
-	Begründung 		&	Über das App kann man die Informationen schnell und einfach abrufen, somit sollte den Anlässen mehr Beachtung geschenkt werden.\\ \hline
+	Beschreibung 	&	Falls ein Anlass im System ist, muss das System dem Benutzer der App die Möglichkeit bieten, Informationen über Vereinsanlässe zu erhalten.\\ \hline
+	Begründung 		&	Über die App kann man die Informationen schnell und einfach abrufen, somit sollte den Anlässen mehr Beachtung geschenkt werden.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Der Benutzer erhält informationen über den ausgewählten Anlass
 					\item Der Benutzer sieht einen Hinweis, falls keine Anlässe vorhanden sind
@@ -685,7 +685,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Erweiterte Informationen über Vereinsanlässe\\ \hline
 	Use Case 		&	\nameref{table:use_case_5}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist und ein Anlass im System besteht, sollte das System dem besagten Mitglied die Möglichkeit bieten zusätzliche Informationen über den Anlass zu erhalten.\\ \hline
+	Beschreibung 	&	Falls das Mitglied angemeldet ist und ein Anlass im System besteht, sollte das System dem besagten Mitglied die Möglichkeit bieten, zusätzliche Informationen über den Anlass zu erhalten.\\ \hline
 	Begründung 		&	Einige Informationen (z. B. Anmelde-Listen) sind aus Datenschutz- oder anderen Gründen nicht für alle Nutzer der App bestimmt und sollten nur angemeldeten Mitgliedern angezeigt werden.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied sieht die erweiterten Informationen zum Anlass
@@ -709,7 +709,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Informationen über Vereine und Riegen\\ \hline
 	Use Case 		&	\nameref{table:use_case_6}\\ \hline
-	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten Informationen über die verschiedenen Vereine und Riegen zu erhalten.\\ \hline
+	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten, Informationen über die verschiedenen Vereine und Riegen zu erhalten.\\ \hline
 	Begründung 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. Jeder kann aktuelle Trainingszeiten und Inhalte der Trainings anschauen und erhält Kontaktinformationen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Der Benutzer erhält Informationen über die verschiedenen Vereine und Riegen
@@ -732,7 +732,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Aktuellen Berichte\\ \hline
 	Use Case 		&	\nameref{table:use_case_6}\\ \hline
-	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten aktuellen Berichte von den einzelnen Anlässen oder Vereine lesen zu können.\\ \hline
+	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten, aktuellen Berichte von den einzelnen Anlässen oder Vereinen lesen zu können.\\ \hline
 	Begründung 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. In den Berichten wird über aktuelle Anlässe und Geschehnisse geschrieben, ganz nach dem Motto 'Tue gutes und sprich darüber'.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Der Benutzer kann die aktuellen Berichte lesen
@@ -755,7 +755,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Funktional Anforderung\\ \hline
 	Name 			&	Push-Nachrichten versenden\\ \hline
 	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, Push-Nachrichten zu gelassen werden und eine solche vom Backend versendet wurde, sollte das System dem besagten Mitglied eine Push Notification zu stellen.\\ \hline
+	Beschreibung 	&	Falls das Mitglied angemeldet ist, Push-Nachrichten zugelassen werden und eine solche vom Backend versendet wurde, sollte das System dem besagten Mitglied eine Push Notification zustellen.\\ \hline
 	Begründung 		&	Trainingsverantwortliche und Vorstandsmitglieder können die Mitglieder mit Push-Nachrichten schneller über kurzfristige Änderungen informieren.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Das angemeldete Mitglied erhält die Push-Nachrichten
@@ -782,7 +782,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Qualitätsanforderung\\ \hline
 	Name 			&	Unterstützung von Android\\ \hline
 	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Das System muss fähig sein auf Android Geräten zu laufen.\\ \hline
+	Beschreibung 	&	Das System muss fähig sein, auf Android Geräten zu laufen.\\ \hline
 	Begründung 		&	Die Statistik der aktuellen Homepage zeigt, dass über 50\% der Zugriffe über Mobiltelefone und Tablet von Android Plattformen stammen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Ein Nutzer mit einem Android Mobiltelefon kann die App öffnen und verwenden
@@ -805,7 +805,7 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 	Anforderungstyp	&	Qualitätsanforderung\\ \hline
 	Name 			&	Unterstützung von iOS\\ \hline
 	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Das System muss fähig sein auf iOS Geräten zu laufen.\\ \hline
+	Beschreibung 	&	Das System muss fähig sein, auf iOS Geräten zu laufen.\\ \hline
 	Begründung 		&	Die Statistik der aktuellen Homepage zeigt, dass gut 43\% der Zugriffe über Mobiltelefone und Tablet von iOS Plattformen stammen.\\ \hline
 	Akzeptanz Kriterium	&	\begin{enumerate}
 					\item Ein Nutzer mit einem iPhone kann die App öffnen und verwenden
