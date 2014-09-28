@@ -50,6 +50,27 @@
 
 % \include{content/literatur}
 
-\include{content/anhang}
+\pagenumbering{Roman}
+
+\appendix
+\chapter{Anhang}\label{chap.anhang}
+\section{Abnahmeprotokoll}\label{anhang_abnahmeprotokoll}
+\includepdf{images/word/Abnahmeprotokoll.pdf}
+
+\clearpage
+ \input{content/glossar}
+
+\clearpage
+ \bibliography{bibtex/literatur}
+ \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+\clearpage
+ \listoffigures
+ \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+
+\clearpage
+ \listoftables
+ \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
 
 \end{document}
