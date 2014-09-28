@@ -14,7 +14,7 @@ Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich, 
 
 \section{Übersicht}\label{anf_uebersicht}
 
-In diesem Abschnitt  wird die System- und Kontextabgrenzung dargelegt, die Systemumgebung beschrieben, die getroffenen Annahmen festgehalten und die verschiedenen Stakeholder mit ihren Erwartungen aufgelistet.
+In diesem Abschnitt  wird die System- und Kontextabgrenzung dargelegt, die Systemumgebung beschrieben, die getroffenen Annahmen festgehalten und die verschiedenen \glossarmark{Stakeholder} mit ihren Erwartungen aufgelistet.
 
 \subsection{System- und Kontextabgrenzung}\label{systemabgrenzung}
 Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind und nicht im Rahmen der Entwicklung dieses System gestaltet werden können.\cite{req_eng_book} 
@@ -24,10 +24,10 @@ Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten
 \label{fig:systemkontext}
 \end{figure}
 
-Das System hat zwei relevante Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services Apple Push Notification Service (APNS) und Google Cloud Messaging for Android (GCM). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
+Das System hat zwei relevante Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services \glossarmark{Apple Push Notification Service} (\glossarmark{APNS}) und \glossarmark{Google Cloud Messaging for Android} (\glossarmark{GCM}). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
 
 \subsection{Systemumgebung}\label{systemumgebung}
-Die Systemumgebung definiert die Ausgangslage für ein Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein PHP Backend und eine interaktive Webseite liefen. Die Daten wurden in einer MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
+Die Systemumgebung definiert die Ausgangslage für ein Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein \glossarmark{PHP} Backend und eine interaktive Webseite liefen. Die Daten wurden in einer MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{images/visio/systemumgebung.png}
@@ -41,7 +41,7 @@ Es wurden keine Annahmen getroffen. Durch die enge Zusammenarbeit mit dem Turnve
 
 \newpage
 \subsection{Stakeholder}\label{stakeholder}
-Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analyse notwendig. In der der Tabelle \ref{table:stakeholder} wurden die Stakeholder für dieses Projekt zusammengetragen und ihre Erwartungen, ihre Einstellung und ihr Einfluss gegenüber diesem Projekt festgehalten.
+Damit alle Anforderungen erfasst werden können, ist eine gute \glossarmark{Stakeholder} Analyse notwendig. In der der Tabelle \ref{table:stakeholder} wurden die \glossarmark{Stakeholder} für dieses Projekt zusammengetragen und ihre Erwartungen, ihre Einstellung und ihr Einfluss gegenüber diesem Projekt festgehalten.
 
 \begin{table}[ht]
 \centering
@@ -69,7 +69,7 @@ Damit alle Anforderungen erfasst werden können, ist eine gute Stakeholder Analy
 
 \newpage
 \section{Anforderungen}\label{sec.anfoderungen}
-Beim Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet bereits einen klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen Mockups gestaltet. Bevor man mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden auf der Grundlage einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
+Beim Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet bereits einen klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen \glossarmark{Mockups} gestaltet. Bevor man mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden auf der Grundlage einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
 
 \subsection{Use Cases}\label{use_cases}
 Das Use Case Diagramm (siehe Abbildung \ref{fig:use_case}) zeigt zwei Akteure, Mitglieder und Nicht-Mitglieder und sechs Use Cases, welche in diesem Projekt umgesetzt wurden.
@@ -89,8 +89,8 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	Eindeutiger Bezeichner\\ \hline
 	Name			&	Eindeutiger Name\\ \hline
 	Kritikalität		&	Kritikalität hinsichtlich des Schadensausmasses bei Fehlverhalten: hoch, mittel, leicht\\ \hline
-	Quelle			&	Stakeholder, Dokument, System\\ \hline
-	Verantwortlicher	&	Verantwortlicher Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}, Dokument, System\\ \hline
+	Verantwortlicher	&	Verantwortlicher \glossarmark{Stakeholder}\\ \hline
 	Beschreibung	&	Komprimierte Beschreibung\\ \hline
 	Auslösendes Ereignis&	Angabe des Ereignisses, das den Use Case auslöst\\ \hline
 	Akteure		&	Auflistung der Akteure, die mit dem Use Case in Beziehung stehen\\ \hline
@@ -102,7 +102,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					Hier gelten oftmals andere Nachbedingungen.\\ \hline
 	Ausnahmeszenarien&	Beschreibung von Ausnahmeszenarien des Use Case oder lediglich Angabe der auslösenden Ereignisse. 
 					Hier gelten oftmals andere Nachbedingungen.\\ \hline
-	Mockups	 	&	Querbezüge zu Mockups
+	Mockups	 	&	Querbezüge zu \glossarmark{Mockups}
   \end{tabular}
    \caption{Vorlage für Use Case Spezifikation}\label{table:use_case_template}
 \end{table}
@@ -115,7 +115,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	UC-1\\ \hline
 	Name			&	Fahrgemeinschaft erstellen\\ \hline
 	Kritikalität		&	hoch\\ \hline
-	Quelle			&	Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
 	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Jedes Mitglied soll eine Fahrgemeinschaft erstellen können.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte eine Fahrgemeinschaft erstellen\\ \hline
@@ -159,7 +159,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	UC-2\\ \hline
 	Name			&	Fahrgemeinschaften anzeigen\\ \hline
 	Kritikalität		&	hoch\\ \hline
-	Quelle			&	Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
 	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Die Mitglieder sollen sich eine Liste aller Fahrgemeinschaften anzeigen lassen können, um dann zu entscheiden, welcher sie sich anschliessen möchten.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte Fahrgemeinschaften anschauen\\ \hline
@@ -202,7 +202,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	UC-3\\ \hline
 	Name			&	Fahrgemeinschaft beitreten\\ \hline
 	Kritikalität		&	hoch\\ \hline
-	Quelle			&	Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}\\ \hline
 	Verantwortlicher	&	Marco Mathe\\ \hline
 	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Beim Beitreten einer Fahrgemeinschaft geht es darum, dass das Mitglied Interesse an der Fahrgemeinschaft hat und dieser gern beitreten möchte.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte einer Fahrgemeinschaft beitreten\\ \hline
@@ -245,7 +245,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	UC-4\\ \hline
 	Name			&	Anmelden an Anlässe\\ \hline
 	Kritikalität		&	hoch\\ \hline
-	Quelle			&	Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}\\ \hline
 	Verantwortlicher	&	Dominic Keller\\ \hline
 	Beschreibung	&	Die bekannte Anmelde-Funktion von der Homepage soll es auch in der App geben.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte sich für einen Anlass anmelden\\ \hline
@@ -288,7 +288,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	UC-5\\ \hline
 	Name			&	Informationen zu Anlässen anzeigen\\ \hline
 	Kritikalität		&	hoch\\ \hline
-	Quelle			&	Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}\\ \hline
 	Verantwortlicher	&	Ivan Sebastiano\\ \hline
 	Beschreibung	&	Neben Funktionen für die Mitglieder soll die App auch Informationen über bevorstehende Anlässe für Mitglieder und Nicht-Mitglieder zur Verfügung stellen.\\ \hline
 	Auslösendes Ereignis&	Mitglied möchte Informationen über einen bevorstehenden Anlass abrufen\\ \hline
@@ -331,7 +331,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 	Bezeichner		&	UC-6\\ \hline
 	Name			&	Informationen zu Vereinen anzeigen\\ \hline
 	Kritikalität		&	hoch\\ \hline
-	Quelle			&	Stakeholder\\ \hline
+	Quelle			&	\glossarmark{Stakeholder}\\ \hline
 	Verantwortlicher	&	Ivan Sebastiano\\ \hline
 	Beschreibung	&	Mit Hilfe der App sollen Informationen über die Vereine und Riegen, wie zum Beispiel Trainingszeiten und Trainingsinhalte, einfach und rasch zu finden sein.\\ \hline
 	Auslösendes Ereignis&	Mitglied oder Nicht Mitglied möchte Informationen über einen Verein erhalten\\ \hline
@@ -357,7 +357,7 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 
 \FloatBarrier
 \subsection{Mockups}\label{mockups}
-Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden Mockups von den verschiedenen Seiten erstellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle veranlagte Kunden sehr ansprechend. Die Mockups wurden in einer kleinen Gruppe erstellt und die Use Cases dienten als Vorlage. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den Mockups wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Eine gute Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
+Um auf einer gemeinsamen Ebene mit dem Kunden zu diskutieren, wurden \glossarmark{Mockups} von den verschiedenen Seiten erstellt. Dies beugt einerseits Missverständnissen vor und ist für visuelle veranlagte Kunden sehr ansprechend. Die \glossarmark{Mockups} wurden in einer kleinen Gruppe erstellt und die Use Cases dienten als Vorlage. Die Zeichnungen waren zuerst grob auf Papier gezeichnet und wurden danach mit Hilfe von mybalsamiq (siehe \cite{zhaw_mybalsamiq} bzw. \cite{mybalsamiq}) digitalisiert. Bei den \glossarmark{Mockups} wurde mit möglichst ähnlichem und bereits bekanntem Aufbau und Elementen gearbeitet. Eine gute Übersicht und das schnelle Zurechtfinden waren die Hauptkriterien, die Heuristiken von Nielsen von \cite{paper_usability} waren dabei eine grosse Hilfe.
 
 \subsubsection{Navigation - Einstellungen}\label{mockup_navigation_settings}
 Die Navigation und die Einstellungen sind die Grundstruktur der App und wurden deshalb zuerst erstellt.
@@ -457,7 +457,7 @@ Die verschiedenen Übersichten und Detailsichten der Veranstaltungen sollten urs
 
 \FloatBarrier
 \subsubsection{Resultate}\label{mockup_results}
-Das Mockup für die Darstellung der Resultate sah eine veranstaltungsspezifische Darstellung vor, wurde dann im späteren Verlauf des Projektes auf eine personenspezifische Übersicht abgeändert. Diese Ansicht war kein Use Case der Stakeholder und wurde als möglicher Begeisterungsfaktor vom Entwickler hinzugefügt.
+Das \glossarmark{Mockup} für die Darstellung der Resultate sah eine veranstaltungsspezifische Darstellung vor, wurde dann im späteren Verlauf des Projektes auf eine personenspezifische Übersicht abgeändert. Diese Ansicht war kein Use Case der \glossarmark{Stakeholder} und wurde als möglicher \glossarmark{Begeisterungsfaktor} vom Entwickler hinzugefügt.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{images/mockups/results.png}
@@ -508,7 +508,7 @@ Alle Anforderungen wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table
 	Begründung 		&	Bedeutung der Anforderung für das geplante System\\ \hline
 	Akzeptanz Kriterium	&	Messbare Abnahmekriterien\\ \hline
 	Abhängigkeiten 	&	Referenz zu anderen Anforderungen\\ \hline
-	Antragssteller 	&	Stakeholder Gruppe, die um diese Anforderung bittet\\ \hline
+	Antragssteller 	&	\glossarmark{Stakeholder} Gruppe, die um diese Anforderung bittet\\ \hline
 	Risiken	 	&	Weisst auf allfällige Risiken betreffend der Anforderungen hin
   \end{tabular}
    \caption{Vorlage für Anforderungen}\label{table:req_template}
