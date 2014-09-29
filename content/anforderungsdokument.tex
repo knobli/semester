@@ -10,57 +10,63 @@
 
 \chapter{Anforderungsdokument}\label{chap.anforderungsdokument}
 
-Das Anforderungsdokument legt die Basis für die Implementation. Es lohnt sich, detaillierte Anforderungen zu erfassen. Einerseits verhindert das mögliche Missverständnisse, andererseits ist es eine Absicherung, wenn der Kunde am Ende des Projekts etwas anderes behauptet.
+Das Anforderungsdokument legt den Grundstein für die Implementation. Es lohnt sich, detaillierte Anforderungen zu erfassen. Einerseits beugt dies vor möglichen Missverständnissen vor, andererseits ist es eine Absicherung, falls am Ende eines Projektes unterschiedliche Ansichten über den Lieferumfang bestünden.
 
 \section{Übersicht}\label{anf_uebersicht}
 
-In diesem Abschnitt  wird die System- und Kontextabgrenzung dargelegt, die Systemumgebung beschrieben, die getroffenen Annahmen festgehalten und die verschiedenen \glossarmark{Stakeholder} mit ihren Erwartungen aufgelistet.
+In diesem Abschnitt werden die System- und Kontextabgrenzung dargelegt, die Systemumgebung beschrieben, die getroffenen Annahmen festgehalten und die verschiedenen \glossarmark{Stakeholder} mit ihren Erwartungen aufgelistet.
 
 \subsection{System- und Kontextabgrenzung}\label{systemabgrenzung}
-Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind und nicht im Rahmen der Entwicklung dieses System gestaltet werden können.\cite{req_eng_book} 
+Der Systemkontext umfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind und nicht im Rahmen der Entwicklung dieses System gestaltet werden können.
+
+Das geplante System hat zwei relevante Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services \glossarmark{Apple Push Notification Service} (\glossarmark{APNS}) und \glossarmark{Google Cloud Messaging for Android} (\glossarmark{GCM}). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
+
+\cite{req_eng_book} 
 \begin{figure}[h]
-\includegraphics{images/visio/systemkontext.png}
+\centering
+\includegraphics[scale=0.8]{images/visio/systemkontext.png}
 \caption{Systemkontext}
 \label{fig:systemkontext}
 \end{figure}
 
-Das System hat zwei relevante Schnittstellen zur Aussenwelt, welche die Applikation beeinflussen. Die beiden Push Notification Services \glossarmark{Apple Push Notification Service} (\glossarmark{APNS}) und \glossarmark{Google Cloud Messaging for Android} (\glossarmark{GCM}). Des Weiteren wird das System von den verschiedenen Smartphone Typen, dem Anmeldeprozess, dem Hosting und, nicht zu vergessen, den Mitgliedern beeinflusst.
-
+\FloatBarrier
 \subsection{Systemumgebung}\label{systemumgebung}
-Die Systemumgebung definiert die Ausgangslage für ein Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein \glossarmark{PHP} Backend und eine interaktive Webseite liefen. Die Daten wurden in einer MySQL Datenbank abgespeichert. Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied hat ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} sieht man die Systemumgebung graphisch dargestellt.
+Die Systemumgebung definiert die Ausgangslage für ein Projekt. Am Anfang des Projekts bestand das System aus einem Webserver, auf dem ein \glossarmark{PHP} Backend und eine interaktive Webseite liefen. Die Daten wurden in einer MySQL Datenbank abgespeichert. 
+
+Die Seite wird rege benutzt, es sind etwa 35 Benutzer pro Tag online. Fast jedes Mitglied besitzt ein Smartphone, wobei die Aufteilung zwischen Android und iOS Geräten etwa ausgeglichen ist. In Abbildung \ref{fig:systemumgebung} ist die Systemumgebung graphisch dargestellt.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.8]{images/visio/systemumgebung.png}
+\includegraphics[scale=0.95]{images/visio/systemumgebung.png}
 \caption{Systemumgebung}
 \label{fig:systemumgebung}
 \end{figure}
 
 \FloatBarrier
 \subsection{Annahmen}\label{annahmen}
-Es wurden keine Annahmen getroffen. Durch die enge Zusammenarbeit mit dem Turnverein, konnten alle offenen Punkte in kürzester Zeit geklärt werden.
+Es mussten keine Annahmen getroffen werden, da durch die enge Zusammenarbeit mit dem Turnverein, alle offenen Punkte in kürzester Zeit geklärt werden konnten.
 
 \newpage
 \subsection{Stakeholder}\label{stakeholder}
-Damit alle Anforderungen erfasst werden können, ist eine gute \glossarmark{Stakeholder} Analyse notwendig. In der der Tabelle \ref{table:stakeholder} wurden die \glossarmark{Stakeholder} für dieses Projekt zusammengetragen und ihre Erwartungen, ihre Einstellung und ihr Einfluss gegenüber diesem Projekt festgehalten.
+Die \glossarmark{Stakeholder} Analyse dient dem erfassen aller Nutzergruppen, die auf ein Projekt Einfluss haben. Zudem ermöglicht sie die Erfassung aller Gruppen, die potentiell Anforderungen an das Projekt stellen. In der der Tabelle \ref{table:stakeholder} wurden die \glossarmark{Stakeholder} für dieses Projekt mit der Hilfe des Vorstandes zusammengetragen und ihre Erwartungen, ihre Einstellung und ihr Einfluss gegenüber diesem Projekt festgehalten\footnote{Obwohl in diesem Projekt primär die Bedürfnisse des Turnvereins betrachtet werden, soll die App auch für den Damenturnverein und die Jugensport Kommission nutzbar sein.}. 
 
 \begin{table}[ht]
 \centering
   \begin{tabular}{ l | p{5cm} | p{1.5cm} | p{1.5cm} }
 	\hline
 	\rowcolor{darkgray}
-	Name							&	Erwartung		&	Einstellung 	&	Einfluss	\\ \hline
+	\textbf{Name}					&	\textbf{Erwartung}	&	\textbf{Einstellung} 	&	\textbf{Einfluss}	\\ \hline
 	\rowcolor{gray}
 								&				&	-Positiv \mbox{-Neutral} \mbox{-Negativ} 	&	-Hoch \mbox{-Mittel} \mbox{-Niedrig} \\ \hline
 	Vorstand						&	Der Vorstand ist der Kunde in diesem Projekt, er hat den Auftrag erteilt. Er erwartet von der App mehr Popularität, vor allem bei den jüngeren Mitgliedern. Zusätzlich erhofft er sich etwas Werbung für den Verein.			
 												& 	Positiv		&	Hoch		\\ \hline
 	Trainingsverantwortliche				&	Die Trainingsverantwortlichen sehen einen grossen Vorteil darin, dass die Anmeldung für die Trainings vereinfacht werden soll. Sie finden es praktisch, dass sie die Trainingsinformationen schnell abrufen können.			
 												& 	Positiv		&	Hoch		\\ \hline
-	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder wartet gespannt auf die App. Es geht ihnen vor allem darum, eine App von ihrem Verein zu besitzen.			
+	aktive Mitglieder (U30)				&	Die jüngere Generation der aktiv Mitglieder wartet gespannt auf die App.	Sie wünschen sich eine schnelle Möglichkeit sich anmelden zu können.		
 												& 	Positiv		&	Hoch		\\ \hline
-	aktive Mitglieder (Ü30)				&	Die ältere Generation der aktiv Mitglieder hat keine Erwartungen an die App, sie würden auch gut ohne auskommen. 		
+	aktive Mitglieder (Ü30)				&	Die ältere Generation der aktiv Mitglieder hat keine grossen Erwartungen an die App, sie würden auch ohne auskommen.		
 												& 	Neutral	&	Mittel		\\ \hline
-	Passiv- und Ehrenmitglieder			&	Passiv- und Ehrenmitglieder gehören auch eher zu dem älteren Semester und können mit Apps nicht viel anfangen. Sie sind der App gegenüber jedoch nicht negativ eingestellt. Zum Glück, da sie oft das Zünglein an der Waage sind.
-												& 	Neutral	&	Mittel		\\ \hline
+	Passiv- und Ehrenmitglieder			&	Passiv- und Ehrenmitglieder gehören auch eher zu dem älteren Semester und können mit Apps nicht viel anfangen. Sie sind der App gegenüber jedoch nicht negativ eingestellt. Da diese Gruppe einen hohen Einfluss besitzt, ist dies sehr von Vorteil.
+												& 	Neutral	&	Hoch		\\ \hline
 	Nicht-Mitglieder					&	Die Nicht-Mitglieder erhoffen sich schnelle und gute Informationen über Anlässe und die Vereine selbst.
 												& 	Neutral	&	Niedrig	\\ \hline
   \end{tabular}
@@ -69,40 +75,40 @@ Damit alle Anforderungen erfasst werden können, ist eine gute \glossarmark{Stak
 
 \newpage
 \section{Anforderungen}\label{sec.anfoderungen}
-Beim Erfassen der Anforderungen wurde so vorgegangen, dass zuerst die Use-Cases definiert wurden. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet bereits einen klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen \glossarmark{Mockups} gestaltet. Bevor man mit der Implementation anfangen konnte, mussten noch die Anforderungen abgeleitet werden. Die Anforderungen wurden auf der Grundlage einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
+Beim Erfassen der Anforderungen wurden als Erstes die Use-Cases definiert. Diese wurden zusammen mit Vertretern des Turnvereins festgelegt. Die Beschreibung beinhaltet bereits einen klaren Ablauf für die einzelnen Use-Cases. Als nächstes wurden in mehreren Sitzungen die dazugehörigen \glossarmark{Mockups} gestaltet. Bevor die Implementation beginnen konnte, mussten noch die Anforderungen abgeleitet werden. Sie wurden auf der Grundlage einer Mitglieder Befragung und einer kurzen Sitzung mit dem Vorstand evaluiert.
 
 \subsection{Use Cases}\label{use_cases}
-Das Use Case Diagramm (siehe Abbildung \ref{fig:use_case}) zeigt zwei Akteure, Mitglieder und Nicht-Mitglieder und sechs Use Cases, welche in diesem Projekt umgesetzt wurden.
+Das Use Case Diagramm (siehe Abbildung \ref{fig:use_case}) zeigt zwei Akteure, Mitglieder und Nicht-Mitglieder, sowie sechs Use Cases, welche in diesem Projekt umgesetzt wurden.
 \begin{figure}[h]
 \includegraphics{images/anforderungen/use_cases.png}
 \caption{Use-Case Diagramm}
 \label{fig:use_case}
 \end{figure}
 
-Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use_case_template}) spezifiziert. Diese Vorlage basiert auf Angaben von \cite{req_eng_book}. Die Use Cases wurden möglichst genau beschrieben, was danach die Implementation vereinfachte.
+Alle Use Cases wurden anhand der folgenden Vorlage in Tabelle \ref{table:use_case_template} spezifiziert. Diese Schablone basiert auf Angaben von \cite{req_eng_book}. Die Use Cases wurden möglichst genau beschrieben, was danach die Implementation vereinfachte.
 
 \begin{table}[ht]
 \centering
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	Eindeutiger Bezeichner\\ \hline
-	Name			&	Eindeutiger Name\\ \hline
-	Kritikalität		&	Kritikalität hinsichtlich des Schadensausmasses bei Fehlverhalten: hoch, mittel, leicht\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}, Dokument, System\\ \hline
-	Verantwortlicher	&	Verantwortlicher \glossarmark{Stakeholder}\\ \hline
-	Beschreibung	&	Komprimierte Beschreibung\\ \hline
-	Auslösendes Ereignis&	Angabe des Ereignisses, das den Use Case auslöst\\ \hline
-	Akteure		&	Auflistung der Akteure, die mit dem Use Case in Beziehung stehen\\ \hline
-	Vorbedingung	&	Eine Liste notwendiger Voraussetzungen, die erfüllt sein müssen, bevor die Ausführung des Use Case beginnen kann\\ \hline
-	Nachbedingung	&	Eine Liste von Zuständen, in denen sich das System unmittelbar nach der Ausführung des Hauptszenarios befindet.\\ \hline
-	Ergebnis		&	Beschreibung der Ausgaben, die während der Ausführung des Use Case erzeugt werden\\ \hline
-	Hauptszenario	&	Beschreibung des Hauptszenarios eines Use Case\\ \hline
-	Alternativszenarien	&	Beschreibung von Alternativszenarien des Use Case oder lediglich Angabe der auslösenden Ereignisse. 
+	\textbf{Bezeichner}		&	Eindeutiger Bezeichner\\ \hline
+	\textbf{Name}			&	Eindeutiger Name\\ \hline
+	\textbf{Kritikalität}		&	Kritikalität hinsichtlich des Schadensausmasses bei Fehlverhalten: hoch, mittel, leicht\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}, Dokument, System\\ \hline
+	\textbf{Verantwortlicher}	&	Verantwortlicher \glossarmark{Stakeholder}\\ \hline
+	\textbf{Beschreibung}	&	Komprimierte Beschreibung\\ \hline
+	\textbf{Auslösendes Ereignis}&	Angabe des Ereignisses, das den Use Case auslöst\\ \hline
+	\textbf{Akteure}		&	Auflistung der Akteure, die mit dem Use Case in Beziehung stehen\\ \hline
+	\textbf{Vorbedingung}	&	Eine Liste notwendiger Voraussetzungen, die erfüllt sein müssen, bevor die Ausführung des Use Case beginnen kann\\ \hline
+	\textbf{Nachbedingung}	&	Eine Liste von Zuständen, in denen sich das System unmittelbar nach der Ausführung des Hauptszenarios befindet.\\ \hline
+	\textbf{Ergebnis}		&	Beschreibung der Ausgaben, die während der Ausführung des Use Case erzeugt werden\\ \hline
+	\textbf{Hauptszenario}	&	Beschreibung des Hauptszenarios eines Use Case\\ \hline
+	\textbf{Alternativszenarien}	&	Beschreibung von Alternativszenarien des Use Case oder lediglich Angabe der auslösenden Ereignisse. 
 					Hier gelten oftmals andere Nachbedingungen.\\ \hline
-	Ausnahmeszenarien&	Beschreibung von Ausnahmeszenarien des Use Case oder lediglich Angabe der auslösenden Ereignisse. 
+	\textbf{Ausnahmeszenarien}&	Beschreibung von Ausnahmeszenarien des Use Case oder lediglich Angabe der auslösenden Ereignisse. 
 					Hier gelten oftmals andere Nachbedingungen.\\ \hline
-	Mockups	 	&	Querbezüge zu \glossarmark{Mockups}
+	\textbf{Mockups}	 	&	Querbezüge zu \glossarmark{Mockups}
   \end{tabular}
    \caption{Vorlage für Use Case Spezifikation}\label{table:use_case_template}
 \end{table}
@@ -112,18 +118,18 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	UC-1\\ \hline
-	Name			&	Fahrgemeinschaft erstellen\\ \hline
-	Kritikalität		&	hoch\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}\\ \hline
-	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Jedes Mitglied soll eine Fahrgemeinschaft erstellen können.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte eine Fahrgemeinschaft erstellen\\ \hline
-	Akteure		&	TV-Mitglied\\ \hline
-	Vorbedingung	&	Das Mitglied ist angemeldet und es existiert eine Veranstaltung\\ \hline
-	Nachbedingung	&	Das Mitglied hat eine Fahrgemeinschaft erstellt\\ \hline
-	Ergebnis		&	Erstellung einer neuen Fahrgemeinschaft\\ \hline
-	Hauptszenario	&	\begin{enumerate}
+	\textbf{Bezeichner}		&	\textbf{UC-1}\\ \hline
+	\textbf{Name}			&	Fahrgemeinschaft erstellen\\ \hline
+	\textbf{Kritikalität}		&	hoch\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}\\ \hline
+	\textbf{Verantwortlicher}	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Beschreibung}	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Jedes Mitglied soll eine Fahrgemeinschaft erstellen können.\\ \hline
+	\textbf{Auslösendes Ereignis}&	Mitglied möchte eine Fahrgemeinschaft erstellen\\ \hline
+	\textbf{Akteure}		&	TV-Mitglied\\ \hline
+	\textbf{Vorbedingung}	&	Das Mitglied ist angemeldet und es existiert eine Veranstaltung\\ \hline
+	\textbf{Nachbedingung}	&	Das Mitglied hat eine Fahrgemeinschaft erstellt\\ \hline
+	\textbf{Ergebnis}		&	Erstellung einer neuen Fahrgemeinschaft\\ \hline
+	\textbf{Hauptszenario}	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
 					\item Das Mitglied klickt auf eine der drei Veranstaltungstypen
@@ -138,15 +144,15 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt 'Fahrgemeinschaft erfolgreich erstellt' an
 					\end{enumerate}
 					\\ \hline
-	Alternativszenarien	&	\begin{enumerate}
+	\textbf{Alternativszenarien}	&	\begin{enumerate}
 					\item[7a] Das System weist das Mitglied auf fehlende Felder hin
 					\end{enumerate}
 					\\ \hline
-	Ausnahmeszenarien&	\begin{enumerate}
+	\textbf{Ausnahmeszenarien}&	\begin{enumerate}
 					\item[7a] Das System zeigt 'keine Internetverbindung vorhanden' an
 					\end{enumerate}
 					\\ \hline
-	Mockups	 	&	-
+	\textbf{Mockups}	 	&	-
   \end{tabular}
    \caption{Use Case UC-1: Fahrgemeinschaft erstellen}\label{table:use_case_1}
 \end{table}
@@ -156,18 +162,18 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	UC-2\\ \hline
-	Name			&	Fahrgemeinschaften anzeigen\\ \hline
-	Kritikalität		&	hoch\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}\\ \hline
-	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Die Mitglieder sollen sich eine Liste aller Fahrgemeinschaften anzeigen lassen können, um dann zu entscheiden, welcher sie sich anschliessen möchten.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte Fahrgemeinschaften anschauen\\ \hline
-	Akteure		&	TV-Mitglied\\ \hline
-	Vorbedingung	&	Das Mitglied ist angemeldet und Fahrgemeinschaften sind vorhanden\\ \hline
-	Nachbedingung	&	Das Mitglied hat eine Liste von Fahrgemeinschaften erhalten\\ \hline
-	Ergebnis		&	Liste von Fahrgemeinschaften\\ \hline
-	Hauptszenario	&	\begin{enumerate}
+	\textbf{Bezeichner}		&	\textbf{UC-2}\\ \hline
+	\textbf{Name}			&	Fahrgemeinschaften anzeigen\\ \hline
+	\textbf{Kritikalität}		&	hoch\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}\\ \hline
+	\textbf{Verantwortlicher}	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Beschreibung}	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Die Mitglieder sollen sich eine Liste aller Fahrgemeinschaften anzeigen lassen können, um dann zu entscheiden, welcher sie sich anschliessen möchten.\\ \hline
+	\textbf{Auslösendes Ereignis}&	Mitglied möchte Fahrgemeinschaften anschauen\\ \hline
+	\textbf{Akteure}		&	TV-Mitglied\\ \hline
+	\textbf{Vorbedingung}	&	Das Mitglied ist angemeldet und Fahrgemeinschaften sind vorhanden\\ \hline
+	\textbf{Nachbedingung}	&	Das Mitglied hat eine Liste von Fahrgemeinschaften erhalten\\ \hline
+	\textbf{Ergebnis}		&	Liste von Fahrgemeinschaften\\ \hline
+	\textbf{Hauptszenario}	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
 					\item Das Mitglied klickt auf eine der drei Veranstaltungstypen
@@ -179,15 +185,15 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt eine Liste der Fahrgemeinschaften an
 					\end{enumerate}
 					\\ \hline
-	Alternativszenarien	&	\begin{enumerate}
+	\textbf{Alternativszenarien}	&	\begin{enumerate}
 					\item[5a] Das System zeigt 'keine aktuellen Fahrgemeinschaften' an
 					\end{enumerate}
 					\\ \hline
-	Ausnahmeszenarien&	\begin{enumerate}
+	\textbf{Ausnahmeszenarien}&	\begin{enumerate}
 					\item[4a] Das System zeigt 'keine Internetverbindung vorhanden' an
 					\end{enumerate}
 					\\ \hline
-	Mockups	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_carpools}, \ref{fig:mockup_carpool_detail},
+	\textbf{Mockups}	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_carpools}, \ref{fig:mockup_carpool_detail},
 					\ref{fig:mockup_add_carpool}
   \end{tabular}
    \caption{Use Case UC-2: Fahrgemeinschaften anzeigen}\label{table:use_case_2}
@@ -199,18 +205,18 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	UC-3\\ \hline
-	Name			&	Fahrgemeinschaft beitreten\\ \hline
-	Kritikalität		&	hoch\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}\\ \hline
-	Verantwortlicher	&	Marco Mathe\\ \hline
-	Beschreibung	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Beim Beitreten einer Fahrgemeinschaft geht es darum, dass das Mitglied Interesse an der Fahrgemeinschaft hat und dieser gern beitreten möchte.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte einer Fahrgemeinschaft beitreten\\ \hline
-	Akteure		&	TV-Mitglied\\ \hline
-	Vorbedingung	&	Das Mitglied ist angemeldet und Fahrgemeinschaften sind vorhanden\\ \hline
-	Nachbedingung	&	Das Mitglied ist einer Fahrgemeinschaft beigetreten\\ \hline
-	Ergebnis		&	Neuer Eintrag in der Gemeinschaft und Kapazitätenminderung\\ \hline
-	Hauptszenario	&	\begin{enumerate}
+	\textbf{Bezeichner}		&	\textbf{UC-3}\\ \hline
+	\textbf{Name}			&	Fahrgemeinschaft beitreten\\ \hline
+	\textbf{Kritikalität}		&	hoch\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}\\ \hline
+	\textbf{Verantwortlicher}	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Beschreibung}	&	Eine der Hauptaufgaben dieser App soll die Fahrgemeinschaftsverwaltung sein. Beim Beitreten einer Fahrgemeinschaft geht es darum, dass das Mitglied Interesse an der Fahrgemeinschaft hat und dieser gern beitreten möchte.\\ \hline
+	\textbf{Auslösendes Ereignis}&	Mitglied möchte einer Fahrgemeinschaft beitreten\\ \hline
+	\textbf{Akteure}		&	TV-Mitglied\\ \hline
+	\textbf{Vorbedingung}	&	Das Mitglied ist angemeldet und Fahrgemeinschaften sind vorhanden\\ \hline
+	\textbf{Nachbedingung}	&	Das Mitglied ist einer Fahrgemeinschaft beigetreten\\ \hline
+	\textbf{Ergebnis}		&	Neuer Eintrag in der Gemeinschaft und Kapazitätenminderung\\ \hline
+	\textbf{Hauptszenario}	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
 					\item Das Mitglied klickt auf eine der drei Veranstaltungstypen
@@ -223,16 +229,16 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt 'Erfolgreich beigetreten' an
 					\end{enumerate}
 					\\ \hline
-	Alternativszenarien	&	\begin{enumerate}
+	\textbf{Alternativszenarien}	&	\begin{enumerate}
 					\item[3a] Das System zeigt 'Kein Platz mehr' an
 					\item[4] Der User wählt eine andere Fahrgemeinschaft aus und versucht es erneut
 					\end{enumerate}
 					\\ \hline
-	Ausnahmeszenarien&	\begin{enumerate}
+	\textbf{Ausnahmeszenarien}&	\begin{enumerate}
 					\item[3a] Das System zeigt 'keine Internetverbindung vorhanden' an
 					\end{enumerate}
 					\\ \hline
-	Mockups	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_carpools}, \ref{fig:mockup_carpool_detail}
+	\textbf{Mockups}	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_carpools}, \ref{fig:mockup_carpool_detail}
   \end{tabular}
    \caption{Use Case UC-3: Fahrgemeinschaft beitreten}\label{table:use_case_3}
 \end{table}
@@ -242,18 +248,18 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	UC-4\\ \hline
-	Name			&	Anmelden an Anlässe\\ \hline
-	Kritikalität		&	hoch\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}\\ \hline
-	Verantwortlicher	&	Dominic Keller\\ \hline
-	Beschreibung	&	Die bekannte Anmelde-Funktion von der Homepage soll es auch in der App geben.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte sich für einen Anlass anmelden\\ \hline
-	Akteure		&	TV-Mitglied\\ \hline
-	Vorbedingung	&	Das Mitglied ist angemeldet\\ \hline
-	Nachbedingung	&	Das Mitglied hat sich für einen Anlass angemeldet\\ \hline
-	Ergebnis		&	Erstellung einer neuen Anmeldung für den Anlass\\ \hline
-	Hauptszenario	&	\begin{enumerate}
+	\textbf{Bezeichner}		&	\textbf{UC-4}\\ \hline
+	\textbf{Name}			&	Anmelden an Anlässe\\ \hline
+	\textbf{Kritikalität}		&	hoch\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}\\ \hline
+	\textbf{Verantwortlicher}	&	Dominic Keller (aktive Mitglieder (U30))\\ \hline
+	\textbf{Beschreibung}	&	Die bekannte Anmelde-Funktion von der Homepage soll es auch in der App geben.\\ \hline
+	\textbf{Auslösendes Ereignis}&	Mitglied möchte sich für einen Anlass anmelden\\ \hline
+	\textbf{Akteure}		&	TV-Mitglied\\ \hline
+	\textbf{Vorbedingung}	&	Das Mitglied ist angemeldet\\ \hline
+	\textbf{Nachbedingung}	&	Das Mitglied hat sich für einen Anlass angemeldet\\ \hline
+	\textbf{Ergebnis}		&	Erstellung einer neuen Anmeldung für den Anlass\\ \hline
+	\textbf{Hauptszenario}	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
 					\item Das Mitglied klickt auf 'Anlässe'
@@ -265,15 +271,15 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt 'Anmeldung erfolgreich' an
 					\end{enumerate}
 					\\ \hline
-	Alternativszenarien	&	\begin{enumerate}
+	\textbf{Alternativszenarien}	&	\begin{enumerate}
 					\item[7a] Das Mitglied sucht den Anlass und kann nicht auf 'Anmelden' klicken, da es bereits angemeldet ist
 					\end{enumerate}
 					\\ \hline
-	Ausnahmeszenarien&	\begin{enumerate}
+	\textbf{Ausnahmeszenarien}&	\begin{enumerate}
 					\item[8a] Das System zeigt 'keine Internetverbindung vorhanden' an
 					\end{enumerate}
 					\\ \hline
-	Mockups	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_events}, \ref{fig:mockup_event_detail},
+	\textbf{Mockups}	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_events}, \ref{fig:mockup_event_detail},
 					\ref{fig:mockup_matches}, \ref{fig:mockup_match_detail}, \ref{fig:mockup_trainings}, 
 					\ref{fig:mockup_training_detail}
   \end{tabular}
@@ -285,18 +291,18 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	UC-5\\ \hline
-	Name			&	Informationen zu Anlässen anzeigen\\ \hline
-	Kritikalität		&	hoch\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}\\ \hline
-	Verantwortlicher	&	Ivan Sebastiano\\ \hline
-	Beschreibung	&	Neben Funktionen für die Mitglieder soll die App auch Informationen über bevorstehende Anlässe für Mitglieder und Nicht-Mitglieder zur Verfügung stellen.\\ \hline
-	Auslösendes Ereignis&	Mitglied möchte Informationen über einen bevorstehenden Anlass abrufen\\ \hline
-	Akteure		&	TV-Mitglied, Nicht Mitglieder\\ \hline
-	Vorbedingung	&	Anlässe sind vorhanden\\ \hline
-	Nachbedingung	&	Das Mitglied hat die gewünschten Informationen erhalten\\ \hline
-	Ergebnis		&	Informationen über den bevorstehenden Anlass\\ \hline
-	Hauptszenario	&	\begin{enumerate}
+	\textbf{Bezeichner}		&	\textbf{UC-5}\\ \hline
+	\textbf{Name}			&	Informationen zu Anlässen anzeigen\\ \hline
+	\textbf{Kritikalität}		&	hoch\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}\\ \hline
+	\textbf{Verantwortlicher}	&	Ivan Sebastiano (Trainingsverantwortliche)\\ \hline
+	\textbf{Beschreibung}	&	Neben Funktionen für die Mitglieder soll die App auch Informationen über bevorstehende Anlässe für Mitglieder und Nicht-Mitglieder zur Verfügung stellen.\\ \hline
+	\textbf{Auslösendes Ereignis}&	Mitglied möchte Informationen über einen bevorstehenden Anlass abrufen\\ \hline
+	\textbf{Akteure}		&	TV-Mitglied, Nicht Mitglieder\\ \hline
+	\textbf{Vorbedingung}	&	Anlässe sind vorhanden\\ \hline
+	\textbf{Nachbedingung}	&	Das Mitglied hat die gewünschten Informationen erhalten\\ \hline
+	\textbf{Ergebnis}		&	Informationen über den bevorstehenden Anlass\\ \hline
+	\textbf{Hauptszenario}	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
 					\item Das Mitglied klickt auf 'Anlässe'
@@ -307,15 +313,15 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt detaillierte Informationen über den Anlass an
 					\end{enumerate}
 					\\ \hline
-	Alternativszenarien	&	\begin{enumerate}
+	\textbf{Alternativszenarien}	&	\begin{enumerate}
 					\item[8a] Das System zeigt detaillierte Informationen über den Anlass und spezielle Informationen für Mitglieder an
 					\end{enumerate}
 					\\ \hline
-	Ausnahmeszenarien&	\begin{enumerate}
+	\textbf{Ausnahmeszenarien}&	\begin{enumerate}
 					\item[7a] Das System zeigt 'keine Internetverbindung vorhanden' an
 					\end{enumerate}
 					\\ \hline
-	Mockups	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_events}, \ref{fig:mockup_event_detail},
+	\textbf{Mockups}	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_events}, \ref{fig:mockup_event_detail},
 					\ref{fig:mockup_matches}, \ref{fig:mockup_match_detail}, \ref{fig:mockup_trainings}, 
 					\ref{fig:mockup_training_detail}
   \end{tabular}
@@ -328,18 +334,18 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
   \begin{tabular}{ l | p{10cm} }
 	\hline
 	\rowcolor{gray}
-	Bezeichner		&	UC-6\\ \hline
-	Name			&	Informationen zu Vereinen anzeigen\\ \hline
-	Kritikalität		&	hoch\\ \hline
-	Quelle			&	\glossarmark{Stakeholder}\\ \hline
-	Verantwortlicher	&	Ivan Sebastiano\\ \hline
-	Beschreibung	&	Mit Hilfe der App sollen Informationen über die Vereine und Riegen, wie zum Beispiel Trainingszeiten und Trainingsinhalte, einfach und rasch zu finden sein.\\ \hline
-	Auslösendes Ereignis&	Mitglied oder Nicht Mitglied möchte Informationen über einen Verein erhalten\\ \hline
-	Akteure		&	TV-Mitglied, Nicht Mitglieder\\ \hline
-	Vorbedingung	&	-\\ \hline
-	Nachbedingung	&	Das Mitglied oder Nicht Mitglied hat die gewünschten Informationen erhalten\\ \hline
-	Ergebnis		&	Informationen über den gewünschten Verein\\ \hline
-	Hauptszenario	&	\begin{enumerate}
+	\textbf{Bezeichner}		&	\textbf{UC-6}\\ \hline
+	\textbf{Name}			&	Informationen zu Vereinen anzeigen\\ \hline
+	\textbf{Kritikalität}		&	hoch\\ \hline
+	\textbf{Quelle}			&	\glossarmark{Stakeholder}\\ \hline
+	\textbf{Verantwortlicher}	&	Ivan Sebastiano (Trainingsverantwortliche)\\ \hline
+	\textbf{Beschreibung}	&	Mit Hilfe der App sollen Informationen über die Vereine und Riegen, wie zum Beispiel Trainingszeiten und Trainingsinhalte, einfach und rasch zu finden sein.\\ \hline
+	\textbf{Auslösendes Ereignis}&	Mitglied oder Nicht Mitglied möchte Informationen über einen Verein erhalten\\ \hline
+	\textbf{Akteure}		&	TV-Mitglied, Nicht Mitglieder\\ \hline
+	\textbf{Vorbedingung}	&	-\\ \hline
+	\textbf{Nachbedingung}	&	Das Mitglied oder Nicht Mitglied hat die gewünschten Informationen erhalten\\ \hline
+	\textbf{Ergebnis}		&	Informationen über den gewünschten Verein\\ \hline
+	\textbf{Hauptszenario}	&	\begin{enumerate}
 					\item Das Mitglied öffnet den Menü-Knopf
 					\item Das System zeigt das Menü an
 					\item Das Mitglied klickt auf 'Vereine'
@@ -348,9 +354,9 @@ Alle Use Cases wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table:use
 					\item Das System zeigt eine Liste der Informationen an
 					\end{enumerate}
 					\\ \hline
-	Alternativszenarien	&	-\\ \hline
-	Ausnahmeszenarien&	-\\ \hline
-	Mockups	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_vereine}
+	\textbf{Alternativszenarien}	&	-\\ \hline
+	\textbf{Ausnahmeszenarien}&	-\\ \hline
+	\textbf{Mockups}	 	&	\ref{fig:mockup_navigation}, \ref{fig:mockup_vereine}
   \end{tabular}
    \caption{Use Case UC-6: Informationen zu Vereinen anzeigen}\label{table:use_case_6}
 \end{table}
@@ -377,25 +383,25 @@ Die Navigation und die Einstellungen sind die Grundstruktur der App und wurden d
 
 \newpage
 \FloatBarrier
-\subsubsection{Neuigkeiten}\label{mockup_news}
-Als Startseite sollte eine Seite gewählt werden, die etwas aktuelles anzeigt, somit fiel die Entscheidung auf die News Seite.
+\subsubsection{Berichte}\label{mockup_news}
+Als Startseite sollte eine Seite gewählt werden, die etwas Aktuelles anzeigt, somit fiel die Entscheidung auf die Seite mit den Berichten.
 \begin{figure}[ht]
 \centering
-\subfigure[Neuigkeiten]{
+\subfigure[Berichte Übersicht]{
   \includegraphics[scale=0.5]{images/mockups/news.png}
   \label{fig:mockup_news_list}
 }
-\subfigure[Neuigkeiten Details]{
+\subfigure[Bericht Details]{
   \includegraphics[scale=0.5]{images/mockups/news_detail.png}
   \label{fig:mockup_news_detail}
 }
 \label{fig:mockup_news}
-\caption{Neuigkeiten}
+\caption{Berichte}
 \end{figure}
 
 \FloatBarrier
 \subsubsection{Vereine}\label{mockup_vereine}
-Die Gedanken zur Gestaltung der Informationen der Vereine sahen so aus:
+Die Überlegungen zur Gestaltung der Informationen der Vereine sahen so aus:
 \begin{figure}[ht]
 \centering
 \subfigure[Vereine]{
@@ -468,7 +474,7 @@ Das \glossarmark{Mockup} für die Darstellung der Resultate sah eine veranstaltu
 \newpage
 \FloatBarrier
 \subsubsection{Fahrgemeinschaften}\label{mockups_carpools}
-Eine der wichtigsten Ansichten, die nicht auf der Webseite existierte, war jene der Fahrgemeinschaft. An diesem Punkt wurden schon die ersten Überlegungen getroffen, welche Attribute eine Fahrgemeinschaft benötigt.
+Eine der wichtigsten Ansichten, die zu diesem Zeitpunkt nicht auf der Webseite existierte, war jene der Fahrgemeinschaft. An diesem Punkt wurden schon die ersten Überlegungen getroffen, welche Informationen für eine Fahrgemeinschaft relevant sind.
 \begin{figure}[ht]
 \centering
 \subfigure[Fahrgemeinschafen]{
@@ -499,17 +505,17 @@ Alle Anforderungen wurden anhand der folgenden Vorlage (siehe Tabelle \ref{table
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	Eindeutiger Identifikator\\ \hline
-	Priorität 		&	Must, Should, Nice to have\\ \hline
-	Anforderungstyp	&	Funktional Anforderung, Qualitätsanforderung, Randbedingung\\ \hline
-	Name 			&	Eindeutiger, charakterisierender Name\\ \hline
-	Use Case 		&	Referenz zum zugehörigen Use Case\\ \hline
-	Beschreibung 	&	Beschreibung der Anforderung\\ \hline
-	Begründung 		&	Bedeutung der Anforderung für das geplante System\\ \hline
-	Akzeptanz Kriterium	&	Messbare Abnahmekriterien\\ \hline
-	Abhängigkeiten 	&	Referenz zu anderen Anforderungen\\ \hline
-	Antragssteller 	&	\glossarmark{Stakeholder} Gruppe, die um diese Anforderung bittet\\ \hline
-	Risiken	 	&	Weisst auf allfällige Risiken betreffend der Anforderungen hin
+	\textbf{ID}			&	Eindeutiger Identifikator\\ \hline
+	\textbf{Priorität} 		&	Must, Should, Nice to have\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung, Qualitätsanforderung, Randbedingung\\ \hline
+	\textbf{Name} 			&	Eindeutiger, charakterisierender Name\\ \hline
+	\textbf{Use Case} 		&	Referenz zum zugehörigen Use Case\\ \hline
+	\textbf{Beschreibung} 	&	Beschreibung der Anforderung\\ \hline
+	\textbf{Begründung} 		&	Bedeutung der Anforderung für das geplante System\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	Messbare Abnahmekriterien\\ \hline
+	\textbf{Abhängigkeiten} 	&	Referenz zu anderen Anforderungen\\ \hline
+	\textbf{Antragssteller} 	&	\glossarmark{Stakeholder}, der um diese Anforderung bittet\\ \hline
+	\textbf{Risiken}	 	&	Weisst auf allfällige Risiken betreffend der Anforderungen hin
   \end{tabular}
    \caption{Vorlage für Anforderungen}\label{table:req_template}
 \end{table}
@@ -526,30 +532,30 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
 
 \newpage
 \FloatBarrier
-\subsubsection{Funktional Anforderungen}\label{func_anforderungen}
+\subsubsection{Funktionale Anforderungen}\label{func_anforderungen}
 
 \begin{table}[ht]
 \centering
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F1}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Login Möglichkeit bei der Mobile App\\ \hline
-	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Falls ein Mitglied vom Turnverein auf der Homepage registriert ist, muss das System dem besagten Mitglied die Möglichkeit bieten sich über ein Formular am Backend anzumelden.\\ \hline
-	Begründung 		&	Einige Informationen dürfen nur für Mitglieder zugänglich
+	\textbf{ID} 			&	\textbf{RE-F1}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Login Möglichkeit bei der Mobile App\\ \hline
+	\textbf{Use Case} 		&	-\\ \hline
+	\textbf{Beschreibung} 	&	Falls ein Mitglied vom Turnverein auf der Homepage registriert ist, muss das System dem besagten Mitglied die Möglichkeit bieten sich über ein Formular am Backend anzumelden.\\ \hline
+	\textbf{Begründung} 		&	Einige Informationen dürfen nur für Mitglieder zugänglich
 					gemacht werden. Zusätzlich vereinfacht es das Anmelden, Erstellen
 					und Abrufen von benutzerspezifischen Daten\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Bei bekanntem Username und Passwort muss es dem Mitglied möglich sein, sich beim Backend anzumelden und dann erweiterte	Möglichkeiten und Informationen zu erhalten.
 					\item Falls ein unbekannter Username oder das falsche Passwort eingegeben wurden kommt eine entsprechende Fehlermeldung.
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	-\\ \hline
-	Antragssteller 	&	Dominic Keller\\ \hline
-	Risiken	 	&	Falls diese Anforderung nicht erfolgreich implementiert werden kann, gibt es Schwierigkeiten bei sehr vielen anderen Anforderungen
+	\textbf{Abhängigkeiten} 	&	-\\ \hline
+	\textbf{Antragssteller} 	&	Dominic Keller (aktive Mitglieder (U30))\\ \hline
+	\textbf{Risiken}	 	&	Falls diese Anforderung nicht erfolgreich implementiert werden kann, gibt es Schwierigkeiten bei sehr vielen anderen Anforderungen.
   \end{tabular}
    \caption{Anforderung RF-F1}\label{table:req_1}
 \end{table}
@@ -559,21 +565,21 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F2}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Fahrgemeinschaft erstellen\\ \hline
-	Use Case 		&	\nameref{table:use_case_1}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, muss das System dem besagten Mitglied die Möglichkeit bieten über ein Formular eine neue Fahrgemeinschaft zu eröffnen.\\ \hline
-	Begründung 		&	Seit einiger Zeit wird vermehrt der Vereins-Chat mit endlosen Diskussionen für Fahrgemeinschaftsorganisationen verwendet, was einige Mitglieder stört und auch nicht der Sinn und Zweck dieses Chats ist. Jedes Mitglied sollte über die App die Möglichkeit haben seine Fahrdienste zur Verfügung zu stellen.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F2}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Fahrgemeinschaft erstellen\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_1}\\ \hline
+	\textbf{Beschreibung} 	&	Falls das Mitglied angemeldet ist, muss das System dem besagten Mitglied die Möglichkeit bieten über ein Formular eine neue Fahrgemeinschaft zu eröffnen.\\ \hline
+	\textbf{Begründung} 		&	Seit einiger Zeit wird vermehrt der Vereins-Chat mit endlosen Diskussionen für Fahrgemeinschaftsorganisationen verwendet, was einige Mitglieder stört und auch nicht der Sinn und Zweck dieses Chats ist. Jedes Mitglied sollte über die App die Möglichkeit haben seine Fahrdienste zur Verfügung zu stellen.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann eine Fahrgemeinschaft eröffnen
 					\item Bei ungültigen oder nicht ausreichenden Informationen kommt eine entsprechende Fehlermeldung
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	\nameref{table:req_1}\\ \hline
-	Antragssteller 	&	Marco Mathe\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	\nameref{table:req_1}\\ \hline
+	\textbf{Antragssteller} 	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F2}\label{table:req_2}
 \end{table}
@@ -583,21 +589,21 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F3}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Übersicht über Fahrgemeinschaft\\ \hline
-	Use Case 		&	\nameref{table:use_case_2}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist und eine Fahrgemeinschaft im System besteht, muss das System dem besagten Mitglied die Möglichkeit bieten, eine Liste aller aktuellen Fahrgemeinschaften anzeigen zu lassen.\\ \hline
-	Begründung 		&	Das Mitglied benötigt eine Übersicht der aktuellen Fahrgemeinschaften, damit es sich für eine entscheiden kann.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F3}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Übersicht über Fahrgemeinschaft\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_2}\\ \hline
+	\textbf{Beschreibung} 	&	Falls das Mitglied angemeldet ist und eine Fahrgemeinschaft im System besteht, muss das System dem besagten Mitglied die Möglichkeit bieten, eine Liste aller aktuellen Fahrgemeinschaften anzeigen zu lassen.\\ \hline
+	\textbf{Begründung} 		&	Das Mitglied benötigt eine Übersicht der aktuellen Fahrgemeinschaften, damit es sich für eine entscheiden kann.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann die Fahrgemeinschaften anzeigen lassen
 					\item Das angemeldete Mitglied sieht einen Hinweis, falls es keine Fahrgemeinschaften gibt
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	\nameref{table:req_1}, \nameref{table:req_2}\\ \hline
-	Antragssteller 	&	Marco Mathe\\ \hline
-	Risiken	 	&	Falls nur die \nameref{table:req_2} implementiert wird und diese nicht, ist das Fahrgemeinschaft-System nicht funktionsfähig
+	\textbf{Abhängigkeiten} 	&	\nameref{table:req_1}, \nameref{table:req_2}\\ \hline
+	\textbf{Antragssteller} 	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	Falls nur die \nameref{table:req_2} implementiert wird und diese nicht, ist das Fahrgemeinschaft-System nicht funktionsfähig
   \end{tabular}
    \caption{Anforderung RF-F3}\label{table:req_3}
 \end{table}
@@ -607,22 +613,22 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F4}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Fahrgemeinschaft beitreten\\ \hline
-	Use Case 		&	\nameref{table:use_case_3}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, eine Fahrgemeinschaft im System besteht, das besagte Mitglied noch nicht beigetreten ist und die Fahrgemeinschaft noch Kapazität aufweist, muss das System dem besagten Mitglied die Möglichkeit bieten, sich über einen Knopf bei einer Fahrgemeinschaft einzutragen.\\ \hline
-	Begründung 		&	Damit die Fahrgemeinschaften auch funktionieren, muss es den Mitgliedern möglich sein, sich selbständig bei den Fahrgemeinschaften einzutragen.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F4}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Fahrgemeinschaft beitreten\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_3}\\ \hline
+	\textbf{Beschreibung} 	&	Falls das Mitglied angemeldet ist, eine Fahrgemeinschaft im System besteht, das besagte Mitglied noch nicht beigetreten ist und die Fahrgemeinschaft noch Kapazität aufweist, muss das System dem besagten Mitglied die Möglichkeit bieten, sich über einen Knopf bei einer Fahrgemeinschaft einzutragen.\\ \hline
+	\textbf{Begründung} 		&	Damit die Fahrgemeinschaften auch funktionieren, muss es den Mitgliedern möglich sein, sich selbständig bei den Fahrgemeinschaften einzutragen.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann einer Fahrgemeinschaft beitreten
 					\item Das angemeldete Mitglied kann einer Fahrgemeinschaft nicht erneut beitreten
 					\item Das angemeldete Mitglied erhält eine Fehlermeldung falls die Fahrgemeinschaft keine Kapazität mehr aufweist
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	\nameref{table:req_1}, \nameref{table:req_2}, \nameref{table:req_3}\\ \hline
-	Antragssteller 	&	Marco Mathe\\ \hline
-	Risiken	 	&	Falls nur die \nameref{table:req_2} und \nameref{table:req_3} implementiert werden und diese nicht, ist das Fahrgemeinschaft-System nicht funktionsfähig
+	\textbf{Abhängigkeiten} 	&	\nameref{table:req_1}, \nameref{table:req_2}, \nameref{table:req_3}\\ \hline
+	\textbf{Antragssteller} 	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	Falls nur die \nameref{table:req_2} und \nameref{table:req_3} implementiert werden und diese nicht, ist das Fahrgemeinschaft-System nicht funktionsfähig
   \end{tabular}
    \caption{Anforderung RF-F4}\label{table:req_4}
 \end{table}
@@ -632,21 +638,21 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F5}\\ \hline
-	Priorität 		&	Should\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Anmelden an Vereinsanlässe\\ \hline
-	Use Case 		&	\nameref{table:use_case_4}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, ein Anlass im System besteht und das besagte Mitglied noch nicht angemeldet ist, sollte das System dem besagten Mitglied die Möglichkeit bieten, sich über einen Knopf für den Anlass anzumelden.\\ \hline
-	Begründung 		&	Die Anmeldequote der Mitglieder ist nicht so hoch wie erwünscht, durch das Anbieten der Anmelde-Möglichkeit über das App soll das Anmelden vereinfacht und die Anmeldequote erhöht werden.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F5}\\ \hline
+	\textbf{Priorität} 		&	Should\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Anmelden an Vereinsanlässe\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_4}\\ \hline
+	\textbf{Beschreibung} 	&	Falls das Mitglied angemeldet ist, ein Anlass im System besteht und das besagte Mitglied noch nicht angemeldet ist, sollte das System dem besagten Mitglied die Möglichkeit bieten, sich über einen Knopf für den Anlass anzumelden.\\ \hline
+	\textbf{Begründung} 		&	Die Anmeldequote der Mitglieder ist nicht so hoch wie erwünscht, durch das Anbieten der Anmelde-Möglichkeit über das App soll das Anmelden vereinfacht und die Anmeldequote erhöht werden.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Das angemeldete Mitglied kann sich für einen Anlass anmelden
 					\item Das angemeldete Mitglied kann sich für einen Anlass nicht erneut anmelden
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	\nameref{table:req_1}, \nameref{table:req_2}, \nameref{table:req_3}\\ \hline
-	Antragssteller 	&	Dominic Keller\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	\nameref{table:req_1}, \nameref{table:req_2}, \nameref{table:req_3}\\ \hline
+	\textbf{Antragssteller} 	&	Dominic Keller (aktive Mitglieder (U30))\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F5}\label{table:req_5}
 \end{table}
@@ -656,21 +662,21 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F6}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Informationen über Vereinsanlässe\\ \hline
-	Use Case 		&	\nameref{table:use_case_5}\\ \hline
-	Beschreibung 	&	Falls ein Anlass im System ist, muss das System dem Benutzer der App die Möglichkeit bieten, Informationen über Vereinsanlässe zu erhalten.\\ \hline
-	Begründung 		&	Über die App kann man die Informationen schnell und einfach abrufen, somit sollte den Anlässen mehr Beachtung geschenkt werden.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F6}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Informationen über Vereinsanlässe\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_5}\\ \hline
+	\textbf{Beschreibung} 	&	Falls ein Anlass im System ist, muss das System dem Benutzer der App die Möglichkeit bieten, Informationen über Vereinsanlässe zu erhalten.\\ \hline
+	\textbf{Begründung} 		&	Über die App kann man die Informationen schnell und einfach abrufen, somit sollte den Anlässen mehr Beachtung geschenkt werden.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Der Benutzer erhält informationen über den ausgewählten Anlass
 					\item Der Benutzer sieht einen Hinweis, falls keine Anlässe vorhanden sind
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	-\\ \hline
-	Antragssteller 	&	Ivan Sebastiano\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	-\\ \hline
+	\textbf{Antragssteller} 	&	Ivan Sebastiano (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F6}\label{table:req_6}
 \end{table}
@@ -680,21 +686,21 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F7}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Erweiterte Informationen über Vereinsanlässe\\ \hline
-	Use Case 		&	\nameref{table:use_case_5}\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist und ein Anlass im System besteht, sollte das System dem besagten Mitglied die Möglichkeit bieten, zusätzliche Informationen über den Anlass zu erhalten.\\ \hline
-	Begründung 		&	Einige Informationen (z. B. Anmelde-Listen) sind aus Datenschutz- oder anderen Gründen nicht für alle Nutzer der App bestimmt und sollten nur angemeldeten Mitgliedern angezeigt werden.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F7}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Erweiterte Informationen über Vereinsanlässe\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_5}\\ \hline
+	\textbf{Beschreibung} 	&	Falls das Mitglied angemeldet ist und ein Anlass im System besteht, sollte das System dem besagten Mitglied die Möglichkeit bieten, zusätzliche Informationen über den Anlass zu erhalten.\\ \hline
+	\textbf{Begründung} 		&	Einige Informationen (z. B. Anmelde-Listen) sind aus Datenschutz- oder anderen Gründen nicht für alle Nutzer der App bestimmt und sollten nur angemeldeten Mitgliedern angezeigt werden.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Das angemeldete Mitglied sieht die erweiterten Informationen zum Anlass
 					\item Nicht angemeldete Mitglieder sehen die erweiterten Informationen zum Anlass nicht
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	\nameref{table:req_1}, \nameref{table:req_6}\\ \hline
-	Antragssteller 	&	Ivan Sebastiano\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	\nameref{table:req_1}, \nameref{table:req_6}\\ \hline
+	\textbf{Antragssteller} 	&	Ivan Sebastiano (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F7}\label{table:req_7}
 \end{table}
@@ -704,20 +710,20 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F8}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Informationen über Vereine und Riegen\\ \hline
-	Use Case 		&	\nameref{table:use_case_6}\\ \hline
-	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten, Informationen über die verschiedenen Vereine und Riegen zu erhalten.\\ \hline
-	Begründung 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. Jeder kann aktuelle Trainingszeiten und Inhalte der Trainings anschauen und erhält Kontaktinformationen.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F8}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Informationen über Vereine und Riegen\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_6}\\ \hline
+	\textbf{Beschreibung} 	&	Das System muss dem Benutzer der App die Möglichkeit bieten, Informationen über die verschiedenen Vereine und Riegen zu erhalten.\\ \hline
+	\textbf{Begründung} 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. Jeder kann aktuelle Trainingszeiten und Inhalte der Trainings anschauen und erhält Kontaktinformationen.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Der Benutzer erhält Informationen über die verschiedenen Vereine und Riegen
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	-\\ \hline
-	Antragssteller 	&	Ivan Sebastiano\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	-\\ \hline
+	\textbf{Antragssteller} 	&	Ivan Sebastiano (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F8}\label{table:req_8}
 \end{table}
@@ -727,20 +733,20 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F9}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Aktuellen Berichte\\ \hline
-	Use Case 		&	\nameref{table:use_case_6}\\ \hline
-	Beschreibung 	&	Das System muss dem Benutzer der App die Möglichkeit bieten, aktuellen Berichte von den einzelnen Anlässen oder Vereinen lesen zu können.\\ \hline
-	Begründung 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. In den Berichten wird über aktuelle Anlässe und Geschehnisse geschrieben, ganz nach dem Motto 'Tue gutes und sprich darüber'.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F9}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Aktuellen Berichte\\ \hline
+	\textbf{Use Case} 		&	\nameref{table:use_case_6}\\ \hline
+	\textbf{Beschreibung} 	&	Das System muss dem Benutzer der App die Möglichkeit bieten, aktuellen Berichte von den einzelnen Anlässen oder Vereinen lesen zu können.\\ \hline
+	\textbf{Begründung} 		&	Die App ist nicht nur für die Mitglieder des Vereins sondern auch für Aussenstehende und sollte auch zu Werbezwecken dienen. In den Berichten wird über aktuelle Anlässe und Geschehnisse geschrieben, ganz nach dem Motto 'Tue gutes und sprich darüber'.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Der Benutzer kann die aktuellen Berichte lesen
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	-\\ \hline
-	Antragssteller 	&	Dominic Keller\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	-\\ \hline
+	\textbf{Antragssteller} 	&	Dominic Keller (aktive Mitglieder (U30))\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F9}\label{table:req_9}
 \end{table}
@@ -750,20 +756,20 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-F10}\\ \hline
-	Priorität 		&	Nice to have\\ \hline
-	Anforderungstyp	&	Funktional Anforderung\\ \hline
-	Name 			&	Push-Nachrichten versenden\\ \hline
-	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Falls das Mitglied angemeldet ist, Push-Nachrichten zugelassen werden und eine solche vom Backend versendet wurde, sollte das System dem besagten Mitglied eine Push Notification zustellen.\\ \hline
-	Begründung 		&	Trainingsverantwortliche und Vorstandsmitglieder können die Mitglieder mit Push-Nachrichten schneller über kurzfristige Änderungen informieren.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-F10}\\ \hline
+	\textbf{Priorität} 		&	Nice to have\\ \hline
+	\textbf{Anforderungstyp}	&	Funktionale Anforderung\\ \hline
+	\textbf{Name} 			&	Push-Nachrichten versenden\\ \hline
+	\textbf{Use Case} 		&	-\\ \hline
+	\textbf{Beschreibung} 	&	Falls das Mitglied angemeldet ist, Push-Nachrichten zugelassen werden und eine solche vom Backend versendet wurde, sollte das System dem besagten Mitglied eine Push Notification zustellen.\\ \hline
+	\textbf{Begründung} 		&	Trainingsverantwortliche und Vorstandsmitglieder können die Mitglieder mit Push-Nachrichten schneller über kurzfristige Änderungen informieren.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Das angemeldete Mitglied erhält die Push-Nachrichten
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	\nameref{table:req_1}\\ \hline
-	Antragssteller 	&	Oliver Zimmermann\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	\nameref{table:req_1}\\ \hline
+	\textbf{Antragssteller} 	&	Oliver Zimmermann (Trainingsverantwortliche)\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Anforderung RF-F10}\label{table:req_10}
 \end{table}
@@ -777,20 +783,20 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-NF1}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Qualitätsanforderung\\ \hline
-	Name 			&	Unterstützung von Android\\ \hline
-	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Das System muss fähig sein, auf Android Geräten zu laufen.\\ \hline
-	Begründung 		&	Die Statistik der aktuellen Homepage zeigt, dass über 50\% der Zugriffe über Mobiltelefone und Tablet von Android Plattformen stammen.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-NF1}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Qualitätsanforderung\\ \hline
+	\textbf{Name} 			&	Unterstützung von Android\\ \hline
+	\textbf{Use Case} 		&	-\\ \hline
+	\textbf{Beschreibung} 	&	Das System muss fähig sein, auf Android Geräten zu laufen.\\ \hline
+	\textbf{Begründung} 		&	Die Statistik der aktuellen Homepage zeigt, dass über 50\% der Zugriffe über Mobiltelefone und Tablet von Android Plattformen stammen.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Ein Nutzer mit einem Android Mobiltelefon kann die App öffnen und verwenden
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	-\\ \hline
-	Antragssteller 	&	Dominic Keller\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	-\\ \hline
+	\textbf{Antragssteller} 	&	Dominic Keller (aktive Mitglieder (U30))\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Qualitätsanforderung RF-NF1}\label{table:req_nf_1}
 \end{table}
@@ -800,20 +806,20 @@ Die Abstufungen \emph{muss}, \emph{sollte} und \emph{wird} werden verwendet um d
   \begin{tabular}{ l | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	ID 			&	\textbf{RE-NF2}\\ \hline
-	Priorität 		&	Must\\ \hline
-	Anforderungstyp	&	Qualitätsanforderung\\ \hline
-	Name 			&	Unterstützung von iOS\\ \hline
-	Use Case 		&	-\\ \hline
-	Beschreibung 	&	Das System muss fähig sein, auf iOS Geräten zu laufen.\\ \hline
-	Begründung 		&	Die Statistik der aktuellen Homepage zeigt, dass gut 43\% der Zugriffe über Mobiltelefone und Tablet von iOS Plattformen stammen.\\ \hline
-	Akzeptanz Kriterium	&	\begin{enumerate}
+	\textbf{ID} 			&	\textbf{RE-NF2}\\ \hline
+	\textbf{Priorität} 		&	Must\\ \hline
+	\textbf{Anforderungstyp}	&	Qualitätsanforderung\\ \hline
+	\textbf{Name} 			&	Unterstützung von iOS\\ \hline
+	\textbf{Use Case} 		&	-\\ \hline
+	\textbf{Beschreibung} 	&	Das System muss fähig sein, auf iOS Geräten zu laufen.\\ \hline
+	\textbf{Begründung} 		&	Die Statistik der aktuellen Homepage zeigt, dass gut 43\% der Zugriffe über Mobiltelefone und Tablet von iOS Plattformen stammen.\\ \hline
+	\textbf{Akzeptanz Kriterium}	&	\begin{enumerate}
 					\item Ein Nutzer mit einem iPhone kann die App öffnen und verwenden
 					\end{enumerate}
 					\\ \hline
-	Abhängigkeiten 	&	-\\ \hline
-	Antragssteller 	&	Marco Mathe\\ \hline
-	Risiken	 	&	-
+	\textbf{Abhängigkeiten} 	&	-\\ \hline
+	\textbf{Antragssteller} 	&	Marco Mathe (Vorstand)\\ \hline
+	\textbf{Risiken}	 	&	-
   \end{tabular}
    \caption{Qualitätsanforderung RF-NF2}\label{table:req_nf_2}
 \end{table}

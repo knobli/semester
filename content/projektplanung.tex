@@ -9,17 +9,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Projektplanung}\label{chap.projektplanung}
-Dieses Kapitel handelt von der Projektplanung und den verschiedenen Arbeitspaketen in diesem Projekt.
+Dieses Kapitel handelt von den Meilensteinen, Arbeitspakten und der Projektplanung. Zusätzlich beinhaltet es eine Risikoanalyse mit den getroffenen Massnahmen.
 
 \section{Meilensteine}\label{meilensteine}
-Folgende Meilensteine wurden für dieses Projekt festgelegt:
+Folgende Meilensteine wurden festgelegt:
 
 \begin{table}[ht]
 \centering
   \begin{tabular}{ l | r }
 	\hline
 	\rowcolor{gray}
-	Projektstart:					&	01.04.2014	\\ \hline
+	\textbf{Projektstart}					&	\textbf{01.04.2014}	\\ \hline
 	Anforderungsdokument Entwurf		&	07.05.2014	\\ \hline
 	Anforderungsdokument fertig		&	12.07.2014	\\ \hline
 	\glossarmark{Refactoring} abgeschlossen		&	04.08.2014	\\ \hline
@@ -28,6 +28,8 @@ Folgende Meilensteine wurden für dieses Projekt festgelegt:
 	App zur Freigabe eingesendet		&	02.09.2014	\\ \hline
 	Dokumentation fertig			&	20.09.2014	\\ \hline
 	Dokumentation korrigiert			&	27.09.2014	\\ \hline
+	\rowcolor{gray}
+	\textbf{Projektende}			&	\textbf{01.10.2014}	\\ \hline
   \end{tabular}
    \caption{Meilensteine}\label{table:milestones}
 \end{table}
@@ -44,19 +46,19 @@ Das Projekt beinhaltet sechs Arbeitspakete:
 \end{itemize}
 
 \subsection{Planung}\label{planung}
-In der Planungsphase wird geschaut, was in dem Projekt erreicht werden muss und wie diese Tätigkeiten auf die vorhandene Zeit aufgeteilt wird. Es wird auch das erste Mal mit den \glossarmark{Stakeholdern} geredet und erste Abmachungen getroffen.
+In der Planungsphase wird evaluiert, welche Zielen in dem Projekt erreicht werden und wie diese Tätigkeiten auf die vorhandene Zeit aufgeteilt werden sollen. Ferner werden die \glossarmark{Stakeholder} bestimmt und mit ihnen die ersten Abmachungen getroffen.
 
 \subsection{Requirement Engineering}\label{rqe}
-Bei der Erstellung eines neuen Systems ist es immer wichtig, dass man alle Anforderungen kennt. Um die Anforderungen zu erfassen werden die Mitglieder und der Vorstand befragt, was sie sich von der App wünschen. Die Mitglieder sind nur zum Teil Techniker, somit werden auch Anforderungen resultieren, welche sehr schwierig umzusetzen sind und andere Anforderungen werden nicht aufgelistet, sondern einfach vorausgesetzt, sogenannte \glossarmark{Basisfaktoren}. Der Anforderungskatalog wird mit den Mitgliedern, welche sich eingebracht haben, angeschaut und am Schluss findet ein Review statt. (siehe dazu auch \cite{req_eng_book})
+Um die Anforderungen zu erfassen, werden die Mitglieder und der Vorstand befragt, was sie sich von der App wünschen. Die Mitglieder sind keine Techniker, somit werden auch Anforderungen resultieren, welche sehr schwierig umzusetzen sind und andere Anforderungen werden nicht aufgelistet, sondern einfach vorausgesetzt, sogenannte \glossarmark{Basisfaktoren}. Der Anforderungskatalog wird mit den Mitgliedern, welche sich eingebracht haben, angeschaut und am Schluss findet ein Review statt. (siehe dazu auch \cite{req_eng_book})
 
 \subsection{Refactoring Backend}\label{ref_backend}
-Als erste Entwicklungstätigkeit muss das Backend umgebaut werden, damit die Implementation für die App leichter fällt. Dazu wird der Ist-Stand aufgenommen und geschaut, welche Klassen umstrukturiert werden müssen, damit die Implementation danach leichter fällt. Danach wird entschieden, welches Pattern man beim Umbau der Klassen verfolgen möchte. Das Umbauen selbst ist mit viel Arbeit und Testen verbunden.
+Da das Backend über die letzten zwei Jahre organisch gewachsen ist, muss es als erste Entwicklungstätigkeit umgebaut werden, damit die Implementation für die App leichter fällt. Dazu wird der Ist-Stand aufgenommen und betrachtet, welche Klassen umstrukturiert werden müssen. Danach wird entschieden, welches Pattern man beim Umbau der Klassen verfolgen möchte. Der Umbau selbst ist mit viel Arbeit und Testen verbunden.
 
 \subsection{Entwicklung Mobile App}\label{eng_app}
 In diesem Arbeitspaket werden die Anforderungen umgesetzt. Die App wird entworfen und mit Inhalt gefüllt. Die ersten Tests werden durchgeführt und Unstimmigkeiten in den Anforderungen mit den \glossarmark{Stakeholdern} angeschaut.
 
 \subsection{Tests}\label{tests}
-Es gibt zwei Testsphasen, die eine ist dann, wenn das neue Backend online ist und die User, wie gewohnt, arbeiten können sollten. Die andere besteht darin, dass die App für Android zum Download bereit gestellt wird, nachdem die ersten Tests erfolgreich waren.  Das Feedback wird bei beiden Phasen eingearbeitet und möglichst schnell aktualisiert.
+Die Tests gliedern sich in zwei Phasen. Die erste beginnt, sobald das neue Backend online ist und die User, wie gewohnt, arbeiten können sollten. Die andere besteht darin, dass die App für Android zum Download bereit gestellt wird, nachdem die ersten Tests erfolgreich waren.  Das Feedback wird bei beiden Phasen eingearbeitet und möglichst schnell aktualisiert.
 
 \subsection{Dokumentation}\label{dokumentation}
 Die Dokumentation wird das ganze Projekt hindurch aktuell gehalten. Für das Erfassen dieses Dokuments wird \LaTeX\ und das \LaTeX-Template der ZHAW verwendet.
@@ -75,7 +77,7 @@ Anhand der Arbeitspaketen wurde ein \glossarmark{Projektstrukturplan} (siehe Abb
 
 
 \section{Zeitplan}\label{zeitplan}
-Der Zeitplan gibt eine grobe Übersicht, wann an dem Projekt gearbeitet wird und wann die verschiedenen Tätigkeiten fertig werden. Die Angaben sind nur Richtwerte, da neben diesem Projekt noch einer Arbeit nachgegangen wird, verschiedenen Tätigkeiten im Verein ausgeführt werden und zusätzliche andere Arbeiten und Prüfungen Zeit benötigen.
+Der Zeitplan gibt eine grobe Übersicht, wann an dem Projekt gearbeitet wird und wann die verschiedenen Tätigkeiten fertig werden sollen. Die Angaben sind nur Richtwerte, da das Projekt neben einer beruflichen, sowie verschiedenen Tätigkeiten im Verein durchgeführt wird und zusätzliche andere Arbeiten, sowie Prüfungen Zeit benötigen.
 
 \subsection{Geplante Abwesenheiten}
 \begin{table}[ht]
@@ -83,7 +85,7 @@ Der Zeitplan gibt eine grobe Übersicht, wann an dem Projekt gearbeitet wird und
   \begin{tabular}{ l | r }
 	\hline
 	\rowcolor{gray}
-	Abwesenheit							&	Start - Ende	\\ \hline
+	\textbf{Abwesenheit}							&	\textbf{Start - Ende}	\\ \hline
 	Seminararbeit Abgaben					&	01.06.2014 - 22.06.2014	\\ \hline
 	Modulprüfungen und Vorträge Seminararbeit		&	23.06.2014 - 02.07.2014	\\ \hline
 	Ferien								&	12.07.2014 - 03.08.2014	\\ \hline
@@ -99,7 +101,7 @@ Der Zeitplan basierend auf dem \glossarmark{Projektstrukturplan} (siehe \ref{pro
 \centering
 \includegraphics[scale=0.5]{images/project/projectplan.png}
 \caption{Projektplan}
-\label{fig:psp}
+\label{fig:projektplan}
 \end{figure}
 
 \end{landscape}
@@ -110,14 +112,14 @@ Der Zeitplan basierend auf dem \glossarmark{Projektstrukturplan} (siehe \ref{pro
   \begin{tabular}{ l | c | c }
 	\hline
 	\rowcolor{gray}
-	Arbeitspaket							&	Schätzung (h)	& Tatsächlich (h)	\\ \hline
+	\textbf{Arbeitspaket}					&	\textbf{Schätzung (h)}	& \textbf{Tatsächlich (h)}	\\ \hline
 	Planung							&	10			& 8	\\ \hline
-	Requirement Engineering					&	12			& 15	\\ \hline
-	\glossarmark{Refactoring} Backend					&	20			& 40	\\ \hline
-	Entwicklung Mobile App					&	45			& 50	\\ \hline
+	Requirement Engineering					&	12			& 18	\\ \hline
+	\glossarmark{Refactoring} Backend			&	20			& 40	\\ \hline
+	Entwicklung Mobile App					&	45			& 55	\\ \hline
 	Tests								&	8			& 10	\\ \hline
-	Dokumentation						&	60			& 70	\\ \hline \hline
-	Total								&	155			& 193	\\ \hline
+	Dokumentation						&	60			& 75	\\ \hline \hline
+	Total								&	155			& 206	\\ \hline
   \end{tabular}
    \caption{Zeitschätzung auf Arbeitspaketebene}\label{table:time_estimation}
 \end{table}
@@ -126,14 +128,14 @@ Der Zeitplan basierend auf dem \glossarmark{Projektstrukturplan} (siehe \ref{pro
 Jedes Projekt birgt Risiken. Werden diese nicht am Anfang analysiert und über die gesamte Projektlaufzeit überwacht, kann es zu grossen Schwierigkeiten kommen. Die angewandten Methoden sind aus \cite{proj_mgmt_book} und aus dem Management Fach Projekt und Prozessmanagement bekannt.
 
 \subsection{Risikoermittlung}\label{risikoermittlung}
-Die Risikoermittlung ist dafür da, dass man mögliche Risiken aufdeckt und die möglichen Folgen daraus festhält.
+Die Risikoermittlung wird zur Bestimmung und Folgenabschätzung möglicher Risiken angewendet.
 
 \begin{table}[ht]
 \centering
   \begin{tabular}{  p{5cm} | p{9cm} }
 	\hline
 	\rowcolor{gray}
-	Risiko							&	Mögliche Folgen	\\ \hline
+	\textbf{Risiko}					&	\textbf{Mögliche Folgen}	\\ \hline
 	Implementationsschwierigkeiten (Nur wenig Erfahrung in der App Entwicklung)
 								&	\begin{itemize}
 										\item Zeitplan nicht einhaltbar
@@ -166,7 +168,7 @@ Das Schadensausmass und die Eintrittswahrscheinlichkeit der Risiken sind nach fo
   \begin{tabular}{ l | p{5cm} | p{5cm} }
 	\hline
 	\rowcolor{gray}
-	Wert							&	Eintrittswahrscheinlichkeit		&	Schadensausmass	\\ \hline			
+	\textbf{Wert	}					&	\textbf{Eintrittswahrscheinlichkeit}	&	\textbf{Schadensausmass}	\\ \hline			
 	1							&	sehr unwahrscheinlich		&	vernachlässigbar	\\ \hline
 	2							&	unwahrscheinlich			&	spürbar		\\ \hline
 	3							&	wenig wahrscheinlich		&	verkraftbar		\\ \hline
@@ -188,7 +190,7 @@ Risikofaktor = Eintrittswahrscheinlichkeit * Schadensausmass
   \begin{tabular}{ l | p{4cm} | p{3cm} | c }
 	\hline
 	\rowcolor{gray}
-	Risiko							&	Eintrittswahrscheinlichkeit		&	Schadensausmass 	&	Risikofaktor\\ \hline			
+	\textbf{Risiko}					&	\textbf{Eintrittswahrscheinlichkeit}	&	\textbf{Schadensausmass} 	&	\textbf{Risikofaktor}\\ \hline			
 	Implementationsschwierigkeiten			&	1					&	4			&	4		\\ \hline
 	Ressourcen nicht verfügbar			&	2					&	5			&	\textbf{10}	\\ \hline
 	Mangelhaftes Endprodukt				&	2					&	4			&	\textbf{8}	\\ \hline
@@ -214,7 +216,7 @@ Es wurden Massnahmen für die gefundenen Risiken gesucht und festgehalten. Die M
   \begin{tabular}{  l | p{4cm} | p{4cm} }
 	\hline
 	\rowcolor{darkgray}
-	Risiko							&	\multicolumn{2}{|c|}{Massnahmen} \\ \hline
+	\textbf{Risiko}					&	\multicolumn{2}{|c|}{\textbf{Massnahmen}} \\ \hline
 	\rowcolor{gray}
 								&	Vorbeugende Massnahmen & Eventual-Massnahmen	\\ \hline
 	Implementationsschwierigkeiten
@@ -232,7 +234,7 @@ Es wurden Massnahmen für die gefundenen Risiken gesucht und festgehalten. Die M
 										\item Tätigkeiten priorisieren
 									\end{itemize}
 								&	\begin{itemize}
-										\item Verschiebungsgesuch mit guter Begründung stellen
+										\item Verschiebungsgesuch stellen
 									\end{itemize}	\\ \hline
 	Mangelhaftes Endprodukt		
 								&	\begin{itemize}

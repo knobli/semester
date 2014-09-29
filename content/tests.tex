@@ -12,15 +12,15 @@
 In diesem Kapitel wird auf die verschiedenen Tests und Varianten, welche in diesem Projekt verwendet wurden, eingegangen.
 
 \section{Einführung}
-In diesem Projekt hat man die sieben Grundsätze aus \cite{test_soft_book} als Leitlinie beim Testen genommen:
+In diesem Projekt wurden die sieben Grundsätze aus \cite{test_soft_book} als Leitlinie zum Testen verwendet:
 \begin{enumerate}
 \item \textbf{Testen zeigt die Anwesenheit von Fehlern}: Testabdeckung mit Sonar ermittelt und Anforderungen überprüft
 \item \textbf{Vollständiges Testen ist nicht möglich}: Es wurde solange getestet bis die Fehlerfindungsrate einen bestimmte Punkt unterschritten hatte
 \item \textbf{Mit dem Testen frühzeitig beginnen}: Die Tests für die neuen Funktionen wurden zur gleichen Zeit wie der Code, geschrieben
 \item \textbf{Häufung von Fehlern}: Wenn Fehler auftraten, dann wurde diese Komponente nach der Behebung nochmals intensiv getestet
-\item \textbf{Zunehmende Testresistenz (Pesticide paradox)}: Als Änderungen am Code gemacht wurden, wurden die Tests erweitert bzw. angepasst
+\item \textbf{Zunehmende Testresistenz (Pesticide paradox)}: Als Änderungen am Code vorgenommen wurden, wurden die Tests ebenfalls erweitert bzw. angepasst
 \item \textbf{Testen ist abhängig vom Umfeld}: Dieses System ist nicht so sicherheitskritisch, wie etwa Systeme im Bank Umfeld, die Dienste werden jedoch rege benutzt, somit sollte die Testintensität in einem normalen Rahmen liegen.
-\item \textbf{Trugschluss: Keine Fehler bedeutet eine brauchbares System}: Die \glossarmark{Stakeholder} wurden schon bei der \glossarmark{Mockup} Erstellung mit einbezogen und bekamen auch während der Entwicklung immer wieder einen Blick in den aktuellen Stand.
+\item \textbf{Trugschluss: Keine Fehler bedeutet ein brauchbares System}: Die \glossarmark{Stakeholder} wurden schon bei der \glossarmark{Mockup} Erstellung mit einbezogen und bekamen auch während der Entwicklung immer wieder einen Blick in den aktuellen Stand.
 \end{enumerate}
 
 \section{Testing}
@@ -33,10 +33,10 @@ Es wurde festgelegt, dass das Projekt nicht mit der Implementation fertig ist, s
 Die Testphase des Backends begann nach dem lokalen Testing des \glossarmark{Refactorings} und der Produktiv Schaltung des Backends. Die Mitglieder wurden informiert, dass sie theoretisch keine grossen Änderungen feststellen sollten und sie sollten sich doch bitte bei negativen Abweichungen zur vorherigen Version sofort melden. Es wurden nur wenige Spezialfälle gemeldet, welche schnell behoben werden konnten.
 
 \subsubsection{App}
-Da die Freigabe der iOS App mehrere Tage benötigt, wurde die erste Testphase auf Android gemacht. So konnte schneller Feedback eingeholt werden. Die App wurde hochgeladen und nur wenige Personen wurden informiert. Nach wenigen Stunden gab es bereits über 10 Downloads. Das Feedback war gut, lediglich einige kleine Fehler wurden gefunden. Alle Fehler wurden behoben und ein paar kleine Verbesserungsvorschläge umgesetzt, getestet und dann in einer neuen Version hochgeladen. Grössere Anforderungen wurden erfasst, deren Umsetzung jedoch auf kommende Versionen verschoben. Als keine negativen Rückmeldungen mehr kamen und auch beim Nachfragen nichts mehr zum Vorschein kam, wurde die Testphase mit dem Hochladen der iOS App beendet.
+Da die Freigabe der iOS App mehrere Tage benötigt, wurde die erste Testphase auf Android durchgeführt. So konnte schneller Feedback eingeholt werden. Die App wurde hochgeladen und nur einzelne Personen wurden informiert. Nach wenigen Stunden gab es bereits über 10 Downloads. Das Feedback war gut, lediglich einige kleine Fehler wurden gefunden. Alle Fehler wurden behoben, ein paar kleine Verbesserungsvorschläge umgesetzt, getestet und dann in einer neuen Version hochgeladen. Grössere Anforderungen wurden erfasst, deren Umsetzung jedoch auf kommende Versionen verschoben. Als keine negativen Rückmeldungen mehr kamen und auch beim Nachfragen nichts mehr zum Vorschein kam, wurde die Testphase beendet.
 
 \section{System- und Abnahmetest}
-Nach erfolgreichem Testing und Abschluss der Testphasen wurde für den Abnahmetest ein Testprotokoll erstellt, welches vorgängig im Systemtest schon durchgegangen wurde. Das Testprotokoll wurde danach dem Kunden übergeben und von diesem selber nochmals abgearbeitet.
+Nach erfolgreichem Testing und Abschluss der Testphasen wurde für den Abnahmetest ein Testprotokoll erstellt, welches vorgängig im Systemtest bereits durchgegangen wurde. Das Testprotokoll wurde danach dem Kunden übergeben und von diesem selbst nochmals abgearbeitet.
 
 \subsection{Testprotokoll}
 Das Testprotokoll basiert auf den Use Cases (siehe \ref{use_cases}) und den Anforderungen (siehe \ref{anforderungen}). Akzeptanz Kriterien mit UND- oder ODER-Verknüpfung wurden aufgesplittet, um sicher zu gehen, dass beide Bedingungen erfüllt sind.
